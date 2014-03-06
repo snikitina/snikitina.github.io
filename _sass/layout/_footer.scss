@@ -1,0 +1,25 @@
+$footerHeight: 5em;
+
+html, body, #wrapper {
+  height: 100%;
+}
+
+body > #wrapper {
+  height: auto;
+  min-height: 100%;
+}
+
+#wrapper {
+  margin-bottom: -$footerHeight;
+
+  &:after {
+    content: "";
+    display: block;
+    height: $footerHeight;
+  }
+}
+
+body > footer {
+  background-color: #aaa;
+  height: $footerHeight;
+}

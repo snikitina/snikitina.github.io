@@ -1,0 +1,38 @@
+/* line 3, ../_sass/layout/_footer.scss */
+html, body, #wrapper {
+  height: 100%;
+}
+
+/* line 7, ../_sass/layout/_footer.scss */
+body > #wrapper {
+  height: auto;
+  min-height: 100%;
+}
+
+/* line 12, ../_sass/layout/_footer.scss */
+#wrapper {
+  margin-bottom: -5em;
+}
+/* line 15, ../_sass/layout/_footer.scss */
+#wrapper:after {
+  content: "";
+  display: block;
+  height: 5em;
+}
+
+/* line 22, ../_sass/layout/_footer.scss */
+body > footer {
+  background-color: #aaa;
+  height: 5em;
+}
+
+/* line 3, ../_sass/main.scss */
+body {
+  background: #ddd;
+  font-size: 62.5%;
+}
+
+/* line 8, ../_sass/main.scss */
+#wrapper {
+  font-size: 1.2em;
+}
