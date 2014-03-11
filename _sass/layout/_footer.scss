@@ -21,12 +21,17 @@ body > #wrapper {
 
 body > footer {
   @include legacy-pie-clearfix;
-  background-color: $footerBgColor;
-  color: $mainBgColor;
+  background-color: $bodyBgColor;//$footerBgColor;
+  color: lighten($footerBgColor, 20%);
   height: $footerHeight;
+
+  .content {
+    padding-top: $commonPadding;
+  }
 
   aside {
     float: left;
+    margin-left: $commonPadding;
   }
 
   small {
@@ -35,19 +40,24 @@ body > footer {
 
   nav {
     float: right;
+    margin-right: $commonPadding;
+
+    ul {
+      margin: 0;
+    }
 
     li {
       float: left;
       list-style-type: none;
-      margin-left: 1em;
+      margin-left: 1.5em;
     }
   }
 
   a {
     text-decoration: none;
+  }
 
-    &, &:visited {
-      color: $mainBgColor;
-    }
+  &, a, a:visited {
+    color: lighten($footerBgColor, 30%);
   }
 }

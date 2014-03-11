@@ -12,7 +12,7 @@
   visibility: hidden;
 }
 
-/* line 1, ../_sass/layout/_header.scss */
+/* line 5, ../_sass/layout/_header.scss */
 #wrapper > header {
   *zoom: 1;
   background-color: #f0f0f0;
@@ -27,18 +27,29 @@
   overflow: hidden;
   visibility: hidden;
 }
-/* line 7, ../_sass/layout/_header.scss */
+/* line 11, ../_sass/layout/_header.scss */
 #wrapper > header h1 {
   float: left;
-  margin: 0;
+  font-family: "Montez", cursive;
+  font-size: 3em;
+  left: -.1em;
+  margin: 0 0.6em;
+  position: relative;
 }
-/* line 12, ../_sass/layout/_header.scss */
+/* line 20, ../_sass/layout/_header.scss */
 #wrapper > header nav {
   float: right;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: .08em;
+  margin-right: 1.2em;
+  text-transform: uppercase;
 }
-/* line 16, ../_sass/layout/_header.scss */
+/* line 29, ../_sass/layout/_header.scss */
 #wrapper > header nav ul {
   *zoom: 1;
+  margin: 1.5em 0 0;
+  padding: 0;
 }
 /* line 22, ../../../../../usr/local/Cellar/ruby193/1.9.3-p545/lib/ruby/gems/1.9.1/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 #wrapper > header nav ul:after {
@@ -49,15 +60,23 @@
   overflow: hidden;
   visibility: hidden;
 }
-/* line 20, ../_sass/layout/_header.scss */
+/* line 35, ../_sass/layout/_header.scss */
 #wrapper > header nav li {
   display: block;
   float: left;
-  margin-left: 1em;
+  margin-left: 1.2em;
 }
-/* line 27, ../_sass/layout/_header.scss */
+/* line 41, ../_sass/layout/_header.scss */
+#wrapper > header nav a, #wrapper > header nav a:visited {
+  color: #535353;
+}
+/* line 46, ../_sass/layout/_header.scss */
 #wrapper > header a {
   text-decoration: none;
+}
+/* line 49, ../_sass/layout/_header.scss */
+#wrapper > header a, #wrapper > header a:visited {
+  color: #202020;
 }
 
 /* line 3, ../_sass/layout/_footer.scss */
@@ -85,8 +104,8 @@ body > #wrapper {
 /* line 22, ../_sass/layout/_footer.scss */
 body > footer {
   *zoom: 1;
-  background-color: #444444;
-  color: white;
+  background-color: #f0f0f0;
+  color: #535353;
   height: 5em;
 }
 /* line 22, ../../../../../usr/local/Cellar/ruby193/1.9.3-p545/lib/ruby/gems/1.9.1/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
@@ -99,30 +118,40 @@ body > footer:after {
   visibility: hidden;
 }
 /* line 28, ../_sass/layout/_footer.scss */
-body > footer aside {
-  float: left;
+body > footer .content {
+  padding-top: 1.5em;
 }
 /* line 32, ../_sass/layout/_footer.scss */
+body > footer aside {
+  float: left;
+  margin-left: 1.5em;
+}
+/* line 37, ../_sass/layout/_footer.scss */
 body > footer small {
   font-size: 1em;
 }
-/* line 36, ../_sass/layout/_footer.scss */
+/* line 41, ../_sass/layout/_footer.scss */
 body > footer nav {
   float: right;
+  margin-right: 1.5em;
 }
-/* line 39, ../_sass/layout/_footer.scss */
+/* line 45, ../_sass/layout/_footer.scss */
+body > footer nav ul {
+  margin: 0;
+}
+/* line 49, ../_sass/layout/_footer.scss */
 body > footer nav li {
   float: left;
   list-style-type: none;
-  margin-left: 1em;
+  margin-left: 1.5em;
 }
-/* line 46, ../_sass/layout/_footer.scss */
+/* line 56, ../_sass/layout/_footer.scss */
 body > footer a {
   text-decoration: none;
 }
-/* line 49, ../_sass/layout/_footer.scss */
-body > footer a, body > footer a:visited {
-  color: white;
+/* line 60, ../_sass/layout/_footer.scss */
+body > footer, body > footer a, body > footer a:visited {
+  color: #6d6d6d;
 }
 
 /* line 4, ../_sass/layout/_layout.scss */
@@ -132,14 +161,14 @@ body {
 
 /* line 8, ../_sass/layout/_layout.scss */
 #wrapper {
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(640px, #ffffff), color-stop(640px, #dddddd), color-stop(100%, #dddddd));
-  background-image: -webkit-linear-gradient(left, #ffffff, #ffffff 640px, #dddddd 640px, #dddddd 100%);
-  background-image: -moz-linear-gradient(left, #ffffff, #ffffff 640px, #dddddd 640px, #dddddd 100%);
-  background-image: -o-linear-gradient(left, #ffffff, #ffffff 640px, #dddddd 640px, #dddddd 100%);
-  background-image: linear-gradient(left, #ffffff, #ffffff 640px, #dddddd 640px, #dddddd 100%);
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(640px, #ffffff), color-stop(640px, #202020), color-stop(100%, #202020));
+  background-image: -webkit-linear-gradient(left, #ffffff, #ffffff 640px, #202020 640px, #202020 100%);
+  background-image: -moz-linear-gradient(left, #ffffff, #ffffff 640px, #202020 640px, #202020 100%);
+  background-image: -o-linear-gradient(left, #ffffff, #ffffff 640px, #202020 640px, #202020 100%);
+  background-image: linear-gradient(left, #ffffff, #ffffff 640px, #202020 640px, #202020 100%);
 }
 
-/* line 12, ../_sass/layout/_layout.scss */
+/* line 13, ../_sass/layout/_layout.scss */
 main {
   *zoom: 1;
   display: table;
@@ -154,23 +183,87 @@ main:after {
   visibility: hidden;
 }
 
-/* line 17, ../_sass/layout/_layout.scss */
+/* line 18, ../_sass/layout/_layout.scss */
 .content {
   margin-left: auto;
   margin-right: auto;
   width: 960px;
 }
 
-/* line 23, ../_sass/layout/_layout.scss */
+/* line 24, ../_sass/layout/_layout.scss */
 main > article {
   display: table-cell;
+  vertical-align: top;
   width: 640px;
 }
+/* line 29, ../_sass/layout/_layout.scss */
+main > article > div {
+  padding: 0 1.5em;
+}
 
-/* line 28, ../_sass/layout/_layout.scss */
+/* line 34, ../_sass/layout/_layout.scss */
 main > aside {
+  color: #999999;
   display: table-cell;
+  padding-top: 2em;
+  vertical-align: top;
   width: 320px;
+}
+/* line 41, ../_sass/layout/_layout.scss */
+main > aside h3 {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-family: Helvetica;
+  font-size: 1.16em;
+  font-weight: normal;
+  letter-spacing: .15em;
+  line-height: 1em;
+  margin: 1em 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 52, ../_sass/layout/_layout.scss */
+main > aside h3:first-child {
+  margin-top: 0;
+}
+/* line 56, ../_sass/layout/_layout.scss */
+main > aside h3 span {
+  background-color: #202020;
+  color: #ddd;
+  padding: 0 1em;
+  position: relative;
+  top: 1px;
+}
+/* line 65, ../_sass/layout/_layout.scss */
+main > aside h3, main > aside > div {
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+/* line 71, ../_sass/layout/_layout.scss */
+article > header {
+  background-color: #00bd9a;
+  color: rgba(255, 255, 255, 0.95);
+  font-family: "Voces";
+  margin-bottom: 1.5em;
+  padding: 1.5em;
+}
+/* line 79, ../_sass/layout/_layout.scss */
+article > header h1 {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0 0 .3em;
+}
+/* line 85, ../_sass/layout/_layout.scss */
+article > header p {
+  font-size: 15px;
+  margin: 0;
+}
+/* line 90, ../_sass/layout/_layout.scss */
+article > header em {
+  font-size: 1.08em;
+  color: white;
+  font-style: normal;
+  letter-spacing: .03em;
 }
 
 /* line 9, ../_sass/main.scss */
@@ -183,3 +276,25 @@ body {
 #wrapper, body > footer {
   font-size: 1.2em;
 }
+
+/* line 18, ../_sass/main.scss */
+h1, h2, h3, h4, h5, h6, p, div, li {
+  line-height: 1.5em;
+}
+
+/* line 22, ../_sass/main.scss */
+a, a:visited {
+  color: #00BD9A;
+}
+
+/* line 26, ../_sass/main.scss */
+article li {
+  margin: .4em 0 0;
+}
+
+/* line 30, ../_sass/main.scss */
+.bigger {
+  font-size: 14px;
+}
+
+/* transition: all 0.2s linear 0s; */

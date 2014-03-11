@@ -6,7 +6,8 @@ body {
 }
 
 #wrapper {
-  @include background-image(linear-gradient(left, $mainBgColor, $mainBgColor 640px, $columnBgColor 640px, $columnBgColor 100%));
+  @include background-image(linear-gradient(left, $mainBgColor,
+    $mainBgColor 640px, $footerBgColor 640px, $footerBgColor 100%));
 }
 
 main {
@@ -22,11 +23,76 @@ main {
 
 main > article {
   display: table-cell;
+  vertical-align: top;
   width: $contentWidth / 3 * 2;
+
+  > div {
+    padding: 0 $commonPadding;
+  }
 }
 
 main > aside {
+  color: darken($mainBgColor, 40%);
   display: table-cell;
+  padding-top: 2em;
+  vertical-align: top;
   width: $contentWidth - ($contentWidth / 3 * 2);
+
+  h3 {
+    background-color: rgba(255, 255, 255, .2);
+    font-family: Helvetica;
+    font-size: 1.16em;
+    font-weight: normal;
+    letter-spacing: .15em;
+    line-height: 1em;
+    margin: 1em 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    span {
+      background-color: $footerBgColor;
+      color: #ddd;
+      padding: 0 1em;
+      position: relative;
+      top: 1px;
+    }
+  }
+
+  h3, > div {
+    margin-left: $commonPadding;
+    margin-right: $commonPadding;
+  }
+}
+
+article > header {
+  background-color: $green2;
+  color: rgba($mainBgColor, .95);
+  // Varela+Round|Alef:400,700|Voces|Alegreya+Sans:400,700|Montserrat:400,700
+  font-family: "Voces";
+  margin-bottom: $commonPadding;
+  padding: $commonPadding;
+
+  h1 {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0 0 .3em;
+  }
+
+  p {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  em {
+    font-size: 1.08em;
+    color: rgba($mainBgColor, 1);
+    font-style: normal;
+   // font-weight: bold;
+    letter-spacing: .03em;
+  }
 }
   

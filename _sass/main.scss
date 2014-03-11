@@ -14,3 +14,21 @@ body {
 #wrapper, body > footer {
   font-size: $fontSize;
 }
+
+h1, h2, h3, h4, h5, h6, p, div, li {
+  line-height: $lineHeight;
+}
+
+a, a:visited {
+  color: #00BD9A;
+}
+
+article li {
+  margin: .4em 0 0;
+}
+
+.bigger {
+  font-size: 14px;
+}
+
+/* transition: all 0.2s linear 0s; */
