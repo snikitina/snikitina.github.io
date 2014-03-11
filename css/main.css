@@ -1,3 +1,65 @@
+/* line 3, ../_sass/_utilities.scss */
+.clearfix {
+  *zoom: 1;
+}
+/* line 22, ../../../../../usr/local/Cellar/ruby193/1.9.3-p545/lib/ruby/gems/1.9.1/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/* line 1, ../_sass/layout/_header.scss */
+#wrapper > header {
+  *zoom: 1;
+  background-color: #f0f0f0;
+  padding: 1em 0;
+}
+/* line 22, ../../../../../usr/local/Cellar/ruby193/1.9.3-p545/lib/ruby/gems/1.9.1/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#wrapper > header:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 7, ../_sass/layout/_header.scss */
+#wrapper > header h1 {
+  float: left;
+  margin: 0;
+}
+/* line 12, ../_sass/layout/_header.scss */
+#wrapper > header nav {
+  float: right;
+}
+/* line 16, ../_sass/layout/_header.scss */
+#wrapper > header nav ul {
+  *zoom: 1;
+}
+/* line 22, ../../../../../usr/local/Cellar/ruby193/1.9.3-p545/lib/ruby/gems/1.9.1/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#wrapper > header nav ul:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 20, ../_sass/layout/_header.scss */
+#wrapper > header nav li {
+  display: block;
+  float: left;
+  margin-left: 1em;
+}
+/* line 27, ../_sass/layout/_header.scss */
+#wrapper > header a {
+  text-decoration: none;
+}
+
 /* line 3, ../_sass/layout/_footer.scss */
 html, body, #wrapper {
   height: 100%;
@@ -22,17 +84,102 @@ body > #wrapper {
 
 /* line 22, ../_sass/layout/_footer.scss */
 body > footer {
-  background-color: #aaa;
+  *zoom: 1;
+  background-color: #444444;
+  color: white;
   height: 5em;
 }
+/* line 22, ../../../../../usr/local/Cellar/ruby193/1.9.3-p545/lib/ruby/gems/1.9.1/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+body > footer:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 28, ../_sass/layout/_footer.scss */
+body > footer aside {
+  float: left;
+}
+/* line 32, ../_sass/layout/_footer.scss */
+body > footer small {
+  font-size: 1em;
+}
+/* line 36, ../_sass/layout/_footer.scss */
+body > footer nav {
+  float: right;
+}
+/* line 39, ../_sass/layout/_footer.scss */
+body > footer nav li {
+  float: left;
+  list-style-type: none;
+  margin-left: 1em;
+}
+/* line 46, ../_sass/layout/_footer.scss */
+body > footer a {
+  text-decoration: none;
+}
+/* line 49, ../_sass/layout/_footer.scss */
+body > footer a, body > footer a:visited {
+  color: white;
+}
 
-/* line 3, ../_sass/main.scss */
+/* line 4, ../_sass/layout/_layout.scss */
 body {
-  background: #ddd;
+  background: #f0f0f0;
+}
+
+/* line 8, ../_sass/layout/_layout.scss */
+#wrapper {
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(640px, #ffffff), color-stop(640px, #dddddd), color-stop(100%, #dddddd));
+  background-image: -webkit-linear-gradient(left, #ffffff, #ffffff 640px, #dddddd 640px, #dddddd 100%);
+  background-image: -moz-linear-gradient(left, #ffffff, #ffffff 640px, #dddddd 640px, #dddddd 100%);
+  background-image: -o-linear-gradient(left, #ffffff, #ffffff 640px, #dddddd 640px, #dddddd 100%);
+  background-image: linear-gradient(left, #ffffff, #ffffff 640px, #dddddd 640px, #dddddd 100%);
+}
+
+/* line 12, ../_sass/layout/_layout.scss */
+main {
+  *zoom: 1;
+  display: table;
+}
+/* line 22, ../../../../../usr/local/Cellar/ruby193/1.9.3-p545/lib/ruby/gems/1.9.1/gems/compass-0.12.3/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+main:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/* line 17, ../_sass/layout/_layout.scss */
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+}
+
+/* line 23, ../_sass/layout/_layout.scss */
+main > article {
+  display: table-cell;
+  width: 640px;
+}
+
+/* line 28, ../_sass/layout/_layout.scss */
+main > aside {
+  display: table-cell;
+  width: 320px;
+}
+
+/* line 9, ../_sass/main.scss */
+body {
+  font-family: "Lucida Grande", sans-serif;
   font-size: 62.5%;
 }
 
-/* line 8, ../_sass/main.scss */
-#wrapper {
+/* line 14, ../_sass/main.scss */
+#wrapper, body > footer {
   font-size: 1.2em;
 }

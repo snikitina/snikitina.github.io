@@ -20,6 +20,34 @@ body > #wrapper {
 }
 
 body > footer {
-  background-color: #aaa;
+  @include legacy-pie-clearfix;
+  background-color: $footerBgColor;
+  color: $mainBgColor;
   height: $footerHeight;
+
+  aside {
+    float: left;
+  }
+
+  small {
+    font-size: 1em;
+  }
+
+  nav {
+    float: right;
+
+    li {
+      float: left;
+      list-style-type: none;
+      margin-left: 1em;
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    &, &:visited {
+      color: $mainBgColor;
+    }
+  }
 }

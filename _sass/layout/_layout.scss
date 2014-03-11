@@ -1,3 +1,32 @@
 @import "layout/header";
 @import "layout/footer";
+
+body {
+  background: $bodyBgColor;
+}
+
+#wrapper {
+  @include background-image(linear-gradient(left, $mainBgColor, $mainBgColor 640px, $columnBgColor 640px, $columnBgColor 100%));
+}
+
+main {
+  @include legacy-pie-clearfix;
+  display: table;
+}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  width: $contentWidth;
+}
+
+main > article {
+  display: table-cell;
+  width: $contentWidth / 3 * 2;
+}
+
+main > aside {
+  display: table-cell;
+  width: $contentWidth - ($contentWidth / 3 * 2);
+}
   

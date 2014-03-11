@@ -1,0 +1,30 @@
+#wrapper > header {
+
+  @include legacy-pie-clearfix;
+  background-color: $bodyBgColor;
+  padding: 1em 0;
+
+  h1 {
+    float: left;
+    margin: 0;
+  }
+
+  nav {
+
+    float: right;
+
+    ul {
+      @include legacy-pie-clearfix;
+    }
+
+    li {
+      display: block;
+      float: left;
+      margin-left: 1em;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

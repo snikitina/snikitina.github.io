@@ -1,10 +1,16 @@
+@import "compass";
+
+@import "setup";
+@import "utilities";
 @import "layout/layout";
 
+$headerColor: #0090D2;
+
 body {
-	background: #ddd;
+  font-family: $fontFamily;
   font-size: 62.5%;
 }
 
-#wrapper {
-  font-size: 1.2em;
+#wrapper, body > footer {
+  font-size: $fontSize;
 }
