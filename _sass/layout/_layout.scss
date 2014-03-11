@@ -23,6 +23,7 @@ main {
 
 main > article {
   display: table-cell;
+  padding-bottom: $commonPadding;
   vertical-align: top;
   width: $contentWidth / 3 * 2;
 
@@ -34,6 +35,7 @@ main > article {
 main > aside {
   color: darken($mainBgColor, 40%);
   display: table-cell;
+  padding-bottom: $commonPadding;
   padding-top: 2em;
   vertical-align: top;
   width: $contentWidth - ($contentWidth / 3 * 2);
@@ -62,9 +64,14 @@ main > aside {
     }
   }
 
-  h3, > div {
+  > div {
     margin-left: $commonPadding;
     margin-right: $commonPadding;
+  }
+
+  h3 {
+    margin-left: $commonPadding / 1.16;
+    margin-right: $commonPadding / 1.16;
   }
 }
 
@@ -91,7 +98,6 @@ article > header {
     font-size: 1.08em;
     color: rgba($mainBgColor, 1);
     font-style: normal;
-   // font-weight: bold;
     letter-spacing: .03em;
   }
 }

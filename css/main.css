@@ -193,23 +193,25 @@ main:after {
 /* line 24, ../_sass/layout/_layout.scss */
 main > article {
   display: table-cell;
+  padding-bottom: 1.5em;
   vertical-align: top;
   width: 640px;
 }
-/* line 29, ../_sass/layout/_layout.scss */
+/* line 30, ../_sass/layout/_layout.scss */
 main > article > div {
   padding: 0 1.5em;
 }
 
-/* line 34, ../_sass/layout/_layout.scss */
+/* line 35, ../_sass/layout/_layout.scss */
 main > aside {
   color: #999999;
   display: table-cell;
+  padding-bottom: 1.5em;
   padding-top: 2em;
   vertical-align: top;
   width: 320px;
 }
-/* line 41, ../_sass/layout/_layout.scss */
+/* line 43, ../_sass/layout/_layout.scss */
 main > aside h3 {
   background-color: rgba(255, 255, 255, 0.2);
   font-family: Helvetica;
@@ -221,11 +223,11 @@ main > aside h3 {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 52, ../_sass/layout/_layout.scss */
+/* line 54, ../_sass/layout/_layout.scss */
 main > aside h3:first-child {
   margin-top: 0;
 }
-/* line 56, ../_sass/layout/_layout.scss */
+/* line 58, ../_sass/layout/_layout.scss */
 main > aside h3 span {
   background-color: #202020;
   color: #ddd;
@@ -233,13 +235,18 @@ main > aside h3 span {
   position: relative;
   top: 1px;
 }
-/* line 65, ../_sass/layout/_layout.scss */
-main > aside h3, main > aside > div {
+/* line 67, ../_sass/layout/_layout.scss */
+main > aside > div {
   margin-left: 1.5em;
   margin-right: 1.5em;
 }
+/* line 72, ../_sass/layout/_layout.scss */
+main > aside h3 {
+  margin-left: 1.2931em;
+  margin-right: 1.2931em;
+}
 
-/* line 71, ../_sass/layout/_layout.scss */
+/* line 78, ../_sass/layout/_layout.scss */
 article > header {
   background-color: #00bd9a;
   color: rgba(255, 255, 255, 0.95);
@@ -247,18 +254,18 @@ article > header {
   margin-bottom: 1.5em;
   padding: 1.5em;
 }
-/* line 79, ../_sass/layout/_layout.scss */
+/* line 86, ../_sass/layout/_layout.scss */
 article > header h1 {
   font-size: 20px;
   font-weight: normal;
   margin: 0 0 .3em;
 }
-/* line 85, ../_sass/layout/_layout.scss */
+/* line 92, ../_sass/layout/_layout.scss */
 article > header p {
   font-size: 15px;
   margin: 0;
 }
-/* line 90, ../_sass/layout/_layout.scss */
+/* line 97, ../_sass/layout/_layout.scss */
 article > header em {
   font-size: 1.08em;
   color: white;
@@ -298,3 +305,80 @@ article li {
 }
 
 /* transition: all 0.2s linear 0s; */
+/* line 35, ../_sass/main.scss */
+#recent-projects {
+  text-align: center;
+}
+/* line 38, ../_sass/main.scss */
+#recent-projects ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 44, ../_sass/main.scss */
+#recent-projects li {
+  display: block;
+  margin: 0 0 1.5em;
+  padding: 0;
+  /* just for testing */
+}
+/* line 49, ../_sass/main.scss */
+#recent-projects li a {
+  display: block;
+  height: 170px;
+  overflow: hidden;
+  position: relative;
+  width: 284px;
+}
+/* line 59, ../_sass/main.scss */
+#recent-projects li a:after {
+  border: 6px solid rgba(0, 0, 0, 0.4);
+  content: "";
+  display: block;
+  height: 158px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 272px;
+}
+/* line 71, ../_sass/main.scss */
+#recent-projects li:first-child img {
+  position: relative;
+  top: -73px;
+}
+/* line 76, ../_sass/main.scss */
+#recent-projects li:nth-child(2) img {
+  left: -223px;
+  position: relative;
+  top: -73px;
+}
+/* line 82, ../_sass/main.scss */
+#recent-projects li:nth-child(3) img {
+  left: -40px;
+  position: relative;
+  top: -14px;
+}
+/* line 89, ../_sass/main.scss */
+#recent-projects .button {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+/* line 95, ../_sass/main.scss */
+.button {
+  background-color: #00bd9a;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 1.16em;
+  padding: .5em 1em;
+  text-align: center;
+  text-decoration: none;
+}
+/* line 104, ../_sass/main.scss */
+.button, .button:visited {
+  color: white;
+}

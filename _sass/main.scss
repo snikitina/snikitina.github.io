@@ -32,3 +32,77 @@ article li {
 }
 
 /* transition: all 0.2s linear 0s; */
+#recent-projects {
+  text-align: center;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: block;
+    margin: 0 0 $commonPadding;
+    padding: 0;
+
+    a {
+      display: block;
+      height: 170px;
+      overflow: hidden;
+      position: relative;
+      width: 284px;
+    }
+
+    $projectBorderWidth: 6px;
+
+    a:after {
+      border: $projectBorderWidth solid rgba(#000, .4);
+      content: "";
+      display: block;
+      height: 170px - 2 * $projectBorderWidth;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 284px - 2 * $projectBorderWidth;
+    }
+
+    /* just for testing */
+    &:first-child img {
+      position: relative;
+      top: -73px;
+    }
+
+    &:nth-child(2) img {
+      left: -223px;
+      position: relative;
+      top: -73px; 
+    }
+
+    &:nth-child(3) img {
+      left: -40px;
+      position: relative;
+      top: -14px; 
+    }
+  }
+
+  .button {
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+}
+
+.button {
+  background-color: $green2;
+  @include border-radius(2px);
+  display: inline-block;
+  font-size: 1.16em;
+  padding: .5em 1em;
+  text-align: center;
+  text-decoration: none;
+
+  &, &:visited {
+    color: $mainBgColor;
+  }
+}
+
