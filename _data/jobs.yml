@@ -1,0 +1,23 @@
+- title: "Web-designer and Python programmer"
+  company: "CZ.NIC domain registry"
+  location: "Prague, Czech Republic"
+  started: 2009-04-01
+  finished: 2012-07-01
+  responsibilites:
+  - Develop the front-ends of alpha and beta versions of <a href="http://www.mojeid.cz/">mojeID</a> — an OpenID provider service
+  - Design and develop the front and back-end of <a href="http://www.nic.cz/dnssectests/">DNSSEC hardware tester</a> service — an overview of DNSSEC compatible devices
+  - Extend the existing CMS to use new types of content, e.g. implement solutions for conference registration (<a href="http://www.nic.cz/it10/">IT10</a>, <a href="http://www.nic.cz/it09/">IT9</a>) and landing pages (<a href="http://www.dnssec-validator.cz/">DNSSEC Validator</a>)
+  - Design and develop front-end solutions for the whole range of CZ.NIC’s public and internal services
+  - Create email newsletter templates
+
+- title: "Front-end web-developer"
+  company: "Embria"
+  location: "Saint-Petersburg, Russia"
+  started: 2008-10-01
+  finished: 2009-03-01
+  responsibilites:
+  - Developed part of the front-end of the social network <a href="http://www.fotostrana.ru/">fotostrana.ru</a>, including promo and landing pages
+  - Developed widgets and a messenger application for the social network <a href="http://www.fotostrana.ru/">fotostrana.ru</a> utilizing jQuery framework
+  - Created wireframes and prototypes
+  - Designed web pages
+  - Developed XHTML/CSS web pages for <a href="http://www.rusim.ru/">rusim.ru</a> and <a href="http://www.semrush.com/">semrush.com</a>
