@@ -1,6 +1,5 @@
 $headerFontSize: 3em;
-$navFontSize: 1em;//.16em;
-
+$headerNavFontSize: 1em;
 
 #wrapper > header {
 
@@ -13,29 +12,29 @@ $navFontSize: 1em;//.16em;
     font-family: "Montez", cursive;
     font-size: $headerFontSize;
     left: -.1em;
-    margin: 0 ($fontSize / $headerFontSize * $commonPadding);
+    margin: 0 $commonPadding;
     position: relative;
   }
 
   nav {
 
     float: right;
-    font-size: $navFontSize;
+    font-size: $headerNavFontSize;
     font-weight: bold;
     letter-spacing: .08em;
-    margin-right: ($fontSize / $navFontSize * 1em);
+    margin-right: $commonPadding;
     text-transform: uppercase;
 
     ul {
       @include legacy-pie-clearfix;
-      margin: ($headerFontSize - $navFontSize) / 2em * $lineHeight 0 0;
+      margin: ($headerFontSize - $headerNavFontSize) / 2em * $lineHeight 0 0;
       padding: 0;
     }
 
     li {
       display: block;
       float: left;
-      margin-left: ($fontSize / $navFontSize * 1em);
+      margin-left: ($fontSize / $headerNavFontSize * 1em);
     }
 
     a, a:visited {

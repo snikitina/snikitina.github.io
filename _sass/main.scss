@@ -31,6 +31,26 @@ article li {
   font-size: 14px;
 }
 
+h2 {
+  color: $green2;
+  font-family: "Voces";
+  font-size: 20px * 1.08;
+  font-weight: normal;
+  letter-spacing: .03em;
+}
+
+article h3 {
+  font-family: "Voces";
+  font-size: 16px;
+  margin-bottom: .5em;
+}
+
+h4 {
+  color: $green2;
+  font-size: 14px;
+  margin: 0 0 .5em;
+}
+
 /* transition: all 0.2s linear 0s; */
 #recent-projects {
   text-align: center;
@@ -54,7 +74,7 @@ article li {
       width: 284px;
     }
 
-    $projectBorderWidth: 6px;
+    $projectBorderWidth: 4px;
 
     a:after {
       border: $projectBorderWidth solid rgba(#000, .4);
@@ -67,22 +87,32 @@ article li {
       width: 284px - 2 * $projectBorderWidth;
     }
 
+    img {
+      @include scale(0.5);
+    }
+
     /* just for testing */
     &:first-child img {
       position: relative;
-      top: -73px;
+      //top: -73px;
+      top: -261px;
+      left: -360px;
     }
 
     &:nth-child(2) img {
-      left: -223px;
+      //left: -223px;
       position: relative;
-      top: -73px; 
+      //top: -73px; 
+      left: -455px;
+      top: -260px;
     }
 
     &:nth-child(3) img {
-      left: -40px;
+      //left: -40px;
       position: relative;
-      top: -14px; 
+      //top: -14px; 
+      left: -280px;
+      top: -186px;
     }
   }
 
@@ -92,6 +122,8 @@ article li {
   }
 }
 
+#qualifications {}
+
 .button {
   background-color: $green2;
   @include border-radius(2px);
@@ -100,9 +132,14 @@ article li {
   padding: .5em 1em;
   text-align: center;
   text-decoration: none;
+  transition: all 0.2s linear 0s;
 
   &, &:visited {
     color: $mainBgColor;
+  }
+
+  &:hover {
+    background-color: darken($green2, 10%);
   }
 }
 

@@ -4,4 +4,67 @@ title: Resume
 permalink: /resume/
 ---
 
-<p>Resume</p>
+<article>
+  <header><h1><em>Resume</em></h1></header>
+  <div>
+    
+    <section>
+      <h3>Professional Experience</h3>
+      <ul class="no-bullets">
+        {% for job in site.data.jobs %}
+          <li>
+            <h4>{{ job.title }}</h4>
+            <div class="resume-item-data">
+              <strong>{{ job.company }}</strong>
+              <em>{{ job.location }}</em>
+              <span>{{ job.started|date:"%b, %Y" }} &mdash; {{ job.finished|date:"%b, %Y" }}</span>
+            </div>
+            <div class="resume-item-desc">
+              <ul class="no-bullets">
+                {% for resp in job.responsibilites %}
+                  <li>{{ resp }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+    <section>
+      <h3>Education</h3>
+      <ul class="no-bullets">
+        {% for item in site.data.education %}
+          <li>
+            <h4>{{ item.title }}</h4>
+            <div class="resume-item-data">
+              <strong>{{ item.uni }}</strong>
+              <em>{{ item.location }}</em>
+              <span>{{ item.started|date:"%b, %Y" }} &mdash; {{ item.finished|date:"%b %Y" }}</span>
+            </div>
+            <div class="resume-item-desc">
+              <ul class="no-bullets">
+                {% for desc in item.description %}
+                  <li>{{ desc }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  </div>
+</article>
+<aside>
+  <h3><span>PDF Version</span></h3>
+  <div>My resume is also available in PDF format.</div><br />
+  <div style="text-align: center;">
+    <a href="#" class="button">Download PDF version</a>
+  </div>
+  <br />
+  <h3><span>Contact</span></h3>
+  <div>
+    <p><a href="#">s.a.nikitina [at] gmail.com</a></p>
+    <p><a href="#">s.a.nikitina</a></p>
+    <p><a href="#">Linkedin</a></p>
+  </div>
+</aside>

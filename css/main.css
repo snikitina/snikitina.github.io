@@ -12,7 +12,13 @@
   visibility: hidden;
 }
 
-/* line 5, ../_sass/layout/_header.scss */
+/* line 7, ../_sass/_utilities.scss */
+.no-bullets {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* line 4, ../_sass/layout/_header.scss */
 #wrapper > header {
   *zoom: 1;
   background-color: #f0f0f0;
@@ -27,25 +33,25 @@
   overflow: hidden;
   visibility: hidden;
 }
-/* line 11, ../_sass/layout/_header.scss */
+/* line 10, ../_sass/layout/_header.scss */
 #wrapper > header h1 {
   float: left;
   font-family: "Montez", cursive;
   font-size: 3em;
   left: -.1em;
-  margin: 0 0.6em;
+  margin: 0 18px;
   position: relative;
 }
-/* line 20, ../_sass/layout/_header.scss */
+/* line 19, ../_sass/layout/_header.scss */
 #wrapper > header nav {
   float: right;
   font-size: 1em;
   font-weight: bold;
   letter-spacing: .08em;
-  margin-right: 1.2em;
+  margin-right: 18px;
   text-transform: uppercase;
 }
-/* line 29, ../_sass/layout/_header.scss */
+/* line 28, ../_sass/layout/_header.scss */
 #wrapper > header nav ul {
   *zoom: 1;
   margin: 1.5em 0 0;
@@ -60,21 +66,21 @@
   overflow: hidden;
   visibility: hidden;
 }
-/* line 35, ../_sass/layout/_header.scss */
+/* line 34, ../_sass/layout/_header.scss */
 #wrapper > header nav li {
   display: block;
   float: left;
   margin-left: 1.2em;
 }
-/* line 41, ../_sass/layout/_header.scss */
+/* line 40, ../_sass/layout/_header.scss */
 #wrapper > header nav a, #wrapper > header nav a:visited {
   color: #535353;
 }
-/* line 46, ../_sass/layout/_header.scss */
+/* line 45, ../_sass/layout/_header.scss */
 #wrapper > header a {
   text-decoration: none;
 }
-/* line 49, ../_sass/layout/_header.scss */
+/* line 48, ../_sass/layout/_header.scss */
 #wrapper > header a, #wrapper > header a:visited {
   color: #202020;
 }
@@ -119,12 +125,12 @@ body > footer:after {
 }
 /* line 28, ../_sass/layout/_footer.scss */
 body > footer .content {
-  padding-top: 1.5em;
+  padding-top: 18px;
 }
 /* line 32, ../_sass/layout/_footer.scss */
 body > footer aside {
   float: left;
-  margin-left: 1.5em;
+  margin-left: 18px;
 }
 /* line 37, ../_sass/layout/_footer.scss */
 body > footer small {
@@ -133,7 +139,7 @@ body > footer small {
 /* line 41, ../_sass/layout/_footer.scss */
 body > footer nav {
   float: right;
-  margin-right: 1.5em;
+  margin-right: 18px;
 }
 /* line 45, ../_sass/layout/_footer.scss */
 body > footer nav ul {
@@ -193,20 +199,20 @@ main:after {
 /* line 24, ../_sass/layout/_layout.scss */
 main > article {
   display: table-cell;
-  padding-bottom: 1.5em;
+  padding-bottom: 18px;
   vertical-align: top;
   width: 640px;
 }
 /* line 30, ../_sass/layout/_layout.scss */
 main > article > div {
-  padding: 0 1.5em;
+  padding: 0 18px;
 }
 
 /* line 35, ../_sass/layout/_layout.scss */
 main > aside {
   color: #999999;
   display: table-cell;
-  padding-bottom: 1.5em;
+  padding-bottom: 18px;
   padding-top: 2em;
   vertical-align: top;
   width: 320px;
@@ -237,13 +243,13 @@ main > aside h3 span {
 }
 /* line 67, ../_sass/layout/_layout.scss */
 main > aside > div {
-  margin-left: 1.5em;
-  margin-right: 1.5em;
+  margin-left: 18px;
+  margin-right: 18px;
 }
 /* line 72, ../_sass/layout/_layout.scss */
 main > aside h3 {
-  margin-left: 1.2931em;
-  margin-right: 1.2931em;
+  margin-left: 15.51724px;
+  margin-right: 15.51724px;
 }
 
 /* line 78, ../_sass/layout/_layout.scss */
@@ -251,19 +257,19 @@ article > header {
   background-color: #00bd9a;
   color: rgba(255, 255, 255, 0.95);
   font-family: "Voces";
-  margin-bottom: 1.5em;
-  padding: 1.5em;
+  margin-bottom: 18px;
+  padding: 18px;
 }
 /* line 86, ../_sass/layout/_layout.scss */
 article > header h1 {
   font-size: 20px;
   font-weight: normal;
-  margin: 0 0 .3em;
+  margin: 0;
 }
 /* line 92, ../_sass/layout/_layout.scss */
 article > header p {
   font-size: 15px;
-  margin: 0;
+  margin: .5em 0 0;
 }
 /* line 97, ../_sass/layout/_layout.scss */
 article > header em {
@@ -304,25 +310,48 @@ article li {
   font-size: 14px;
 }
 
+/* line 34, ../_sass/main.scss */
+h2 {
+  color: #00bd9a;
+  font-family: "Voces";
+  font-size: 21.6px;
+  font-weight: normal;
+  letter-spacing: .03em;
+}
+
+/* line 42, ../_sass/main.scss */
+article h3 {
+  font-family: "Voces";
+  font-size: 16px;
+  margin-bottom: .5em;
+}
+
+/* line 48, ../_sass/main.scss */
+h4 {
+  color: #00bd9a;
+  font-size: 14px;
+  margin: 0 0 .5em;
+}
+
 /* transition: all 0.2s linear 0s; */
-/* line 35, ../_sass/main.scss */
+/* line 55, ../_sass/main.scss */
 #recent-projects {
   text-align: center;
 }
-/* line 38, ../_sass/main.scss */
+/* line 58, ../_sass/main.scss */
 #recent-projects ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 44, ../_sass/main.scss */
+/* line 64, ../_sass/main.scss */
 #recent-projects li {
   display: block;
-  margin: 0 0 1.5em;
+  margin: 0 0 18px;
   padding: 0;
   /* just for testing */
 }
-/* line 49, ../_sass/main.scss */
+/* line 69, ../_sass/main.scss */
 #recent-projects li a {
   display: block;
   height: 170px;
@@ -330,41 +359,50 @@ article li {
   position: relative;
   width: 284px;
 }
-/* line 59, ../_sass/main.scss */
+/* line 79, ../_sass/main.scss */
 #recent-projects li a:after {
-  border: 6px solid rgba(0, 0, 0, 0.4);
+  border: 4px solid rgba(0, 0, 0, 0.4);
   content: "";
   display: block;
-  height: 158px;
+  height: 162px;
   left: 0;
   position: absolute;
   top: 0;
-  width: 272px;
+  width: 276px;
 }
-/* line 71, ../_sass/main.scss */
+/* line 90, ../_sass/main.scss */
+#recent-projects li img {
+  -webkit-transform: scale(0.5, 0.5);
+  -moz-transform: scale(0.5, 0.5);
+  -ms-transform: scale(0.5, 0.5);
+  -o-transform: scale(0.5, 0.5);
+  transform: scale(0.5, 0.5);
+}
+/* line 95, ../_sass/main.scss */
 #recent-projects li:first-child img {
   position: relative;
-  top: -73px;
+  top: -261px;
+  left: -360px;
 }
-/* line 76, ../_sass/main.scss */
+/* line 102, ../_sass/main.scss */
 #recent-projects li:nth-child(2) img {
-  left: -223px;
   position: relative;
-  top: -73px;
+  left: -455px;
+  top: -260px;
 }
-/* line 82, ../_sass/main.scss */
+/* line 110, ../_sass/main.scss */
 #recent-projects li:nth-child(3) img {
-  left: -40px;
   position: relative;
-  top: -14px;
+  left: -280px;
+  top: -186px;
 }
-/* line 89, ../_sass/main.scss */
+/* line 119, ../_sass/main.scss */
 #recent-projects .button {
   padding-left: 4em;
   padding-right: 4em;
 }
 
-/* line 95, ../_sass/main.scss */
+/* line 127, ../_sass/main.scss */
 .button {
   background-color: #00bd9a;
   -webkit-border-radius: 2px;
@@ -377,8 +415,13 @@ article li {
   padding: .5em 1em;
   text-align: center;
   text-decoration: none;
+  transition: all 0.2s linear 0s;
 }
-/* line 104, ../_sass/main.scss */
+/* line 137, ../_sass/main.scss */
 .button, .button:visited {
   color: white;
+}
+/* line 141, ../_sass/main.scss */
+.button:hover {
+  background-color: #008a70;
 }

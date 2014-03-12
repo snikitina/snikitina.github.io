@@ -3,3 +3,8 @@
 .clearfix {
   @include legacy-pie-clearfix;
 }
+
+.no-bullets {
+  list-style-type: none;
+  padding: 0;
+}
