@@ -2,6 +2,7 @@
 
 @import "setup";
 @import "utilities";
+@import "icomoon";
 @import "layout/layout";
 
 $headerColor: #0090D2;
@@ -20,7 +21,12 @@ h1, h2, h3, h4, h5, h6, p, div, li {
 }
 
 a, a:visited {
-  color: #00BD9A;
+  color: $green2;
+  transition: all 0.2s linear 0s;
+
+  &:not(.button):hover {
+    color: darken($green2, 10%);
+  }
 }
 
 article li {
@@ -41,14 +47,56 @@ h2 {
 
 article h3 {
   font-family: "Voces";
-  font-size: 16px;
+  font-size: 18px;
+  //font-weight: normal;
   margin-bottom: .5em;
 }
 
 h4 {
-  color: $green2;
+  //color: $green2;
+  //color: #777;
   font-size: 14px;
+  //font-weight: normal;
   margin: 0 0 .5em;
+}
+
+.resume-item-data {
+  color: #777;
+  margin-bottom: .75em;
+
+  strong {
+    color: $green2;
+  }
+
+  em {
+    border-left: 1px solid #bbb;
+    font-style: normal;
+    margin-left: .5em;
+    padding-left: .75em;
+  }
+
+  span {
+    border-left: 1px solid #bbb;
+    font-style: normal;
+    margin-left: .5em;
+    padding-left: .75em;
+  }
+}
+
+#resume {
+
+  section {
+    margin-bottom: 2em;
+  }
+
+  section > ul > li {
+    margin-bottom: 1.5em;
+  }
+
+  section ul ul {
+    list-style-type: disc;
+    padding-left: 2em;
+  }
 }
 
 /* transition: all 0.2s linear 0s; */
@@ -122,7 +170,43 @@ h4 {
   }
 }
 
-#qualifications {}
+#qualifications {
+  font-size: 14px;
+
+  ul {
+    padding-left: 1.7em;
+  }
+
+}
+
+.contact-list {
+
+  [class^="icon-"], [class*=" icon-"] {
+
+    &:before {
+      //color: #999;//$green2;
+      font-size: 18px;
+      margin-right: .6em;
+      vertical-align: middle;
+    }
+  }
+
+  li {
+    line-height: 2em;
+  }
+}
+
+aside .contact-list {
+  font-size: 13px;
+
+  li {
+    line-height: 2em;
+  }
+}
+
+#qualifications .contact-list {
+  padding-left: .4em;
+}
 
 .button {
   background-color: $green2;

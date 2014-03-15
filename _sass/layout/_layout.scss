@@ -69,10 +69,16 @@ main > aside {
     margin-right: $commonPadding;
   }
 
-  h3 {
+  > h3 {
     margin-left: $commonPadding / 1.16;
     margin-right: $commonPadding / 1.16;
   }
+}
+
+#resume-aside {
+  position: fixed;
+  top: (4em + 3em * $lineHeight / 1em) * $fontSize / 1em / 1em * 10px;//3 * $commonPadding + 3em * $fontSize * $lineHeight / 1em / 1em / 1em * 10px;
+  width: $contentWidth - ($contentWidth / 3 * 2) - 2 * $commonPadding;
 }
 
 article > header {
