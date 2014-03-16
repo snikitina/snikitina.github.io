@@ -2,30 +2,22 @@
 
 @import "setup";
 @import "utilities";
+@import "reset";
 @import "icomoon";
 @import "layout/layout";
+@import "common";
 
-$headerColor: #0090D2;
+@import "pages/index";
+@import "pages/portfolio";
+@import "pages/resume";
 
-body {
-  font-family: $fontFamily;
-  font-size: 62.5%;
-}
-
-#wrapper, body > footer {
-  font-size: $fontSize;
-}
-
-h1, h2, h3, h4, h5, h6, p, div, li {
-  line-height: $lineHeight;
-}
 
 a, a:visited {
-  color: $green2;
+  color: $green;
   transition: all 0.2s linear 0s;
 
   &:not(.button):hover {
-    color: darken($green2, 10%);
+    color: darken($green, 10%);
   }
 }
 
@@ -38,7 +30,7 @@ article li {
 }
 
 h2 {
-  color: $green2;
+  color: $green;
   font-family: "Voces";
   font-size: 20px * 1.08;
   font-weight: normal;
@@ -65,7 +57,7 @@ h4 {
   margin-bottom: .75em;
 
   strong {
-    color: $green2;
+    color: $green;
   }
 
   em {
@@ -80,22 +72,6 @@ h4 {
     font-style: normal;
     margin-left: .5em;
     padding-left: .75em;
-  }
-}
-
-#resume {
-
-  section {
-    margin-bottom: 2em;
-  }
-
-  section > ul > li {
-    margin-bottom: 1.5em;
-  }
-
-  section ul ul {
-    list-style-type: disc;
-    padding-left: 2em;
   }
 }
 
@@ -209,7 +185,7 @@ aside .contact-list {
 }
 
 .button {
-  background-color: $green2;
+  background-color: $green;
   @include border-radius(2px);
   display: inline-block;
   font-size: 1.16em;
@@ -223,7 +199,7 @@ aside .contact-list {
   }
 
   &:hover {
-    background-color: darken($green2, 10%);
+    background-color: darken($green, 10%);
   }
 }
 

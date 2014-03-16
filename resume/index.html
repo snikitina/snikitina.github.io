@@ -1,12 +1,12 @@
 ---
-layout: default
+body_id: resume
+layout: two_columns
 title: Resume
 ---
 
-<article id="resume">
+<article>
   <header><h1><em>Resume</em></h1></header>
   <div>
-    
     <section>
       <h3>Professional Experience</h3>
       <ul class="no-bullets">
@@ -29,6 +29,7 @@ title: Resume
         {% endfor %}
       </ul>
     </section>
+
     <section>
       <h3>Education</h3>
       <ul class="no-bullets">
@@ -51,6 +52,7 @@ title: Resume
         {% endfor %}
       </ul>
     </section>
+
     <section>
       <h3>Applications and Technologies</h3>
       <ul>
@@ -63,6 +65,7 @@ title: Resume
         <li>User experience — MacOS, Linux (Ubuntu), Windows</li>
       </ul>
     </section>
+
     <section>
       <h3>Languages</h3>
       <ul>
@@ -74,21 +77,19 @@ title: Resume
     </section>
   </div>
 </article>
+
 <aside>
   <div id="resume-aside">
-  <h3><span>PDF Version</span></h3>
-  <div>My resume is also available in PDF format.</div><br />
-  <div style="text-align: center;">
-    <a href="#" class="button">Download PDF version</a>
+    <section>
+      <h3><span>PDF Version</span></h3>
+      <p>My resume is also available in PDF format.</p>
+      <div class="button-block">
+        <a href="#" class="button">Download PDF version</a>
+      </div>
+    </section>
+    <section>
+      <h3><span>Contact</span></h3>
+      {% include contact_list.html %}
+    </section>
   </div>
-  <br />
-  <h3><span>Contact</span></h3>
-  <div>
-    <ul class="no-bullets contact-list">
-      <li><span class="icon-mail"></span><a href="mailto:s.a.nikitina@gmail.com">s.a.nikitina [at] gmail.com</a></li>
-      <li><span class="icon-mobile"></span>+61 1234 56789</li>
-      <li><span class="icon-skype"></span><a href="skype:s.a.nikitina">s.a.nikitina</a></li>
-      <li><span class="icon-linkedin"></span><a href="http://www.linkedin.com/in/svetlananikitina">svetlananikitina</a></li>
-    </ul>
-  </div></div>
 </aside>

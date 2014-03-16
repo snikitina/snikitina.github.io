@@ -1,0 +1,62 @@
+#wrapper, body > footer {
+  font-size: $fontSize;
+}
+
+main > article > header {
+  background-color: $green;
+  color: rgba($mainBgColor, .95);
+  font-family: "Voces";
+  margin-bottom: $commonPadding;
+  margin-top: -$commonPadding;
+  padding: $commonPadding;
+
+  h1 {
+    font-size: 1.667em;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  p {
+    font-size: 1.25em;
+    margin: .5em 0 0;
+  }
+
+  em {
+    font-size: 1.08em;
+    color: rgba($mainBgColor, 1);
+    font-style: normal;
+    letter-spacing: .03em;
+  }
+}
+
+main > aside {
+
+  color: darken($mainBgColor, 40%);
+
+  h3 {
+    background-color: rgba($mainBgColor, .2);
+    font-size: 1.1666em;
+    font-weight: normal;
+    letter-spacing: .15em;
+    line-height: 1em;
+    margin: (1 + ($lineHeight - 1) / 2em) * 1em 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:first-child {
+      margin-top: ($lineHeight - 1) / 2;
+    }
+
+    span {
+      background-color: $footerBgColor;
+      color: lighten($footerBgColor, 70%);
+      padding: 0 1em;
+    }
+  }
+}
+
+section:not(:last-child) {
+  margin-bottom: 2.5em;
+}
+
+

@@ -1,18 +1,9 @@
 @import "layout/header";
 @import "layout/footer";
 
+
 body {
   background: $bodyBgColor;
-}
-
-#wrapper {
-  @include background-image(linear-gradient(left, $mainBgColor,
-    $mainBgColor 640px, $footerBgColor 640px, $footerBgColor 100%));
-}
-
-main {
-  @include legacy-pie-clearfix;
-  display: table;
 }
 
 .content {
@@ -21,90 +12,53 @@ main {
   width: $contentWidth;
 }
 
-main > article {
-  display: table-cell;
-  padding-bottom: $commonPadding;
-  vertical-align: top;
-  width: $contentWidth / 3 * 2;
 
-  > div {
-    padding: 0 $commonPadding;
-  }
+/* Default layout with one column ----------------------------------------- */
+#wrapper {
+  background: $mainBgColor;
 }
 
-main > aside {
-  color: darken($mainBgColor, 40%);
-  display: table-cell;
-  padding-bottom: $commonPadding;
-  padding-top: 2em;
-  vertical-align: top;
-  width: $contentWidth - ($contentWidth / 3 * 2);
+main {
 
-  h3 {
-    background-color: rgba(255, 255, 255, .2);
-    font-family: Helvetica;
-    font-size: 1.16em;
-    font-weight: normal;
-    letter-spacing: .15em;
-    line-height: 1em;
-    margin: 1em 0;
-    text-align: center;
-    text-transform: uppercase;
+  > article, > aside {
 
-    &:first-child {
-      margin-top: 0;
-    }
+    padding: $commonPadding 0;
 
-    span {
-      background-color: $footerBgColor;
-      color: #ddd;
-      padding: 0 1em;
-      position: relative;
-      top: 1px;
+    > div, > section {
+      padding: 0 $commonPadding;
     }
   }
-
-  > div {
-    margin-left: $commonPadding;
-    margin-right: $commonPadding;
-  }
-
-  > h3 {
-    margin-left: $commonPadding / 1.16;
-    margin-right: $commonPadding / 1.16;
-  }
 }
 
-#resume-aside {
-  position: fixed;
-  top: (4em + 3em * $lineHeight / 1em) * $fontSize / 1em / 1em * 10px;//3 * $commonPadding + 3em * $fontSize * $lineHeight / 1em / 1em / 1em * 10px;
-  width: $contentWidth - ($contentWidth / 3 * 2) - 2 * $commonPadding;
+
+/* Two-column layout ------------------------------------------------------ */
+.two-columns {
+
+  #wrapper {
+    background-color: transparent; /* Fallback for the browsers that do
+                                      not support CSS3 gradients */
+    @include background-image(linear-gradient(left, $mainBgColor,
+      $mainBgColor 640px, $footerBgColor 640px, $footerBgColor 100%));
+  }
+
+  main {
+    display: table;
+
+    > article, > aside {
+      display: table-cell;
+      vertical-align: top;
+    }
+
+    > article {
+      background-color: $mainBgColor; /* Fallback for the browsers that do
+                                         not support CSS3 gradients */
+      width: $contentWidth / 3 * 2;
+    }
+
+    > aside {
+      background-color: $footerBgColor; /* Fallback for the browsers that do
+                                           not support CSS3 gradients */
+      width: $contentWidth - ($contentWidth / 3 * 2);
+    }
+  }
 }
-
-article > header {
-  background-color: $green2;
-  color: rgba($mainBgColor, .95);
-  // Varela+Round|Alef:400,700|Voces|Alegreya+Sans:400,700|Montserrat:400,700
-  font-family: "Voces";
-  margin-bottom: $commonPadding;
-  padding: $commonPadding;
-
-  h1 {
-    font-size: 20px;
-    font-weight: normal;
-    margin: 0;
-  }
-
-  p {
-    font-size: 15px;
-    margin: .5em 0 0;
-  }
-
-  em {
-    font-size: 1.08em;
-    color: rgba($mainBgColor, 1);
-    font-style: normal;
-    letter-spacing: .03em;
-  }
-}
-  

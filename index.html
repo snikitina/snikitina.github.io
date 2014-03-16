@@ -1,13 +1,15 @@
 ---
-layout: default
+layout: two_columns
 title: Index page
 ---
 
 <article>
+
   <header>
     <h1>Hello. My name is <em>Svetlana Nikitina</em>.</h1>
     <p>I am a <em>front-end</em> web-developer with <em>5 years</em> of experience. I am looking for a full-time position in <em>Sydney</em>, Australia, and I am also considering freelance jobs <em>worldwide</em>.</p>
   </header>
+
   <div id="qualifications">
     <p>My qualifications are:</p>
     <ul>
@@ -21,17 +23,15 @@ title: Index page
       <li>High attention to detail and ability to create pixel-perfect interfaces</li>
     </ul>
     <p class="bigger">Please feel free to contact me:</p>
-    <ul class="no-bullets contact-list">
-      <li><span class="icon-mail"></span><a href="mailto:s.a.nikitina@gmail.com">s.a.nikitina [at] gmail.com</a></li>
-      <li><span class="icon-mobile"></span>+61 1234 56789</li>
-      <li><span class="icon-skype"></span><a href="skype:s.a.nikitina">s.a.nikitina</a></li>
-      <li><span class="icon-linkedin"></span><a href="http://www.linkedin.com/in/svetlananikitina">svetlananikitina</a></li>
-    </ul>
+    {% include contact_list.html %}
   </div>
+
 </article>
+
 <aside>
-  <h3><span>Recent projects</span></h3>
-  <div id="recent-projects">
+
+  <section id="recent-projects">
+    <h3><span>Recent projects</span></h3>
     <ul>
       <li>
         <a href="#">
@@ -50,5 +50,6 @@ title: Index page
       </li>
     </ul>
     <a href="#" class="button">Full portofilo</a>
-  </div>
+  </section>
+
 </aside>

@@ -7,12 +7,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
-    <link href='http://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Esteban|Cambo|Varela+Round|Alef:400,700|Voces|Alegreya+Sans:400,700|Montserrat:400,700|Lusitana:400,700|Arbutus+Slab' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Montez|Voces" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/main.css">
   </head>
-  <body>
+  <body {% if page.extra_body_class %}class="{{ page.extra_body_class }}"{% endif %} {% if page.body_id %}id="{{ page.body_id }}{% endif %}">
     <div id="wrapper" class="content">
 
       {% include header.html %}

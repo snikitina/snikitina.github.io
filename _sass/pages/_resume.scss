@@ -1,0 +1,31 @@
+#resume {
+
+  article {
+
+    section > ul > li {
+      margin-bottom: 1.5em;
+    }
+
+    section ul ul {
+      list-style-type: disc;
+      padding-left: 2em;
+    }
+  }
+}
+
+#resume-aside {
+
+  // uncomment for fixed positioning
+  // position: fixed;
+  // top: (4em + 3em * $lineHeight / 1em) * $fontSize / 1em / 1em * 10px;
+  // width: $contentWidth - ($contentWidth / 3 * 2) - 2 * $commonPadding;
+
+  p {
+    font-size: 1.083em;
+  }
+
+  .button-block {
+    margin-top: 1.5em;
+    text-align: center;
+  }
+}

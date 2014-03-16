@@ -1,5 +1,4 @@
-$footerHeight: 5em;
-
+/* Sticky footer ---------------------------------------------------------- */
 html, body, #wrapper {
   height: 100%;
 }
@@ -21,9 +20,13 @@ body > #wrapper {
 
 body > footer {
   @include legacy-pie-clearfix;
-  background-color: $bodyBgColor;//$footerBgColor;
-  color: lighten($footerBgColor, 20%);
   height: $footerHeight;
+}
+
+/* Footer content --------------------------------------------------------- */
+body > footer {
+  background-color: $bodyBgColor;
+  color: lighten($footerBgColor, 20%);
 
   .content {
     padding-top: $commonPadding;

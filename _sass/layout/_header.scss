@@ -1,7 +1,8 @@
 $headerFontSize: 3em;
 $headerNavFontSize: 1em;
 
-#wrapper > header {
+
+body > div > header {
 
   @include legacy-pie-clearfix;
   background-color: $bodyBgColor;
@@ -21,7 +22,7 @@ $headerNavFontSize: 1em;
     float: right;
     font-size: $headerNavFontSize;
     font-weight: bold;
-    letter-spacing: .08em;
+    letter-spacing: 1px;
     margin-right: $commonPadding;
     text-transform: uppercase;
 
@@ -34,7 +35,7 @@ $headerNavFontSize: 1em;
     li {
       display: block;
       float: left;
-      margin-left: ($fontSize / $headerNavFontSize * 1em);
+      margin-left: 1em;
     }
 
     a, a:visited {

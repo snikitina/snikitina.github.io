@@ -1,0 +1,12 @@
+body {
+  font-family: $fontFamily;
+  font-size: 62.5%;
+}
+
+h1, h2, h3, h4, h5, h6, p, div, li {
+  line-height: $lineHeight;
+}
+
+td, th {
+  vertical-align: top;
+}

@@ -1,17 +1,16 @@
-$mainBgColor: #fff;
 $bodyBgColor: #f0f0f0;
+$mainBgColor: #fff;
 $columnBgColor: #ddd;
 $footerBgColor: #202020;
 
 $textColor: #202020;
-
-$green: #1FAF95;
-$green2: #00BD9A;//#29AF95;
+$green: #00BD9A;
+$darkGreen: darken($green, 10%);
 
 $contentWidth: 960px;
+$commonPadding: 18px;
+$footerHeight: 5em;
 
 $fontSize: 1.2em;
 $fontFamily: "Lucida Grande", sans-serif;
 $lineHeight: 1.5em;
-
-$commonPadding: 18px;
