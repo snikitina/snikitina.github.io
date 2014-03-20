@@ -30,7 +30,12 @@
   - jQuery and jQuery UI, DataTables
   - Django
   thumbnails: 
-  - /img/projects/kiss/hr_924.png
+  - path: /img/projects/kiss/dashboard_thumbnail.png
+    url: /img/projects/kiss/dashboard.png
+    desc: KISS - Employee dashboard
+  - path: /img/projects/kiss/student_thumbnail.png
+    url: /img/projects/kiss/student.png
+    desc: KISS - Student page
 
 - title: snikitina.com
   type: Personal site
