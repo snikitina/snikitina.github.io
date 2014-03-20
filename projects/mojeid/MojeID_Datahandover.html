@@ -1,0 +1,371 @@
+<!DOCTYPE HTML>
+<html><!-- Source is https://mojeid.cz/trust/realm/40/?level=0 -->
+
+    
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+            <meta name="robots" content="NONE,NOARCHIVE" />
+
+            
+            
+        
+            <title>MojeID - Data handover</title>
+        
+            
+        	    <link rel="icon" type="image/png" href="MojeID_files/favicon.png" />
+                <!--[if IE ]><link rel="shortcut icon" type="image/x-icon" href="MojeID_files/favicon.ico" /><![endif]-->
+            
+                
+            
+    
+    <link href="MojeID_files/editor.css" rel="stylesheet" type="text/css" media="screen" />
+    
+        <link href="MojeID_files/mojeid_editor.css" rel="stylesheet" type="text/css" media="screen" />
+    
+    <!--[if IE]><link href="MojeID_files/base_msie.css" rel="stylesheet" type="text/css" media="screen" /><![endif]-->
+
+    
+    
+
+            
+        	<!--[if IE]><link href="MojeID_files/base_msie.css" rel="stylesheet" type="text/css" media="screen" /><![endif]-->
+        
+            <script type="text/javascript" charset="utf-8" src="MojeID_files/MochiKit.js"></script>
+        	<script type="text/javascript" src="MojeID_files/base-1.js"></script>        	
+            <script type="text/javascript" charset="utf-8" src="MojeID_files/new_captcha.js"></script>        
+            
+<script type="text/javascript" src="MojeID_files/trusts.js"></script>
+<script type="text/javascript" src="MojeID_files/changes_validation.js"></script>
+<script type="text/javascript">
+connect(window, "onload", function () {   
+    JsCheckboxes.onLoad(true);
+    JsFileInputs.onLoad();
+    Popup.onLoad();
+    Messages.onLoad();
+    Trusts.onLoad();
+    Changes.onLoad();
+    EventHandlers.onLoad();
+});
+</script>
+        
+        
+            <script type="text/javascript">
+                /* prevent displaying this page in frame */
+                if (top != self) { top.location.replace(self.location.href); }
+            </script>
+        </head>
+        
+        <body id="editor" class="mojeid">
+            
+            <script type="text/javascript">
+            // <![CDATA[
+                document.body.className = document.body.className ? (document.body.className + " js") : "js";      
+            //]]>  
+            </script>
+        
+            
+            <div id="overlay"></div>
+        
+            
+                <div id="outer-wrapper">
+        		    <div id="wrapper">
+                    
+                        
+                            <div id="header" class="clear-fix">
+                                
+                                <h1>
+                                    
+                                	    <a href="/" id="logo"><img src="MojeID_files/small_logo.png" alt="mojeID" /></a>
+                                	
+                                </h1>                            
+                                <ul id="account">                                
+                                    
+                                    
+                                        
+                    				
+                                        
+                    						<li class="first"><a href="/setlang/?language=cs" id="set-language" title="Česky"><img src="MojeID_files/cs.png" alt="Česky" /></a></li>
+                    					
+                    				
+                                
+                                    
+
+    
+	           
+        <li class="username">sveta</li>
+    
+    
+    
+    <li class="support"><a href="/support/">Support</a></li>
+    
+    
+     
+        
+        <li class="logout">
+        
+            <a href="/logout/" id="logout">
+        
+        Log out</a></li>
+    
+    
+                                
+                                </ul>
+                                
+    
+    
+    
+    
+    
+    
+    
+         
+        <div id="nav-wrapper">   
+            <ul id="nav">
+                <li class="not-active first"><a href="/account/">Account</a></li>
+                <li class="not-active"><a href="/editor/">Profile</a></li>
+                <li class="not-active"><a href="/password_change/">Authentication</a></li>
+                <li class="active"><a href="/trust/">Data handover</a></li>
+                <li class="not-active last"><a href="/history/">History</a></li>
+            </ul>
+        </div>
+        
+    
+                             
+                            </div>                    
+                        
+        
+                        <div id="content">            
+                            <div id="content-wrapper-no-css3">
+                                
+                                    
+                                
+                                
+    
+    <div id="changelist">
+        
+
+
+
+        
+
+
+        
+	
+	    <form action="/distrust/40/" method="post" id="remove-realm-form" class="no-validation">
+	        <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='b96df963b2a95be7c0b84db859e5c465' /></div>
+	        <input type="hidden" name="drop_trust" value="1" />
+			<input type="submit" class="remove-realm-button" value="Delete" />
+	    </form>
+    
+    
+        
+        
+
+
+        <form action="" method="post" id="trust-attributes-form" class="clear-fix">
+            <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='b96df963b2a95be7c0b84db859e5c465' /></div>
+            
+
+            	
+    <div id="left-column">
+        <h6>Standard settings</h6>
+        <div id="predefined-realms" class="realms-wrapper">
+            <ul>
+                
+                    <li>
+                        
+                            
+                            
+                                <a href="/trust/group/4/">Basic realm</a>
+                            
+                        
+                    </li>
+                
+                    <li>
+                        
+                            
+                            
+                                <a href="/trust/group/5/">Extended realm</a>
+                            
+                        
+                    </li>
+                
+            </ul>
+            <ul>
+                <li>
+                    <a href="/trust/whois/">Domain WHOIS</a>
+                </li>
+            </ul>
+        </div>
+        
+        
+        <h6>Services</h6>
+        <div id="custom-realms" class="realms-wrapper">
+            <ul>
+                
+                    <li>
+                        
+                            
+                            
+                                <span>http://www.toodledo.com/</span>
+                            
+                        
+                    </li>
+                
+                    <li>
+                        
+                            
+                            
+                                <a href="/trust/realm/183/">http://www.dailymotion.com/</a>
+                            
+                        
+                    </li>
+                
+            </ul>
+        </div>
+        
+	</div>
+	<div id="right-column">
+	    <p>The settings for service:</p>
+	    <p><strong>http://www.toodledo.com/</strong></p>
+        
+            
+                <p><span><input id="id_immediate" type="checkbox" class="js-checkbox" name="immediate" /></span><label for="id_immediate">Login automatically</label></p>
+                
+            
+        
+        <div class="clear-fix" id="group-form">
+            <div>Overview of data to handover:</div>
+            <p><label for="id_level_0">Level:</label> <ul>
+
+<li class="level-0 active"><label for="id_level_0"><input checked="checked" type="radio" id="id_level_0" value="0" name="level" /> <a href="?level=0">Custom</a></label></li><li class="level-1"><label for="id_level_1"><input type="radio" id="id_level_1" value="1" name="level" /> <a href="?level=1">Low</a></label></li><li class="level-2"><label for="id_level_2"><input type="radio" id="id_level_2" value="2" name="level" /> <a href="?level=2">Medium</a></label></li><li class="level-3"><label for="id_level_3"><input type="radio" id="id_level_3" value="3" name="level" /> <a href="?level=3">High</a></label></li>
+</ul></p>
+            <input type="hidden" name="current_level" id="current-level" value="0" />
+        </div>
+	    
+                
+          
+                <div id="attributes-wrapper">
+<ul id="attributes-table" class="attributes-table clear-fix">
+    
+        <li class="group-heading top-group-heading"><span><input checked="checked" name="_selected_action" value="10001" id="action-select-10001" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-10001">Name</label></li>
+    
+        <li class="attr" data-group="10001"><span><input checked="checked" name="_selected_action" value="1" id="action-select-1" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-1">First name</label></li>
+    
+        <li class="attr" data-group="10001"><span><input checked="checked" name="_selected_action" value="2" id="action-select-2" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-2">Last name</label></li>
+    
+        <li class="attr" data-group="10001"><span><input checked="checked" name="_selected_action" value="3" id="action-select-3" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-3">Full name</label></li>
+    
+        <li class="group-heading top-group-heading"><span><input value="10005" type="checkbox" class="action-select js-checkbox" name="_selected_action" id="action-select-10005" /></span><label for="action-select-10005">Organization</label></li>
+    
+        <li class="attr" data-group="10005"><span><input checked="checked" name="_selected_action" value="5" id="action-select-5" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-5">Organization</label></li>
+    
+        <li class="group-heading top-group-heading"><span><input value="10008" type="checkbox" class="action-select js-checkbox" name="_selected_action" id="action-select-10008" /></span><label for="action-select-10008">Personal data</label></li>
+    
+        <li class="attr" data-group="10008"><span><input value="10" type="checkbox" class="action-select js-checkbox" name="_selected_action" id="action-select-10" /></span><label for="action-select-10">Birth date</label></li>
+    
+        <li class="attr" data-group="10008"><span><input checked="checked" name="_selected_action" value="13" id="action-select-13" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-13">Image</label></li>
+    
+        <li class="attr" data-group="10008"><span><input checked="checked" name="_selected_action" value="15" id="action-select-15" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-15">Age over 18 years</label></li>
+    
+        <li class="attr" data-group="10008"><span><input value="16" type="checkbox" class="action-select js-checkbox" name="_selected_action" id="action-select-16" /></span><label for="action-select-16">I am student</label></li>
+    
+        <li class="group-heading top-group-heading"><span><input checked="checked" name="_selected_action" value="10100" id="action-select-10100" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-10100">Addresses</label></li>
+    
+        <li class="group-heading inner-group-heading" data-group="10100"><span><input checked="checked" name="_selected_action" value="10101" id="action-select-10101" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-10101">Main address</label></li>
+    
+        <li class="attr" data-group="10101"><span><input checked="checked" name="_selected_action" value="100" id="action-select-100" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-100">Street</label></li>
+    
+        <li class="attr" data-group="10101"><span><input checked="checked" name="_selected_action" value="102" id="action-select-102" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-102">Street 3</label></li>
+    
+        <li class="attr" data-group="10101"><span><input checked="checked" name="_selected_action" value="103" id="action-select-103" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-103">City</label></li>
+    
+        <li class="attr" data-group="10101"><span><input checked="checked" name="_selected_action" value="105" id="action-select-105" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-105">Country</label></li>
+    
+        <li class="attr" data-group="10101"><span><input checked="checked" name="_selected_action" value="106" id="action-select-106" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-106">Postal code</label></li>
+    
+        <li class="group-heading inner-group-heading" data-group="10100"><span><input checked="checked" name="_selected_action" value="10111" id="action-select-10111" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-10111">Billing address</label></li>
+    
+        <li class="attr" data-group="10111"><span><input checked="checked" name="_selected_action" value="110" id="action-select-110" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-110">Street</label></li>
+    
+        <li class="attr" data-group="10111"><span><input checked="checked" name="_selected_action" value="112" id="action-select-112" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-112">Street 3</label></li>
+    
+        <li class="attr" data-group="10111"><span><input checked="checked" name="_selected_action" value="113" id="action-select-113" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-113">City</label></li>
+    
+        <li class="attr" data-group="10111"><span><input checked="checked" name="_selected_action" value="115" id="action-select-115" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-115">Country</label></li>
+    
+        <li class="attr" data-group="10111"><span><input checked="checked" name="_selected_action" value="116" id="action-select-116" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-116">Postal code</label></li>
+    
+        <li class="group-heading inner-group-heading" data-group="10100"><span><input checked="checked" name="_selected_action" value="10121" id="action-select-10121" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-10121">Shipping address</label></li>
+    
+        <li class="attr" data-group="10121"><span><input checked="checked" name="_selected_action" value="120" id="action-select-120" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-120">Street</label></li>
+    
+        <li class="attr" data-group="10121"><span><input checked="checked" name="_selected_action" value="122" id="action-select-122" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-122">Street 3</label></li>
+    
+        <li class="attr" data-group="10121"><span><input checked="checked" name="_selected_action" value="123" id="action-select-123" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-123">City</label></li>
+    
+        <li class="attr" data-group="10121"><span><input checked="checked" name="_selected_action" value="125" id="action-select-125" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-125">Country</label></li>
+    
+        <li class="attr" data-group="10121"><span><input checked="checked" name="_selected_action" value="126" id="action-select-126" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-126">Postal code</label></li>
+    
+        <li class="group-heading inner-group-heading" data-group="10100"><span><input checked="checked" name="_selected_action" value="10131" id="action-select-10131" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-10131">Mailing address</label></li>
+    
+        <li class="attr" data-group="10131"><span><input checked="checked" name="_selected_action" value="130" id="action-select-130" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-130">Street</label></li>
+    
+        <li class="attr" data-group="10131"><span><input checked="checked" name="_selected_action" value="132" id="action-select-132" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-132">Street 3</label></li>
+    
+        <li class="attr" data-group="10131"><span><input checked="checked" name="_selected_action" value="133" id="action-select-133" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-133">City</label></li>
+    
+        <li class="attr" data-group="10131"><span><input checked="checked" name="_selected_action" value="135" id="action-select-135" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-135">Country</label></li>
+    
+        <li class="attr" data-group="10131"><span><input checked="checked" name="_selected_action" value="136" id="action-select-136" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-136">Postal code</label></li>
+    
+        <li class="group-heading top-group-heading"><span><input value="10200" type="checkbox" class="action-select js-checkbox" name="_selected_action" id="action-select-10200" /></span><label for="action-select-10200">Emails</label></li>
+    
+        <li class="attr" data-group="10200"><span><input value="200" type="checkbox" class="action-select js-checkbox" name="_selected_action" id="action-select-200" /></span><label for="action-select-200">Email</label></li>
+    
+        <li class="attr" data-group="10200"><span><input checked="checked" name="_selected_action" value="210" id="action-select-210" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-210">Notify email</label></li>
+    
+        <li class="group-heading top-group-heading"><span><input checked="checked" name="_selected_action" value="10300" id="action-select-10300" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-10300">Phones</label></li>
+    
+        <li class="attr" data-group="10300"><span><input checked="checked" name="_selected_action" value="300" id="action-select-300" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-300">Telephone</label></li>
+    
+        <li class="group-heading top-group-heading"><span><input checked="checked" name="_selected_action" value="10500" id="action-select-10500" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-10500">IM accounts</label></li>
+    
+        <li class="attr" data-group="10500"><span><input checked="checked" name="_selected_action" value="500" id="action-select-500" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-500">ICQ</label></li>
+    
+        <li class="attr" data-group="10500"><span><input checked="checked" name="_selected_action" value="540" id="action-select-540" type="checkbox" class="action-select js-checkbox" /></span><label for="action-select-540">Google Talk</label></li>
+       
+</ul>
+
+</div>
+                
+<div class="actions submit-row">
+    <div class="invisible">Action: <select name="action">
+<option value="set_trust">Set trust</option>
+</select> <input type="hidden" class="select-across" value="0" name="select_across" /></div>
+    <button type="submit" name="index" value="0" class="button">Save</button>
+</div>
+         
+            
+	</div>
+
+            
+        </form>
+        
+    </div>
+
+                            </div>
+                        </div>
+        
+                        
+                            
+                        
+                                        
+                    </div>
+                </div>
+            
+        </body>
+    
+
+</html>

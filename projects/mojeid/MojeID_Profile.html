@@ -1,0 +1,4539 @@
+<!DOCTYPE HTML>
+<html><!-- Source is https://mojeid.cz/editor/ -->
+
+    
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+            <meta name="robots" content="NONE,NOARCHIVE" />
+
+            
+            
+        
+            <title>MojeID - Profile</title>
+        
+            
+        	    <link rel="icon" type="image/png" href="MojeID_files/favicon.png" />
+                <!--[if IE ]><link rel="shortcut icon" type="image/x-icon" href="MojeID_files/favicon.ico" /><![endif]-->
+            
+                
+            
+    
+    <link href="MojeID_files/editor.css" rel="stylesheet" type="text/css" media="screen" />
+    
+        <link href="MojeID_files/mojeid_editor.css" rel="stylesheet" type="text/css" media="screen" />
+    
+    <!--[if IE]><link href="MojeID_files/base_msie.css" rel="stylesheet" type="text/css" media="screen" /><![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="MojeID_files/profile.css" />
+
+            
+        	<!--[if IE]><link href="MojeID_files/base_msie.css" rel="stylesheet" type="text/css" media="screen" /><![endif]-->
+        
+            <script type="text/javascript" charset="utf-8" src="MojeID_files/MochiKit.js"></script>
+        	<script type="text/javascript" src="MojeID_files/base-1.js"></script>        	
+            <script type="text/javascript" charset="utf-8" src="MojeID_files/new_captcha.js"></script>        
+            
+    
+    <script type="text/javascript" src="MojeID_files/profile.js"></script>
+    
+    <script type="text/javascript" src="MojeID_files/changes_validation.js"></script>
+    <script type="text/javascript">
+    connect(window, "onload", function () {   
+        JsCheckboxes.onLoad(true);
+        JsFileInputs.onLoad();
+        Popup.onLoad();
+        Messages.onLoad();
+        Profile.onLoad(true);
+        Changes.onLoad();
+        AuthorizedRequest.onLoad();
+        EventHandlers.onLoad();
+    });
+    </script>    
+        
+        
+            <script type="text/javascript">
+                /* prevent displaying this page in frame */
+                if (top != self) { top.location.replace(self.location.href); }
+            </script>
+        </head>
+        
+        <body id="editor" class="mojeid">
+            
+            <script type="text/javascript">
+            // <![CDATA[
+                document.body.className = document.body.className ? (document.body.className + " js") : "js";      
+            //]]>  
+            </script>
+        
+            
+            <div id="overlay"></div>
+        
+            
+                <div id="outer-wrapper">
+        		    <div id="wrapper">
+                    
+                        
+                            <div id="header" class="clear-fix">
+                                
+                                <h1>
+                                    
+                                	    <a href="/" id="logo"><img src="MojeID_files/small_logo.png" alt="mojeID" /></a>
+                                	
+                                </h1>                            
+                                <ul id="account">                                
+                                    
+                                    
+                                        
+                    				
+                                        
+                    						<li class="first"><a href="/setlang/?language=cs" id="set-language" title="Česky"><img src="MojeID_files/cs.png" alt="Česky" /></a></li>
+                    					
+                    				
+                                
+                                    
+
+    
+	           
+        <li class="username">sveta</li>
+    
+    
+    
+    <li class="support"><a href="/support/">Support</a></li>
+    
+    
+     
+        
+        <li class="logout">
+        
+            <a href="/logout/" id="logout">
+        
+        Log out</a></li>
+    
+    
+                                
+                                </ul>
+                                
+    
+    
+    
+    
+    
+    
+    
+         
+        <div id="nav-wrapper">   
+            <ul id="nav">
+                <li class="not-active first"><a href="/account/">Account</a></li>
+                <li class="active"><a href="/editor/">Profile</a></li>
+                <li class="not-active"><a href="/password_change/">Authentication</a></li>
+                <li class="not-active"><a href="/trust/">Data handover</a></li>
+                <li class="not-active last"><a href="/history/">History</a></li>
+            </ul>
+        </div>
+        
+    
+                             
+                            </div>                    
+                        
+        
+                        <div id="content">            
+                            <div id="content-wrapper-no-css3">
+                                
+    
+                                    
+    
+    
+    <form enctype="multipart/form-data" action="" method="post" id="user_form">
+    	<div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='b96df963b2a95be7c0b84db859e5c465' /></div>
+        <script type="text/javascript">
+            // <![CDATA[        
+            document.getElementById("user_form").className += " invisible";
+            // ]]>
+        </script>
+        
+        
+
+        <div class="clear-fix" id="profile-form">
+            <div class="form-column left-column">
+                        
+                <fieldset>
+                    
+
+<h5>Personal data</h5>
+<table>
+    <tbody>
+    
+        
+        <tr class="first_name">
+            <td class="left-td"><label for="id_first_name">First name<em class="required">*</em>:</label></td>
+            <td class="right-td">
+            <input name="first_name" value="Svetlana" class="vTextField" maxlength="50" type="text" id="id_first_name" />
+            </td>
+        </tr>
+        
+    
+        
+        <tr class="last_name">
+            <td class="left-td"><label for="id_last_name">Last name<em class="required">*</em>:</label></td>
+            <td class="right-td">
+            <input name="last_name" value="Nikitina" class="vTextField" maxlength="50" type="text" id="id_last_name" />
+            </td>
+        </tr>
+        
+    
+        
+        <tr class="nickname">
+            <td class="left-td"><label for="id_nickname">Nickname:</label></td>
+            <td class="right-td">
+            <input id="id_nickname" type="text" class="vTextField" name="nickname" maxlength="50" />
+            </td>
+        </tr>
+        
+    
+        
+        <tr class="birth_date">
+            <td class="left-td"><label for="id_birth_date">Birth date:</label></td>
+            <td class="right-td">
+            <select name="birth_date_month" id="id_birth_date_month"><option value="0">---</option><option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6" selected="selected">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select><select name="birth_date_day" id="id_birth_date_day"><option value="0">---</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25" selected="selected">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select><select name="birth_date_year" id="id_birth_date_year"><option value="0">---</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option><option value="1994">1994</option><option value="1993">1993</option><option value="1992">1992</option><option value="1991">1991</option><option value="1990">1990</option><option value="1989">1989</option><option value="1988">1988</option><option value="1987">1987</option><option value="1986">1986</option><option value="1985" selected="selected">1985</option><option value="1984">1984</option><option value="1983">1983</option><option value="1982">1982</option><option value="1981">1981</option><option value="1980">1980</option><option value="1979">1979</option><option value="1978">1978</option><option value="1977">1977</option><option value="1976">1976</option><option value="1975">1975</option><option value="1974">1974</option><option value="1973">1973</option><option value="1972">1972</option><option value="1971">1971</option><option value="1970">1970</option><option value="1969">1969</option><option value="1968">1968</option><option value="1967">1967</option><option value="1966">1966</option><option value="1965">1965</option><option value="1964">1964</option><option value="1963">1963</option><option value="1962">1962</option><option value="1961">1961</option><option value="1960">1960</option><option value="1959">1959</option><option value="1958">1958</option><option value="1957">1957</option><option value="1956">1956</option><option value="1955">1955</option><option value="1954">1954</option><option value="1953">1953</option><option value="1952">1952</option><option value="1951">1951</option><option value="1950">1950</option><option value="1949">1949</option><option value="1948">1948</option><option value="1947">1947</option><option value="1946">1946</option><option value="1945">1945</option><option value="1944">1944</option><option value="1943">1943</option><option value="1942">1942</option><option value="1941">1941</option><option value="1940">1940</option><option value="1939">1939</option><option value="1938">1938</option><option value="1937">1937</option><option value="1936">1936</option><option value="1935">1935</option><option value="1934">1934</option><option value="1933">1933</option><option value="1932">1932</option><option value="1931">1931</option><option value="1930">1930</option><option value="1929">1929</option><option value="1928">1928</option><option value="1927">1927</option><option value="1926">1926</option><option value="1925">1925</option><option value="1924">1924</option><option value="1923">1923</option><option value="1922">1922</option><option value="1921">1921</option><option value="1920">1920</option><option value="1919">1919</option><option value="1918">1918</option><option value="1917">1917</option><option value="1916">1916</option><option value="1915">1915</option><option value="1914">1914</option><option value="1913">1913</option><option value="1912">1912</option></select>
+            </td>
+        </tr>
+        
+    
+        
+        <tr class="id_card_num">
+            <td class="left-td"><label for="id_id_card_num">ID card number:</label></td>
+            <td class="right-td">
+            <input id="id_id_card_num" type="text" class="vTextField" name="id_card_num" maxlength="50" />
+            </td>
+        </tr>
+        
+    
+        
+        <tr class="passport_num">
+            <td class="left-td"><label for="id_passport_num">Passport number:</label></td>
+            <td class="right-td">
+            <input id="id_passport_num" type="text" class="vTextField" name="passport_num" maxlength="50" />
+            </td>
+        </tr>
+        
+    
+        
+        <tr class="ssn_id_num">
+            <td class="left-td"><label for="id_ssn_id_num">Identifier MPSV:</label></td>
+            <td class="right-td">
+            <input id="id_ssn_id_num" type="text" class="vTextField" name="ssn_id_num" maxlength="50" />
+            </td>
+        </tr>
+        
+    
+        
+        <tr class="student">
+            <td class="left-td"><label for="id_student">I am student:</label></td>
+            <td class="right-td">
+            <span><input id="id_student" type="checkbox" class="js-checkbox" name="student" /></span>
+            </td>
+        </tr>
+        
+    
+        
+        <tr class="image">
+            <td class="left-td"><label for="id_image">Picture:</label></td>
+            <td class="right-td">
+            <div class="image-input clear-fix" id="image-preview"><img src="MojeID_files/sveta_1.jpg" class="user-image" alt="" id="id_image_0-preview" /><p>Change:</p><input type="text" class="file-input-text" readonly="readonly" id="id_image_0_text" /><div class="file-input-div"><input type="button" value="Browse" class="file-input-button" /><input id="id_image_0" type="file" class="file-input" name="image_0" size="17" /></div><span><input id="id_image_1" type="checkbox" class="js-checkbox" name="image_1" /></span><label for="id_image_1">Delete</label><span class="help-icon" title="Please insert Your picture (JPEG, PNG format). The file size mustn&#39;t exceed 2.0 MB, and will be resized to 120 × 160 px automatically.">&nbsp;</span></div>
+            </td>
+        </tr>
+        
+    
+    </tbody>
+</table>
+                </fieldset>  
+                        
+                <fieldset>
+                    
+
+<h5>Organization</h5>
+<table>
+    <tbody>
+    
+        
+        <tr class="organization">
+            <td class="left-td"><label for="id_organization">Organization:</label></td>
+            <td class="right-td">
+            <input name="organization" value="CZ.NIC" class="vTextField" maxlength="200" type="text" id="id_organization" />
+            </td>
+        </tr>
+        
+    
+        
+        <tr class="vat_reg_num">
+            <td class="left-td"><label for="id_vat_reg_num">VAT registration number:</label></td>
+            <td class="right-td">
+            <input id="id_vat_reg_num" type="text" class="vTextField" name="vat_reg_num" maxlength="50" />
+            </td>
+        </tr>
+        
+    
+        
+        <tr class="vat_id_num">
+            <td class="left-td"><label for="id_vat_id_num">VAT identification number:</label></td>
+            <td class="right-td">
+            <input id="id_vat_id_num" type="text" class="vTextField" name="vat_id_num" maxlength="50" />
+            </td>
+        </tr>
+        
+    
+    </tbody>
+</table>
+                </fieldset>  
+                
+                
+                
+            </div>
+
+            <div class="form-column">
+                <fieldset id="contact-block">
+                    <h5>Contact details</h5>
+                    <table id="contact-block-table">
+                        <tbody>
+                        
+                            
+
+<input type="hidden" name="email_set-TOTAL_FORMS" value="1" id="id_email_set-TOTAL_FORMS" /><input type="hidden" name="email_set-INITIAL_FORMS" value="1" id="id_email_set-INITIAL_FORMS" /><input type="hidden" name="email_set-MAX_NUM_FORMS" value="1" id="id_email_set-MAX_NUM_FORMS" />
+
+    
+    
+    
+        
+            
+            <tr class="has-heading">
+                <th colspan="2">
+                    <h6>Emails</h6>                    
+                </th>
+            </tr>        
+            
+                        
+          
+        
+        
+    
+    
+    <tr id="email_set-1" class="email_set">
+        
+                                 
+                <td class="left-td">                
+                    
+                        <label>Email<em class="required">*</em>:</label>
+                        <span class="field-name invisible">Email</span>   
+                    
+
+                    
+                             
+                </td>
+            
+        
+                                 
+                <td class="right-td">                
+                    
+                        <input name="email_set-0-email" value="svetlana.nikitina@nic.cz" class="vTextField" maxlength="200" type="text" id="id_email_set-0-email" />
+                                                
+                        
+                            
+                                <span class="help-icon" title="Change of email will be authorized by PIN1 code sent to your new email.">&nbsp;</span>
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="email_set-0-id" value="99" id="id_email_set-0-id" />
+                        <input type="hidden" name="email_set-0-contact" value="3514533" id="id_email_set-0-contact" />
+                         
+                    
+                             
+                </td>
+            
+        
+    </tr>
+    
+    
+    
+    
+          
+        
+        
+    
+    
+    <tr  class="last-in-fieldset invisible">
+        
+                                 
+                <td class="left-td">                
+                    
+                        <label>Email<em class="required">*</em>:</label>
+                        <span class="field-name invisible">Email</span>   
+                    
+
+                    
+                             
+                </td>
+            
+        
+                                 
+                <td class="right-td">                
+                    
+                        <input id="id_email_set-__prefix__-email" type="text" class="vTextField" name="email_set-__prefix__-email" maxlength="200" />
+                                                
+                        
+                            
+                                <span class="help-icon" title="Change of email will be authorized by PIN1 code sent to your new email.">&nbsp;</span>
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="email_set-__prefix__-id" id="id_email_set-__prefix__-id" />
+                        <input type="hidden" name="email_set-__prefix__-contact" id="id_email_set-__prefix__-contact" />
+                         
+                    
+                             
+                </td>
+            
+        
+    </tr>
+    
+
+                        
+                            
+
+<input type="hidden" name="email_set-2-TOTAL_FORMS" value="1" id="id_email_set-2-TOTAL_FORMS" /><input type="hidden" name="email_set-2-INITIAL_FORMS" value="1" id="id_email_set-2-INITIAL_FORMS" /><input type="hidden" name="email_set-2-MAX_NUM_FORMS" value="1" id="id_email_set-2-MAX_NUM_FORMS" />
+
+    
+    
+    
+        
+            
+                        
+          
+        
+        
+    
+    
+    <tr id="email_set-2" class="email_set">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <label>Notify email:</label>
+                        <span class="field-name invisible">Email</span>   
+                    
+
+                    
+                    
+                    <!-- <p> email_set-2</p>      -->          
+                </td>
+            
+        
+            
+                        
+                    <td class="right-td">  
+                
+                
+                
+                    
+                        <input name="email_set-2-0-email" value="s.a.nikitina@gmail.com" class="vTextField" maxlength="200" type="text" id="id_email_set-2-0-email" />
+                        
+                            <strong class="can-delete" title="Delete"><input type="checkbox" name="email_set-2-0-DELETE" id="id_email_set-2-0-DELETE" /></strong>
+                                                
+                        
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="email_set-2-0-id" value="3168" id="id_email_set-2-0-id" />
+                        <input type="hidden" name="email_set-2-0-contact" value="3514533" id="id_email_set-2-0-contact" />
+                         
+                    
+                    
+                    <!-- <p>email_set-2-0-email email_set-2</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+    
+    
+    
+          
+        
+        
+    
+    
+    <tr  class="last-in-fieldset invisible">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <label>Notify email:</label>
+                        <span class="field-name invisible">Email</span>   
+                    
+
+                    
+                    
+                    <!-- <p> email_set-2</p>      -->          
+                </td>
+            
+        
+            
+                        
+                    <td class="right-td">  
+                
+                
+                
+                    
+                        <input id="id_email_set-2-__prefix__-email" type="text" class="vTextField" name="email_set-2-__prefix__-email" maxlength="200" />
+                                                
+                        
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="email_set-2-__prefix__-id" id="id_email_set-2-__prefix__-id" />
+                        <input type="hidden" name="email_set-2-__prefix__-contact" id="id_email_set-2-__prefix__-contact" />
+                         
+                    
+                    
+                    <!-- <p>email_set-2-__prefix__-email email_set-2</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+
+                        
+                            
+
+<input type="hidden" name="email_set-3-TOTAL_FORMS" value="1" id="id_email_set-3-TOTAL_FORMS" /><input type="hidden" name="email_set-3-INITIAL_FORMS" value="0" id="id_email_set-3-INITIAL_FORMS" /><input type="hidden" name="email_set-3-MAX_NUM_FORMS" value="1" id="id_email_set-3-MAX_NUM_FORMS" />
+
+    
+    
+    
+        
+            
+                        
+          
+        
+        
+    
+    
+    <tr  class="email_set">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="email_set-3-0-type" id="id_email_set-3-0-type">
+<option value="" selected="selected">---------</option>
+<option value="3">Next email</option>
+</select>
+                        <span class="field-name invisible">Email</span>   
+                    
+
+                    
+                    
+                    <!-- <p>email_set-3-0-type email_set-3</p>      -->          
+                </td>
+            
+        
+            
+                        
+                    <td class="right-td">  
+                
+                
+                
+                    
+                        <input id="id_email_set-3-0-email" type="text" class="vTextField" name="email_set-3-0-email" maxlength="200" />
+                                                
+                        
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="email_set-3-0-id" id="id_email_set-3-0-id" />
+                        <input type="hidden" name="email_set-3-0-contact" value="3514533" id="id_email_set-3-0-contact" />
+                         
+                    
+                    
+                    <!-- <p>email_set-3-0-email email_set-3</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+    
+    
+    
+          
+        
+        
+    
+    
+    <tr  class="last-in-fieldset invisible">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="email_set-3-__prefix__-type" id="id_email_set-3-__prefix__-type">
+<option value="" selected="selected">---------</option>
+<option value="3">Next email</option>
+</select>
+                        <span class="field-name invisible">Email</span>   
+                    
+
+                    
+                    
+                    <!-- <p>email_set-3-__prefix__-type email_set-3</p>      -->          
+                </td>
+            
+        
+            
+                        
+                    <td class="right-td">  
+                
+                
+                
+                    
+                        <input id="id_email_set-3-__prefix__-email" type="text" class="vTextField" name="email_set-3-__prefix__-email" maxlength="200" />
+                                                
+                        
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="email_set-3-__prefix__-id" id="id_email_set-3-__prefix__-id" />
+                        <input type="hidden" name="email_set-3-__prefix__-contact" value="3514533" id="id_email_set-3-__prefix__-contact" />
+                         
+                    
+                    
+                    <!-- <p>email_set-3-__prefix__-email email_set-3</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+
+                        
+                            
+
+<input type="hidden" name="phone_set-TOTAL_FORMS" value="1" id="id_phone_set-TOTAL_FORMS" /><input type="hidden" name="phone_set-INITIAL_FORMS" value="1" id="id_phone_set-INITIAL_FORMS" /><input type="hidden" name="phone_set-MAX_NUM_FORMS" value="1" id="id_phone_set-MAX_NUM_FORMS" />
+
+    
+    
+    
+        
+            
+            <tr class="has-heading">
+                <th colspan="2">
+                    <h6>Phones</h6>                    
+                </th>
+            </tr>        
+            
+                        
+          
+        
+        
+    
+    
+    <tr id="phone_set-1" class="phone_set">
+        
+            
+                <td class="left-td">
+                    
+                        <label>Telephone:</label>
+                        <span class="field-name invisible">Phone</span>   
+                    
+
+                    
+                            
+                </td>
+            
+        
+            
+                <td class="right-td">
+                    
+                        <input name="phone_set-0-number" value="+420.776322402" class="vTextField" maxlength="14" type="text" id="id_phone_set-0-number" />
+                        
+                            <strong class="can-delete" title="Delete"><input type="checkbox" name="phone_set-0-DELETE" id="id_phone_set-0-DELETE" /></strong>
+                                                
+                        
+                            
+                                <span class="help-icon" title="Required format is +420.777888999. Change of phone will be authorized by PIN2 code sent to your new phone.">&nbsp;</span>
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="phone_set-0-id" value="88" id="id_phone_set-0-id" />
+                        <input type="hidden" name="phone_set-0-contact" value="3514533" id="id_phone_set-0-contact" />
+                         
+                    
+                            
+                </td>
+            
+        
+    </tr>
+    
+    
+    
+    
+          
+        
+        
+    
+    
+    <tr  class="last-in-fieldset invisible">
+        
+            
+                <td class="left-td">
+                    
+                        <label>Telephone:</label>
+                        <span class="field-name invisible">Phone</span>   
+                    
+
+                    
+                            
+                </td>
+            
+        
+            
+                <td class="right-td">
+                    
+                        <input id="id_phone_set-__prefix__-number" type="text" class="vTextField" name="phone_set-__prefix__-number" maxlength="14" />
+                                                
+                        
+                            
+                                <span class="help-icon" title="Required format is +420.777888999. Change of phone will be authorized by PIN2 code sent to your new phone.">&nbsp;</span>
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="phone_set-__prefix__-id" id="id_phone_set-__prefix__-id" />
+                        <input type="hidden" name="phone_set-__prefix__-contact" id="id_phone_set-__prefix__-contact" />
+                         
+                    
+                            
+                </td>
+            
+        
+    </tr>
+    
+
+                        
+                            
+
+<input type="hidden" name="phone_set-2-TOTAL_FORMS" value="4" id="id_phone_set-2-TOTAL_FORMS" /><input type="hidden" name="phone_set-2-INITIAL_FORMS" value="0" id="id_phone_set-2-INITIAL_FORMS" /><input type="hidden" name="phone_set-2-MAX_NUM_FORMS" value="4" id="id_phone_set-2-MAX_NUM_FORMS" />
+
+    
+    
+    
+        
+            
+                        
+          
+        
+        
+    
+    
+    <tr  class="phone_set">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="phone_set-2-0-type" id="id_phone_set-2-0-type">
+<option value="" selected="selected">---------</option>
+<option value="2">Office phone</option>
+<option value="3">Mobile phone</option>
+<option value="4">Home phone</option>
+<option value="5">Fax</option>
+</select>
+                        <span class="field-name invisible">Phone</span>   
+                    
+
+                    
+                    
+                    <!-- <p>phone_set-2-0-type phone_set-2</p>      -->          
+                </td>
+            
+        
+            
+                        
+                    <td class="right-td">  
+                
+                
+                
+                    
+                        <input id="id_phone_set-2-0-number" type="text" class="vTextField" name="phone_set-2-0-number" maxlength="17" />
+                                                
+                        
+                            
+                                <span class="help-icon" title="Required format is +420.777888999.">&nbsp;</span>
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="phone_set-2-0-id" id="id_phone_set-2-0-id" />
+                        <input type="hidden" name="phone_set-2-0-contact" value="3514533" id="id_phone_set-2-0-contact" />
+                         
+                    
+                    
+                    <!-- <p>phone_set-2-0-number phone_set-2</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+    
+    
+    
+          
+        
+        
+    
+    
+    <tr  class="phone_set">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="phone_set-2-1-type" id="id_phone_set-2-1-type">
+<option value="" selected="selected">---------</option>
+<option value="2">Office phone</option>
+<option value="3">Mobile phone</option>
+<option value="4">Home phone</option>
+<option value="5">Fax</option>
+</select>
+                        <span class="field-name invisible">Phone</span>   
+                    
+
+                    
+                    
+                    <!-- <p>phone_set-2-1-type phone_set-2</p>      -->          
+                </td>
+            
+        
+            
+                        
+                    <td class="right-td">  
+                
+                
+                
+                    
+                        <input id="id_phone_set-2-1-number" type="text" class="vTextField" name="phone_set-2-1-number" maxlength="17" />
+                                                
+                        
+                            
+                                <span class="help-icon" title="Required format is +420.777888999.">&nbsp;</span>
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="phone_set-2-1-id" id="id_phone_set-2-1-id" />
+                        <input type="hidden" name="phone_set-2-1-contact" value="3514533" id="id_phone_set-2-1-contact" />
+                         
+                    
+                    
+                    <!-- <p>phone_set-2-1-number phone_set-2</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+    
+    
+    
+          
+        
+        
+    
+    
+    <tr  class="phone_set">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="phone_set-2-2-type" id="id_phone_set-2-2-type">
+<option value="" selected="selected">---------</option>
+<option value="2">Office phone</option>
+<option value="3">Mobile phone</option>
+<option value="4">Home phone</option>
+<option value="5">Fax</option>
+</select>
+                        <span class="field-name invisible">Phone</span>   
+                    
+
+                    
+                    
+                    <!-- <p>phone_set-2-2-type phone_set-2</p>      -->          
+                </td>
+            
+        
+            
+                        
+                    <td class="right-td">  
+                
+                
+                
+                    
+                        <input id="id_phone_set-2-2-number" type="text" class="vTextField" name="phone_set-2-2-number" maxlength="17" />
+                                                
+                        
+                            
+                                <span class="help-icon" title="Required format is +420.777888999.">&nbsp;</span>
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="phone_set-2-2-id" id="id_phone_set-2-2-id" />
+                        <input type="hidden" name="phone_set-2-2-contact" value="3514533" id="id_phone_set-2-2-contact" />
+                         
+                    
+                    
+                    <!-- <p>phone_set-2-2-number phone_set-2</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+    
+    
+    
+          
+        
+        
+    
+    
+    <tr  class="phone_set">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="phone_set-2-3-type" id="id_phone_set-2-3-type">
+<option value="" selected="selected">---------</option>
+<option value="2">Office phone</option>
+<option value="3">Mobile phone</option>
+<option value="4">Home phone</option>
+<option value="5">Fax</option>
+</select>
+                        <span class="field-name invisible">Phone</span>   
+                    
+
+                    
+                    
+                    <!-- <p>phone_set-2-3-type phone_set-2</p>      -->          
+                </td>
+            
+        
+            
+                        
+                    <td class="right-td">  
+                
+                
+                
+                    
+                        <input id="id_phone_set-2-3-number" type="text" class="vTextField" name="phone_set-2-3-number" maxlength="17" />
+                                                
+                        
+                            
+                                <span class="help-icon" title="Required format is +420.777888999.">&nbsp;</span>
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="phone_set-2-3-id" id="id_phone_set-2-3-id" />
+                        <input type="hidden" name="phone_set-2-3-contact" value="3514533" id="id_phone_set-2-3-contact" />
+                         
+                    
+                    
+                    <!-- <p>phone_set-2-3-number phone_set-2</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+    
+    
+    
+          
+        
+        
+    
+    
+    <tr  class="last-in-fieldset invisible">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="phone_set-2-__prefix__-type" id="id_phone_set-2-__prefix__-type">
+<option value="" selected="selected">---------</option>
+<option value="2">Office phone</option>
+<option value="3">Mobile phone</option>
+<option value="4">Home phone</option>
+<option value="5">Fax</option>
+</select>
+                        <span class="field-name invisible">Phone</span>   
+                    
+
+                    
+                    
+                    <!-- <p>phone_set-2-__prefix__-type phone_set-2</p>      -->          
+                </td>
+            
+        
+            
+                        
+                    <td class="right-td">  
+                
+                
+                
+                    
+                        <input id="id_phone_set-2-__prefix__-number" type="text" class="vTextField" name="phone_set-2-__prefix__-number" maxlength="17" />
+                                                
+                        
+                            
+                                <span class="help-icon" title="Required format is +420.777888999.">&nbsp;</span>
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="phone_set-2-__prefix__-id" id="id_phone_set-2-__prefix__-id" />
+                        <input type="hidden" name="phone_set-2-__prefix__-contact" value="3514533" id="id_phone_set-2-__prefix__-contact" />
+                         
+                    
+                    
+                    <!-- <p>phone_set-2-__prefix__-number phone_set-2</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+
+                        
+                            
+
+<input type="hidden" name="imaccount_set-TOTAL_FORMS" value="5" id="id_imaccount_set-TOTAL_FORMS" /><input type="hidden" name="imaccount_set-INITIAL_FORMS" value="2" id="id_imaccount_set-INITIAL_FORMS" /><input type="hidden" name="imaccount_set-MAX_NUM_FORMS" value="5" id="id_imaccount_set-MAX_NUM_FORMS" />
+
+    
+    
+    
+        
+            
+            <tr class="has-heading">
+                <th colspan="2">
+                    <h6>IM accounts</h6>                    
+                </th>
+            </tr>        
+            
+                        
+          
+        
+        
+    
+    
+    <tr id="imaccount_set-1" class="imaccount_set">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="imaccount_set-0-type" id="id_imaccount_set-0-type">
+<option value="">---------</option>
+<option value="1" selected="selected">ICQ</option>
+<option value="2">Skype</option>
+<option value="3">Windows Live</option>
+<option value="4">Jabber</option>
+<option value="5">Google Talk</option>
+</select>
+                        <span class="field-name invisible">IM account</span>   
+                    
+
+                    
+                    
+                    <!-- <p>imaccount_set-0-type imaccount_set</p>      -->          
+                </td>
+            
+        
+            
+                        
+                    <td class="right-td">  
+                
+                
+                
+                    
+                        <input name="imaccount_set-0-username" value="211600297" class="vTextField" maxlength="255" type="text" id="id_imaccount_set-0-username" />
+                        
+                            <strong class="can-delete" title="Delete"><input type="checkbox" name="imaccount_set-0-DELETE" id="id_imaccount_set-0-DELETE" /></strong>
+                                                
+                        
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="imaccount_set-0-id" value="18" id="id_imaccount_set-0-id" />
+                        <input type="hidden" name="imaccount_set-0-contact" value="3514533" id="id_imaccount_set-0-contact" />
+                         
+                    
+                    
+                    <!-- <p>imaccount_set-0-username imaccount_set</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+    
+    
+    
+          
+        
+        
+    
+    
+    <tr id="imaccount_set-5" class="imaccount_set">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="imaccount_set-1-type" id="id_imaccount_set-1-type">
+<option value="">---------</option>
+<option value="1">ICQ</option>
+<option value="2">Skype</option>
+<option value="3">Windows Live</option>
+<option value="4">Jabber</option>
+<option value="5" selected="selected">Google Talk</option>
+</select>
+                        <span class="field-name invisible">IM account</span>   
+                    
+
+                    
+                    
+                    <!-- <p>imaccount_set-1-type imaccount_set</p>      -->          
+                </td>
+            
+        
+            
+                        
+                    <td class="right-td">  
+                
+                
+                
+                    
+                        <input name="imaccount_set-1-username" value="s.a.nikitina" class="vTextField" maxlength="255" type="text" id="id_imaccount_set-1-username" />
+                        
+                            <strong class="can-delete" title="Delete"><input type="checkbox" name="imaccount_set-1-DELETE" id="id_imaccount_set-1-DELETE" /></strong>
+                                                
+                        
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="imaccount_set-1-id" value="19" id="id_imaccount_set-1-id" />
+                        <input type="hidden" name="imaccount_set-1-contact" value="3514533" id="id_imaccount_set-1-contact" />
+                         
+                    
+                    
+                    <!-- <p>imaccount_set-1-username imaccount_set</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+    
+    
+    
+          
+        
+        
+    
+    
+    <tr  class="imaccount_set">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="imaccount_set-2-type" id="id_imaccount_set-2-type">
+<option value="" selected="selected">---------</option>
+<option value="1">ICQ</option>
+<option value="2">Skype</option>
+<option value="3">Windows Live</option>
+<option value="4">Jabber</option>
+<option value="5">Google Talk</option>
+</select>
+                        <span class="field-name invisible">IM account</span>   
+                    
+
+                    
+                    
+                    <!-- <p>imaccount_set-2-type imaccount_set</p>      -->          
+                </td>
+            
+        
+            
+                        
+                    <td class="right-td">  
+                
+                
+                
+                    
+                        <input id="id_imaccount_set-2-username" type="text" class="vTextField" name="imaccount_set-2-username" maxlength="255" />
+                                                
+                        
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="imaccount_set-2-id" id="id_imaccount_set-2-id" />
+                        <input type="hidden" name="imaccount_set-2-contact" value="3514533" id="id_imaccount_set-2-contact" />
+                         
+                    
+                    
+                    <!-- <p>imaccount_set-2-username imaccount_set</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+    
+    
+    
+          
+        
+        
+    
+    
+    <tr  class="imaccount_set">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="imaccount_set-3-type" id="id_imaccount_set-3-type">
+<option value="" selected="selected">---------</option>
+<option value="1">ICQ</option>
+<option value="2">Skype</option>
+<option value="3">Windows Live</option>
+<option value="4">Jabber</option>
+<option value="5">Google Talk</option>
+</select>
+                        <span class="field-name invisible">IM account</span>   
+                    
+
+                    
+                    
+                    <!-- <p>imaccount_set-3-type imaccount_set</p>      -->          
+                </td>
+            
+        
+            
+                        
+                    <td class="right-td">  
+                
+                
+                
+                    
+                        <input id="id_imaccount_set-3-username" type="text" class="vTextField" name="imaccount_set-3-username" maxlength="255" />
+                                                
+                        
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="imaccount_set-3-id" id="id_imaccount_set-3-id" />
+                        <input type="hidden" name="imaccount_set-3-contact" value="3514533" id="id_imaccount_set-3-contact" />
+                         
+                    
+                    
+                    <!-- <p>imaccount_set-3-username imaccount_set</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+    
+    
+    
+          
+        
+        
+    
+    
+    <tr  class="imaccount_set">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="imaccount_set-4-type" id="id_imaccount_set-4-type">
+<option value="" selected="selected">---------</option>
+<option value="1">ICQ</option>
+<option value="2">Skype</option>
+<option value="3">Windows Live</option>
+<option value="4">Jabber</option>
+<option value="5">Google Talk</option>
+</select>
+                        <span class="field-name invisible">IM account</span>   
+                    
+
+                    
+                    
+                    <!-- <p>imaccount_set-4-type imaccount_set</p>      -->          
+                </td>
+            
+        
+            
+                        
+                    <td class="right-td">  
+                
+                
+                
+                    
+                        <input id="id_imaccount_set-4-username" type="text" class="vTextField" name="imaccount_set-4-username" maxlength="255" />
+                                                
+                        
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="imaccount_set-4-id" id="id_imaccount_set-4-id" />
+                        <input type="hidden" name="imaccount_set-4-contact" value="3514533" id="id_imaccount_set-4-contact" />
+                         
+                    
+                    
+                    <!-- <p>imaccount_set-4-username imaccount_set</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+    
+    
+    
+          
+        
+        
+    
+    
+    <tr  class="last-in-fieldset invisible">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="imaccount_set-__prefix__-type" id="id_imaccount_set-__prefix__-type">
+<option value="" selected="selected">---------</option>
+<option value="1">ICQ</option>
+<option value="2">Skype</option>
+<option value="3">Windows Live</option>
+<option value="4">Jabber</option>
+<option value="5">Google Talk</option>
+</select>
+                        <span class="field-name invisible">IM account</span>   
+                    
+
+                    
+                    
+                    <!-- <p>imaccount_set-__prefix__-type imaccount_set</p>      -->          
+                </td>
+            
+        
+            
+                        
+                    <td class="right-td">  
+                
+                
+                
+                    
+                        <input id="id_imaccount_set-__prefix__-username" type="text" class="vTextField" name="imaccount_set-__prefix__-username" maxlength="255" />
+                                                
+                        
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="imaccount_set-__prefix__-id" id="id_imaccount_set-__prefix__-id" />
+                        <input type="hidden" name="imaccount_set-__prefix__-contact" value="3514533" id="id_imaccount_set-__prefix__-contact" />
+                         
+                    
+                    
+                    <!-- <p>imaccount_set-__prefix__-username imaccount_set</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+
+                        
+                            
+
+<input type="hidden" name="urladdress_set-TOTAL_FORMS" value="8" id="id_urladdress_set-TOTAL_FORMS" /><input type="hidden" name="urladdress_set-INITIAL_FORMS" value="0" id="id_urladdress_set-INITIAL_FORMS" /><input type="hidden" name="urladdress_set-MAX_NUM_FORMS" value="8" id="id_urladdress_set-MAX_NUM_FORMS" />
+
+    
+    
+    
+        
+            
+            <tr class="has-heading">
+                <th colspan="2">
+                    <h6>URL addresses</h6>                    
+                </th>
+            </tr>        
+            
+                        
+          
+        
+        
+    
+    
+    <tr  class="urladdress_set">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="urladdress_set-0-type" id="id_urladdress_set-0-type">
+<option value="" selected="selected">---------</option>
+<option value="1">Web site</option>
+<option value="2">Blog</option>
+<option value="3">Personal site</option>
+<option value="4">Office site</option>
+<option value="5">RSS feed</option>
+<option value="6">Facebook profile</option>
+<option value="7">Twitter feed</option>
+<option value="8">LinkedIN profile</option>
+</select>
+                        <span class="field-name invisible">URL address</span>   
+                    
+
+                    
+                    
+                    <!-- <p>urladdress_set-0-type urladdress_set</p>      -->          
+                </td>
+            
+        
+            
+                
+                    
+                    <td class="right-td">
+                
+                
+                
+                    
+                        <input id="id_urladdress_set-0-url" type="text" class="vURLField" name="urladdress_set-0-url" maxlength="255" />
+                                                
+                        
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="urladdress_set-0-id" id="id_urladdress_set-0-id" />
+                        <input type="hidden" name="urladdress_set-0-contact" value="3514533" id="id_urladdress_set-0-contact" />
+                         
+                    
+                    
+                    <!-- <p>urladdress_set-0-url urladdress_set</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+    
+    
+    
+          
+        
+        
+    
+    
+    <tr  class="urladdress_set">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="urladdress_set-1-type" id="id_urladdress_set-1-type">
+<option value="" selected="selected">---------</option>
+<option value="1">Web site</option>
+<option value="2">Blog</option>
+<option value="3">Personal site</option>
+<option value="4">Office site</option>
+<option value="5">RSS feed</option>
+<option value="6">Facebook profile</option>
+<option value="7">Twitter feed</option>
+<option value="8">LinkedIN profile</option>
+</select>
+                        <span class="field-name invisible">URL address</span>   
+                    
+
+                    
+                    
+                    <!-- <p>urladdress_set-1-type urladdress_set</p>      -->          
+                </td>
+            
+        
+            
+                
+                    
+                    <td class="right-td">
+                
+                
+                
+                    
+                        <input id="id_urladdress_set-1-url" type="text" class="vURLField" name="urladdress_set-1-url" maxlength="255" />
+                                                
+                        
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="urladdress_set-1-id" id="id_urladdress_set-1-id" />
+                        <input type="hidden" name="urladdress_set-1-contact" value="3514533" id="id_urladdress_set-1-contact" />
+                         
+                    
+                    
+                    <!-- <p>urladdress_set-1-url urladdress_set</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+    
+    
+    
+          
+        
+        
+    
+    
+    <tr  class="urladdress_set">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="urladdress_set-2-type" id="id_urladdress_set-2-type">
+<option value="" selected="selected">---------</option>
+<option value="1">Web site</option>
+<option value="2">Blog</option>
+<option value="3">Personal site</option>
+<option value="4">Office site</option>
+<option value="5">RSS feed</option>
+<option value="6">Facebook profile</option>
+<option value="7">Twitter feed</option>
+<option value="8">LinkedIN profile</option>
+</select>
+                        <span class="field-name invisible">URL address</span>   
+                    
+
+                    
+                    
+                    <!-- <p>urladdress_set-2-type urladdress_set</p>      -->          
+                </td>
+            
+        
+            
+                
+                    
+                    <td class="right-td">
+                
+                
+                
+                    
+                        <input id="id_urladdress_set-2-url" type="text" class="vURLField" name="urladdress_set-2-url" maxlength="255" />
+                                                
+                        
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="urladdress_set-2-id" id="id_urladdress_set-2-id" />
+                        <input type="hidden" name="urladdress_set-2-contact" value="3514533" id="id_urladdress_set-2-contact" />
+                         
+                    
+                    
+                    <!-- <p>urladdress_set-2-url urladdress_set</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+    
+    
+    
+          
+        
+        
+    
+    
+    <tr  class="urladdress_set">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="urladdress_set-3-type" id="id_urladdress_set-3-type">
+<option value="" selected="selected">---------</option>
+<option value="1">Web site</option>
+<option value="2">Blog</option>
+<option value="3">Personal site</option>
+<option value="4">Office site</option>
+<option value="5">RSS feed</option>
+<option value="6">Facebook profile</option>
+<option value="7">Twitter feed</option>
+<option value="8">LinkedIN profile</option>
+</select>
+                        <span class="field-name invisible">URL address</span>   
+                    
+
+                    
+                    
+                    <!-- <p>urladdress_set-3-type urladdress_set</p>      -->          
+                </td>
+            
+        
+            
+                
+                    
+                    <td class="right-td">
+                
+                
+                
+                    
+                        <input id="id_urladdress_set-3-url" type="text" class="vURLField" name="urladdress_set-3-url" maxlength="255" />
+                                                
+                        
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="urladdress_set-3-id" id="id_urladdress_set-3-id" />
+                        <input type="hidden" name="urladdress_set-3-contact" value="3514533" id="id_urladdress_set-3-contact" />
+                         
+                    
+                    
+                    <!-- <p>urladdress_set-3-url urladdress_set</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+    
+    
+    
+          
+        
+        
+    
+    
+    <tr  class="urladdress_set">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="urladdress_set-4-type" id="id_urladdress_set-4-type">
+<option value="" selected="selected">---------</option>
+<option value="1">Web site</option>
+<option value="2">Blog</option>
+<option value="3">Personal site</option>
+<option value="4">Office site</option>
+<option value="5">RSS feed</option>
+<option value="6">Facebook profile</option>
+<option value="7">Twitter feed</option>
+<option value="8">LinkedIN profile</option>
+</select>
+                        <span class="field-name invisible">URL address</span>   
+                    
+
+                    
+                    
+                    <!-- <p>urladdress_set-4-type urladdress_set</p>      -->          
+                </td>
+            
+        
+            
+                
+                    
+                    <td class="right-td">
+                
+                
+                
+                    
+                        <input id="id_urladdress_set-4-url" type="text" class="vURLField" name="urladdress_set-4-url" maxlength="255" />
+                                                
+                        
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="urladdress_set-4-id" id="id_urladdress_set-4-id" />
+                        <input type="hidden" name="urladdress_set-4-contact" value="3514533" id="id_urladdress_set-4-contact" />
+                         
+                    
+                    
+                    <!-- <p>urladdress_set-4-url urladdress_set</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+    
+    
+    
+          
+        
+        
+    
+    
+    <tr  class="urladdress_set">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="urladdress_set-5-type" id="id_urladdress_set-5-type">
+<option value="" selected="selected">---------</option>
+<option value="1">Web site</option>
+<option value="2">Blog</option>
+<option value="3">Personal site</option>
+<option value="4">Office site</option>
+<option value="5">RSS feed</option>
+<option value="6">Facebook profile</option>
+<option value="7">Twitter feed</option>
+<option value="8">LinkedIN profile</option>
+</select>
+                        <span class="field-name invisible">URL address</span>   
+                    
+
+                    
+                    
+                    <!-- <p>urladdress_set-5-type urladdress_set</p>      -->          
+                </td>
+            
+        
+            
+                
+                    
+                    <td class="right-td">
+                
+                
+                
+                    
+                        <input id="id_urladdress_set-5-url" type="text" class="vURLField" name="urladdress_set-5-url" maxlength="255" />
+                                                
+                        
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="urladdress_set-5-id" id="id_urladdress_set-5-id" />
+                        <input type="hidden" name="urladdress_set-5-contact" value="3514533" id="id_urladdress_set-5-contact" />
+                         
+                    
+                    
+                    <!-- <p>urladdress_set-5-url urladdress_set</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+    
+    
+    
+          
+        
+        
+    
+    
+    <tr  class="urladdress_set">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="urladdress_set-6-type" id="id_urladdress_set-6-type">
+<option value="" selected="selected">---------</option>
+<option value="1">Web site</option>
+<option value="2">Blog</option>
+<option value="3">Personal site</option>
+<option value="4">Office site</option>
+<option value="5">RSS feed</option>
+<option value="6">Facebook profile</option>
+<option value="7">Twitter feed</option>
+<option value="8">LinkedIN profile</option>
+</select>
+                        <span class="field-name invisible">URL address</span>   
+                    
+
+                    
+                    
+                    <!-- <p>urladdress_set-6-type urladdress_set</p>      -->          
+                </td>
+            
+        
+            
+                
+                    
+                    <td class="right-td">
+                
+                
+                
+                    
+                        <input id="id_urladdress_set-6-url" type="text" class="vURLField" name="urladdress_set-6-url" maxlength="255" />
+                                                
+                        
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="urladdress_set-6-id" id="id_urladdress_set-6-id" />
+                        <input type="hidden" name="urladdress_set-6-contact" value="3514533" id="id_urladdress_set-6-contact" />
+                         
+                    
+                    
+                    <!-- <p>urladdress_set-6-url urladdress_set</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+    
+    
+    
+          
+        
+        
+    
+    
+    <tr  class="urladdress_set">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="urladdress_set-7-type" id="id_urladdress_set-7-type">
+<option value="" selected="selected">---------</option>
+<option value="1">Web site</option>
+<option value="2">Blog</option>
+<option value="3">Personal site</option>
+<option value="4">Office site</option>
+<option value="5">RSS feed</option>
+<option value="6">Facebook profile</option>
+<option value="7">Twitter feed</option>
+<option value="8">LinkedIN profile</option>
+</select>
+                        <span class="field-name invisible">URL address</span>   
+                    
+
+                    
+                    
+                    <!-- <p>urladdress_set-7-type urladdress_set</p>      -->          
+                </td>
+            
+        
+            
+                
+                    
+                    <td class="right-td">
+                
+                
+                
+                    
+                        <input id="id_urladdress_set-7-url" type="text" class="vURLField" name="urladdress_set-7-url" maxlength="255" />
+                                                
+                        
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="urladdress_set-7-id" id="id_urladdress_set-7-id" />
+                        <input type="hidden" name="urladdress_set-7-contact" value="3514533" id="id_urladdress_set-7-contact" />
+                         
+                    
+                    
+                    <!-- <p>urladdress_set-7-url urladdress_set</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+    
+    
+    
+          
+        
+        
+    
+    
+    <tr  class="last-in-fieldset invisible">
+        
+            
+                        
+                    <td class="left-td">  
+                
+                
+                
+                    
+                        <select name="urladdress_set-__prefix__-type" id="id_urladdress_set-__prefix__-type">
+<option value="" selected="selected">---------</option>
+<option value="1">Web site</option>
+<option value="2">Blog</option>
+<option value="3">Personal site</option>
+<option value="4">Office site</option>
+<option value="5">RSS feed</option>
+<option value="6">Facebook profile</option>
+<option value="7">Twitter feed</option>
+<option value="8">LinkedIN profile</option>
+</select>
+                        <span class="field-name invisible">URL address</span>   
+                    
+
+                    
+                    
+                    <!-- <p>urladdress_set-__prefix__-type urladdress_set</p>      -->          
+                </td>
+            
+        
+            
+                
+                    
+                    <td class="right-td">
+                
+                
+                
+                    
+                        <input id="id_urladdress_set-__prefix__-url" type="text" class="vURLField" name="urladdress_set-__prefix__-url" maxlength="255" />
+                                                
+                        
+                            
+                        
+                    
+
+                    
+                        <input type="hidden" name="urladdress_set-__prefix__-id" id="id_urladdress_set-__prefix__-id" />
+                        <input type="hidden" name="urladdress_set-__prefix__-contact" value="3514533" id="id_urladdress_set-__prefix__-contact" />
+                         
+                    
+                    
+                    <!-- <p>urladdress_set-__prefix__-url urladdress_set</p>      -->          
+                </td>
+            
+        
+    </tr>
+    
+
+                        
+                        </tbody>
+                    </table>
+                </fieldset>
+                <fieldset id="address-block">
+                    <!-- <h5>Addresses</h5> -->
+                    
+                        
+
+<input type="hidden" name="address_set-TOTAL_FORMS" value="1" id="id_address_set-TOTAL_FORMS" /><input type="hidden" name="address_set-INITIAL_FORMS" value="1" id="id_address_set-INITIAL_FORMS" /><input type="hidden" name="address_set-MAX_NUM_FORMS" value="1" id="id_address_set-MAX_NUM_FORMS" />
+
+
+            
+        <h5 class="can-delete-wrapper">Permanent address
+            
+        </h5>        
+    
+    
+    
+    
+    
+      
+        <div id="fieldset-1">
+      
+
+        
+
+    <input type="hidden" name="address_set-0-id" value="109" id="id_address_set-0-id" />
+    <input type="hidden" name="address_set-0-contact" value="3514533" id="id_address_set-0-contact" />
+     
+           
+        <table>
+            <tbody>
+            
+                
+                    
+                    
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="street1">
+                            <td class="left-td"><label for="id_address_set-0-street1">Street<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <input name="address_set-0-street1" value="U Zvonarky 2536" class="vTextField" maxlength="200" type="text" id="id_address_set-0-street1" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="street2">
+                            <td class="left-td"><label for="id_address_set-0-street2">Street 2:</label></td>
+                            <td class="right-td">
+                                
+                                    <input name="address_set-0-street2" value="1G 15" class="vTextField" maxlength="200" type="text" id="id_address_set-0-street2" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="street3">
+                            <td class="left-td"><label for="id_address_set-0-street3">Street 3:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-0-street3" type="text" class="vTextField" name="address_set-0-street3" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="city">
+                            <td class="left-td"><label for="id_address_set-0-city">City<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <input name="address_set-0-city" value="Praha" class="vTextField" maxlength="200" type="text" id="id_address_set-0-city" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="state">
+                            <td class="left-td"><label for="id_address_set-0-state">State:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-0-state" type="text" class="vTextField" name="address_set-0-state" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="postal_code">
+                            <td class="left-td"><label for="id_address_set-0-postal_code">Postal code<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <input name="address_set-0-postal_code" value="12000" class="vTextField" maxlength="50" type="text" id="id_address_set-0-postal_code" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="country">
+                            <td class="left-td"><label for="id_address_set-0-country">Country<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <select name="address_set-0-country" id="id_address_set-0-country">
+<option value="AF">AFGHANISTAN</option>
+<option value="AX">ALAND ISLANDS</option>
+<option value="AL">ALBANIA</option>
+<option value="DZ">ALGERIA</option>
+<option value="AS">AMERICAN SAMOA</option>
+<option value="AD">ANDORRA</option>
+<option value="AO">ANGOLA</option>
+<option value="AI">ANGUILLA</option>
+<option value="AQ">ANTARCTICA</option>
+<option value="AG">ANTIGUA AND BARBUDA</option>
+<option value="AR">ARGENTINA</option>
+<option value="AM">ARMENIA</option>
+<option value="AW">ARUBA</option>
+<option value="AU">AUSTRALIA</option>
+<option value="AT">AUSTRIA</option>
+<option value="AZ">AZERBAIJAN</option>
+<option value="BS">BAHAMAS</option>
+<option value="BH">BAHRAIN</option>
+<option value="BD">BANGLADESH</option>
+<option value="BB">BARBADOS</option>
+<option value="BY">BELARUS</option>
+<option value="BE">BELGIUM</option>
+<option value="BZ">BELIZE</option>
+<option value="BJ">BENIN</option>
+<option value="BM">BERMUDA</option>
+<option value="BT">BHUTAN</option>
+<option value="BO">BOLIVIA</option>
+<option value="BA">BOSNIA AND HERZEGOVINA</option>
+<option value="BW">BOTSWANA</option>
+<option value="BV">BOUVET ISLAND</option>
+<option value="BR">BRAZIL</option>
+<option value="IO">BRITISH INDIAN OCEAN TERRITORY</option>
+<option value="BN">BRUNEI DARUSSALAM</option>
+<option value="BG">BULGARIA</option>
+<option value="BF">BURKINA FASO</option>
+<option value="BI">BURUNDI</option>
+<option value="KH">CAMBODIA</option>
+<option value="CM">CAMEROON</option>
+<option value="CA">CANADA</option>
+<option value="CV">CAPE VERDE</option>
+<option value="KY">CAYMAN ISLANDS</option>
+<option value="CF">CENTRAL AFRICAN REPUBLIC</option>
+<option value="TD">CHAD</option>
+<option value="CL">CHILE</option>
+<option value="CN">CHINA</option>
+<option value="CX">CHRISTMAS ISLAND</option>
+<option value="CC">COCOS (KEELING); ISLANDS</option>
+<option value="CO">COLOMBIA</option>
+<option value="KM">COMOROS</option>
+<option value="CG">CONGO</option>
+<option value="CD">CONGO, THE DEMOCRATIC REPUBLIC OF THE</option>
+<option value="CK">COOK ISLANDS</option>
+<option value="CR">COSTA RICA</option>
+<option value="HR">CROATIA</option>
+<option value="CU">CUBA</option>
+<option value="CY">CYPRUS</option>
+<option value="CZ" selected="selected">CZECH REPUBLIC</option>
+<option value="DK">DENMARK</option>
+<option value="DJ">DJIBOUTI</option>
+<option value="DM">DOMINICA</option>
+<option value="DO">DOMINICAN REPUBLIC</option>
+<option value="EC">ECUADOR</option>
+<option value="EG">EGYPT</option>
+<option value="SV">EL SALVADOR</option>
+<option value="GQ">EQUATORIAL GUINEA</option>
+<option value="ER">ERITREA</option>
+<option value="EE">ESTONIA</option>
+<option value="ET">ETHIOPIA</option>
+<option value="FK">FALKLAND ISLANDS (MALVINAS);</option>
+<option value="FO">FAROE ISLANDS</option>
+<option value="FJ">FIJI</option>
+<option value="FI">FINLAND</option>
+<option value="FR">FRANCE</option>
+<option value="GF">FRENCH GUIANA</option>
+<option value="PF">FRENCH POLYNESIA</option>
+<option value="TF">FRENCH SOUTHERN TERRITORIES</option>
+<option value="GA">GABON</option>
+<option value="GM">GAMBIA</option>
+<option value="GE">GEORGIA</option>
+<option value="DE">GERMANY</option>
+<option value="GH">GHANA</option>
+<option value="GI">GIBRALTAR</option>
+<option value="GR">GREECE</option>
+<option value="GL">GREENLAND</option>
+<option value="GD">GRENADA</option>
+<option value="GP">GUADELOUPE</option>
+<option value="GU">GUAM</option>
+<option value="GT">GUATEMALA</option>
+<option value="GG">GUERNSEY</option>
+<option value="GN">GUINEA</option>
+<option value="GW">GUINEA-BISSAU</option>
+<option value="GY">GUYANA</option>
+<option value="HT">HAITI</option>
+<option value="HM">HEARD ISLAND AND MCDONALD ISLANDS</option>
+<option value="VA">HOLY SEE (VATICAN CITY STATE);</option>
+<option value="HN">HONDURAS</option>
+<option value="HK">HONG KONG</option>
+<option value="HU">HUNGARY</option>
+<option value="IS">ICELAND</option>
+<option value="IN">INDIA</option>
+<option value="ID">INDONESIA</option>
+<option value="IR">IRAN, ISLAMIC REPUBLIC OF</option>
+<option value="IQ">IRAQ</option>
+<option value="IE">IRELAND</option>
+<option value="IM">ISLE OF MAN</option>
+<option value="IL">ISRAEL</option>
+<option value="IT">ITALY</option>
+<option value="JM">JAMAICA</option>
+<option value="JP">JAPAN</option>
+<option value="JE">JERSEY</option>
+<option value="JO">JORDAN</option>
+<option value="KZ">KAZAKHSTAN</option>
+<option value="KE">KENYA</option>
+<option value="KI">KIRIBATI</option>
+<option value="KR">KOREA, REPUBLIC OF</option>
+<option value="KW">KUWAIT</option>
+<option value="KG">KYRGYZSTAN</option>
+<option value="LV">LATVIA</option>
+<option value="LB">LEBANON</option>
+<option value="LS">LESOTHO</option>
+<option value="LR">LIBERIA</option>
+<option value="LY">LIBYAN ARAB JAMAHIRIYA</option>
+<option value="LI">LIECHTENSTEIN</option>
+<option value="LT">LITHUANIA</option>
+<option value="LU">LUXEMBOURG</option>
+<option value="MO">MACAO</option>
+<option value="MK">MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</option>
+<option value="MG">MADAGASCAR</option>
+<option value="MW">MALAWI</option>
+<option value="MY">MALAYSIA</option>
+<option value="MV">MALDIVES</option>
+<option value="ML">MALI</option>
+<option value="MT">MALTA</option>
+<option value="MH">MARSHALL ISLANDS</option>
+<option value="MQ">MARTINIQUE</option>
+<option value="MR">MAURITANIA</option>
+<option value="MU">MAURITIUS</option>
+<option value="YT">MAYOTTE</option>
+<option value="MX">MEXICO</option>
+<option value="FM">MICRONESIA, FEDERATED STATES OF</option>
+<option value="MD">MOLDOVA, REPUBLIC OF</option>
+<option value="MC">MONACO</option>
+<option value="MN">MONGOLIA</option>
+<option value="ME">MONTENEGRO</option>
+<option value="MS">MONTSERRAT</option>
+<option value="MA">MOROCCO</option>
+<option value="MZ">MOZAMBIQUE</option>
+<option value="MM">MYANMAR</option>
+<option value="NA">NAMIBIA</option>
+<option value="NR">NAURU</option>
+<option value="NP">NEPAL</option>
+<option value="NL">NETHERLANDS</option>
+<option value="AN">NETHERLANDS ANTILLES</option>
+<option value="NC">NEW CALEDONIA</option>
+<option value="NZ">NEW ZEALAND</option>
+<option value="NI">NICARAGUA</option>
+<option value="NE">NIGER</option>
+<option value="NG">NIGERIA</option>
+<option value="NU">NIUE</option>
+<option value="NF">NORFOLK ISLAND</option>
+<option value="MP">NORTHERN MARIANA ISLANDS</option>
+<option value="NO">NORWAY</option>
+<option value="OM">OMAN</option>
+<option value="PK">PAKISTAN</option>
+<option value="PW">PALAU</option>
+<option value="PS">PALESTINIAN TERRITORY, OCCUPIED</option>
+<option value="PA">PANAMA</option>
+<option value="PG">PAPUA NEW GUINEA</option>
+<option value="PY">PARAGUAY</option>
+<option value="PE">PERU</option>
+<option value="PH">PHILIPPINES</option>
+<option value="PN">PITCAIRN</option>
+<option value="PL">POLAND</option>
+<option value="PT">PORTUGAL</option>
+<option value="PR">PUERTO RICO</option>
+<option value="QA">QATAR</option>
+<option value="RE">REUNION</option>
+<option value="RO">ROMANIA</option>
+<option value="RU">RUSSIAN FEDERATION</option>
+<option value="RW">RWANDA</option>
+<option value="SH">SAINT HELENA</option>
+<option value="KN">SAINT KITTS AND NEVIS</option>
+<option value="LC">SAINT LUCIA</option>
+<option value="PM">SAINT PIERRE AND MIQUELON</option>
+<option value="VC">SAINT VINCENT AND THE GRENADINES</option>
+<option value="WS">SAMOA</option>
+<option value="SM">SAN MARINO</option>
+<option value="ST">SAO TOME AND PRINCIPE</option>
+<option value="SA">SAUDI ARABIA</option>
+<option value="SN">SENEGAL</option>
+<option value="RS">SERBIA</option>
+<option value="CS">SERBIA AND MONTENEGRO</option>
+<option value="SC">SEYCHELLES</option>
+<option value="SL">SIERRA LEONE</option>
+<option value="SG">SINGAPORE</option>
+<option value="SK">SLOVAKIA</option>
+<option value="SI">SLOVENIA</option>
+<option value="SB">SOLOMON ISLANDS</option>
+<option value="SO">SOMALIA</option>
+<option value="ZA">SOUTH AFRICA</option>
+<option value="GS">SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</option>
+<option value="ES">SPAIN</option>
+<option value="LK">SRI LANKA</option>
+<option value="SD">SUDAN</option>
+<option value="SR">SURINAME</option>
+<option value="SJ">SVALBARD AND JAN MAYEN</option>
+<option value="SZ">SWAZILAND</option>
+<option value="SE">SWEDEN</option>
+<option value="CH">SWITZERLAND</option>
+<option value="SY">SYRIAN ARAB REPUBLIC</option>
+<option value="TW">TAIWAN, PROVINCE OF CHINA</option>
+<option value="TJ">TAJIKISTAN</option>
+<option value="TZ">TANZANIA, UNITED REPUBLIC OF</option>
+<option value="TH">THAILAND</option>
+<option value="TL">TIMOR-LESTE</option>
+<option value="TG">TOGO</option>
+<option value="TK">TOKELAU</option>
+<option value="TO">TONGA</option>
+<option value="TT">TRINIDAD AND TOBAGO</option>
+<option value="TN">TUNISIA</option>
+<option value="TR">TURKEY</option>
+<option value="TM">TURKMENISTAN</option>
+<option value="TC">TURKS AND CAICOS ISLANDS</option>
+<option value="TV">TUVALU</option>
+<option value="UG">UGANDA</option>
+<option value="UA">UKRAINE</option>
+<option value="AE">UNITED ARAB EMIRATES</option>
+<option value="GB">UNITED KINGDOM</option>
+<option value="US">UNITED STATES</option>
+<option value="UM">UNITED STATES MINOR OUTLYING ISLANDS</option>
+<option value="UY">URUGUAY</option>
+<option value="UZ">UZBEKISTAN</option>
+<option value="VU">VANUATU</option>
+<option value="VE">VENEZUELA</option>
+<option value="VN">VIET NAM</option>
+<option value="VG">VIRGIN ISLANDS, BRITISH</option>
+<option value="VI">VIRGIN ISLANDS, U.S.</option>
+<option value="WF">WALLIS AND FUTUNA</option>
+<option value="EH">WESTERN SAHARA</option>
+<option value="YE">YEMEN</option>
+<option value="YU">YUGOSLAVIA</option>
+<option value="ZM">ZAMBIA</option>
+<option value="ZW">ZIMBABWE</option>
+</select>
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+            
+            </tbody>
+        </table>
+    </div>
+
+    
+        
+    
+    
+    
+    
+    
+        
+        <div class="address-fieldset-invisible invisible">
+            <h6>                 
+                
+                Address 2
+            </h6>
+      
+
+        
+
+    <input type="hidden" name="address_set-__prefix__-id" id="id_address_set-__prefix__-id" />
+    <input type="hidden" name="address_set-__prefix__-contact" value="3514533" id="id_address_set-__prefix__-contact" />
+     
+           
+        <table>
+            <tbody>
+            
+                
+                    
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="street1">
+                            <td class="left-td"><label for="id_address_set-__prefix__-street1">Street<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-__prefix__-street1" type="text" class="vTextField" name="address_set-__prefix__-street1" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="street2">
+                            <td class="left-td"><label for="id_address_set-__prefix__-street2">Street 2:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-__prefix__-street2" type="text" class="vTextField" name="address_set-__prefix__-street2" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="street3">
+                            <td class="left-td"><label for="id_address_set-__prefix__-street3">Street 3:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-__prefix__-street3" type="text" class="vTextField" name="address_set-__prefix__-street3" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="city">
+                            <td class="left-td"><label for="id_address_set-__prefix__-city">City<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-__prefix__-city" type="text" class="vTextField" name="address_set-__prefix__-city" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="state">
+                            <td class="left-td"><label for="id_address_set-__prefix__-state">State:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-__prefix__-state" type="text" class="vTextField" name="address_set-__prefix__-state" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="postal_code">
+                            <td class="left-td"><label for="id_address_set-__prefix__-postal_code">Postal code<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-__prefix__-postal_code" type="text" class="vTextField" name="address_set-__prefix__-postal_code" maxlength="50" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="country">
+                            <td class="left-td"><label for="id_address_set-__prefix__-country">Country<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <select name="address_set-__prefix__-country" id="id_address_set-__prefix__-country">
+<option value="AF">AFGHANISTAN</option>
+<option value="AX">ALAND ISLANDS</option>
+<option value="AL">ALBANIA</option>
+<option value="DZ">ALGERIA</option>
+<option value="AS">AMERICAN SAMOA</option>
+<option value="AD">ANDORRA</option>
+<option value="AO">ANGOLA</option>
+<option value="AI">ANGUILLA</option>
+<option value="AQ">ANTARCTICA</option>
+<option value="AG">ANTIGUA AND BARBUDA</option>
+<option value="AR">ARGENTINA</option>
+<option value="AM">ARMENIA</option>
+<option value="AW">ARUBA</option>
+<option value="AU">AUSTRALIA</option>
+<option value="AT">AUSTRIA</option>
+<option value="AZ">AZERBAIJAN</option>
+<option value="BS">BAHAMAS</option>
+<option value="BH">BAHRAIN</option>
+<option value="BD">BANGLADESH</option>
+<option value="BB">BARBADOS</option>
+<option value="BY">BELARUS</option>
+<option value="BE">BELGIUM</option>
+<option value="BZ">BELIZE</option>
+<option value="BJ">BENIN</option>
+<option value="BM">BERMUDA</option>
+<option value="BT">BHUTAN</option>
+<option value="BO">BOLIVIA</option>
+<option value="BA">BOSNIA AND HERZEGOVINA</option>
+<option value="BW">BOTSWANA</option>
+<option value="BV">BOUVET ISLAND</option>
+<option value="BR">BRAZIL</option>
+<option value="IO">BRITISH INDIAN OCEAN TERRITORY</option>
+<option value="BN">BRUNEI DARUSSALAM</option>
+<option value="BG">BULGARIA</option>
+<option value="BF">BURKINA FASO</option>
+<option value="BI">BURUNDI</option>
+<option value="KH">CAMBODIA</option>
+<option value="CM">CAMEROON</option>
+<option value="CA">CANADA</option>
+<option value="CV">CAPE VERDE</option>
+<option value="KY">CAYMAN ISLANDS</option>
+<option value="CF">CENTRAL AFRICAN REPUBLIC</option>
+<option value="TD">CHAD</option>
+<option value="CL">CHILE</option>
+<option value="CN">CHINA</option>
+<option value="CX">CHRISTMAS ISLAND</option>
+<option value="CC">COCOS (KEELING); ISLANDS</option>
+<option value="CO">COLOMBIA</option>
+<option value="KM">COMOROS</option>
+<option value="CG">CONGO</option>
+<option value="CD">CONGO, THE DEMOCRATIC REPUBLIC OF THE</option>
+<option value="CK">COOK ISLANDS</option>
+<option value="CR">COSTA RICA</option>
+<option value="HR">CROATIA</option>
+<option value="CU">CUBA</option>
+<option value="CY">CYPRUS</option>
+<option value="CZ" selected="selected">CZECH REPUBLIC</option>
+<option value="DK">DENMARK</option>
+<option value="DJ">DJIBOUTI</option>
+<option value="DM">DOMINICA</option>
+<option value="DO">DOMINICAN REPUBLIC</option>
+<option value="EC">ECUADOR</option>
+<option value="EG">EGYPT</option>
+<option value="SV">EL SALVADOR</option>
+<option value="GQ">EQUATORIAL GUINEA</option>
+<option value="ER">ERITREA</option>
+<option value="EE">ESTONIA</option>
+<option value="ET">ETHIOPIA</option>
+<option value="FK">FALKLAND ISLANDS (MALVINAS);</option>
+<option value="FO">FAROE ISLANDS</option>
+<option value="FJ">FIJI</option>
+<option value="FI">FINLAND</option>
+<option value="FR">FRANCE</option>
+<option value="GF">FRENCH GUIANA</option>
+<option value="PF">FRENCH POLYNESIA</option>
+<option value="TF">FRENCH SOUTHERN TERRITORIES</option>
+<option value="GA">GABON</option>
+<option value="GM">GAMBIA</option>
+<option value="GE">GEORGIA</option>
+<option value="DE">GERMANY</option>
+<option value="GH">GHANA</option>
+<option value="GI">GIBRALTAR</option>
+<option value="GR">GREECE</option>
+<option value="GL">GREENLAND</option>
+<option value="GD">GRENADA</option>
+<option value="GP">GUADELOUPE</option>
+<option value="GU">GUAM</option>
+<option value="GT">GUATEMALA</option>
+<option value="GG">GUERNSEY</option>
+<option value="GN">GUINEA</option>
+<option value="GW">GUINEA-BISSAU</option>
+<option value="GY">GUYANA</option>
+<option value="HT">HAITI</option>
+<option value="HM">HEARD ISLAND AND MCDONALD ISLANDS</option>
+<option value="VA">HOLY SEE (VATICAN CITY STATE);</option>
+<option value="HN">HONDURAS</option>
+<option value="HK">HONG KONG</option>
+<option value="HU">HUNGARY</option>
+<option value="IS">ICELAND</option>
+<option value="IN">INDIA</option>
+<option value="ID">INDONESIA</option>
+<option value="IR">IRAN, ISLAMIC REPUBLIC OF</option>
+<option value="IQ">IRAQ</option>
+<option value="IE">IRELAND</option>
+<option value="IM">ISLE OF MAN</option>
+<option value="IL">ISRAEL</option>
+<option value="IT">ITALY</option>
+<option value="JM">JAMAICA</option>
+<option value="JP">JAPAN</option>
+<option value="JE">JERSEY</option>
+<option value="JO">JORDAN</option>
+<option value="KZ">KAZAKHSTAN</option>
+<option value="KE">KENYA</option>
+<option value="KI">KIRIBATI</option>
+<option value="KR">KOREA, REPUBLIC OF</option>
+<option value="KW">KUWAIT</option>
+<option value="KG">KYRGYZSTAN</option>
+<option value="LV">LATVIA</option>
+<option value="LB">LEBANON</option>
+<option value="LS">LESOTHO</option>
+<option value="LR">LIBERIA</option>
+<option value="LY">LIBYAN ARAB JAMAHIRIYA</option>
+<option value="LI">LIECHTENSTEIN</option>
+<option value="LT">LITHUANIA</option>
+<option value="LU">LUXEMBOURG</option>
+<option value="MO">MACAO</option>
+<option value="MK">MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</option>
+<option value="MG">MADAGASCAR</option>
+<option value="MW">MALAWI</option>
+<option value="MY">MALAYSIA</option>
+<option value="MV">MALDIVES</option>
+<option value="ML">MALI</option>
+<option value="MT">MALTA</option>
+<option value="MH">MARSHALL ISLANDS</option>
+<option value="MQ">MARTINIQUE</option>
+<option value="MR">MAURITANIA</option>
+<option value="MU">MAURITIUS</option>
+<option value="YT">MAYOTTE</option>
+<option value="MX">MEXICO</option>
+<option value="FM">MICRONESIA, FEDERATED STATES OF</option>
+<option value="MD">MOLDOVA, REPUBLIC OF</option>
+<option value="MC">MONACO</option>
+<option value="MN">MONGOLIA</option>
+<option value="ME">MONTENEGRO</option>
+<option value="MS">MONTSERRAT</option>
+<option value="MA">MOROCCO</option>
+<option value="MZ">MOZAMBIQUE</option>
+<option value="MM">MYANMAR</option>
+<option value="NA">NAMIBIA</option>
+<option value="NR">NAURU</option>
+<option value="NP">NEPAL</option>
+<option value="NL">NETHERLANDS</option>
+<option value="AN">NETHERLANDS ANTILLES</option>
+<option value="NC">NEW CALEDONIA</option>
+<option value="NZ">NEW ZEALAND</option>
+<option value="NI">NICARAGUA</option>
+<option value="NE">NIGER</option>
+<option value="NG">NIGERIA</option>
+<option value="NU">NIUE</option>
+<option value="NF">NORFOLK ISLAND</option>
+<option value="MP">NORTHERN MARIANA ISLANDS</option>
+<option value="NO">NORWAY</option>
+<option value="OM">OMAN</option>
+<option value="PK">PAKISTAN</option>
+<option value="PW">PALAU</option>
+<option value="PS">PALESTINIAN TERRITORY, OCCUPIED</option>
+<option value="PA">PANAMA</option>
+<option value="PG">PAPUA NEW GUINEA</option>
+<option value="PY">PARAGUAY</option>
+<option value="PE">PERU</option>
+<option value="PH">PHILIPPINES</option>
+<option value="PN">PITCAIRN</option>
+<option value="PL">POLAND</option>
+<option value="PT">PORTUGAL</option>
+<option value="PR">PUERTO RICO</option>
+<option value="QA">QATAR</option>
+<option value="RE">REUNION</option>
+<option value="RO">ROMANIA</option>
+<option value="RU">RUSSIAN FEDERATION</option>
+<option value="RW">RWANDA</option>
+<option value="SH">SAINT HELENA</option>
+<option value="KN">SAINT KITTS AND NEVIS</option>
+<option value="LC">SAINT LUCIA</option>
+<option value="PM">SAINT PIERRE AND MIQUELON</option>
+<option value="VC">SAINT VINCENT AND THE GRENADINES</option>
+<option value="WS">SAMOA</option>
+<option value="SM">SAN MARINO</option>
+<option value="ST">SAO TOME AND PRINCIPE</option>
+<option value="SA">SAUDI ARABIA</option>
+<option value="SN">SENEGAL</option>
+<option value="RS">SERBIA</option>
+<option value="CS">SERBIA AND MONTENEGRO</option>
+<option value="SC">SEYCHELLES</option>
+<option value="SL">SIERRA LEONE</option>
+<option value="SG">SINGAPORE</option>
+<option value="SK">SLOVAKIA</option>
+<option value="SI">SLOVENIA</option>
+<option value="SB">SOLOMON ISLANDS</option>
+<option value="SO">SOMALIA</option>
+<option value="ZA">SOUTH AFRICA</option>
+<option value="GS">SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</option>
+<option value="ES">SPAIN</option>
+<option value="LK">SRI LANKA</option>
+<option value="SD">SUDAN</option>
+<option value="SR">SURINAME</option>
+<option value="SJ">SVALBARD AND JAN MAYEN</option>
+<option value="SZ">SWAZILAND</option>
+<option value="SE">SWEDEN</option>
+<option value="CH">SWITZERLAND</option>
+<option value="SY">SYRIAN ARAB REPUBLIC</option>
+<option value="TW">TAIWAN, PROVINCE OF CHINA</option>
+<option value="TJ">TAJIKISTAN</option>
+<option value="TZ">TANZANIA, UNITED REPUBLIC OF</option>
+<option value="TH">THAILAND</option>
+<option value="TL">TIMOR-LESTE</option>
+<option value="TG">TOGO</option>
+<option value="TK">TOKELAU</option>
+<option value="TO">TONGA</option>
+<option value="TT">TRINIDAD AND TOBAGO</option>
+<option value="TN">TUNISIA</option>
+<option value="TR">TURKEY</option>
+<option value="TM">TURKMENISTAN</option>
+<option value="TC">TURKS AND CAICOS ISLANDS</option>
+<option value="TV">TUVALU</option>
+<option value="UG">UGANDA</option>
+<option value="UA">UKRAINE</option>
+<option value="AE">UNITED ARAB EMIRATES</option>
+<option value="GB">UNITED KINGDOM</option>
+<option value="US">UNITED STATES</option>
+<option value="UM">UNITED STATES MINOR OUTLYING ISLANDS</option>
+<option value="UY">URUGUAY</option>
+<option value="UZ">UZBEKISTAN</option>
+<option value="VU">VANUATU</option>
+<option value="VE">VENEZUELA</option>
+<option value="VN">VIET NAM</option>
+<option value="VG">VIRGIN ISLANDS, BRITISH</option>
+<option value="VI">VIRGIN ISLANDS, U.S.</option>
+<option value="WF">WALLIS AND FUTUNA</option>
+<option value="EH">WESTERN SAHARA</option>
+<option value="YE">YEMEN</option>
+<option value="YU">YUGOSLAVIA</option>
+<option value="ZM">ZAMBIA</option>
+<option value="ZW">ZIMBABWE</option>
+</select>
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+            
+            </tbody>
+        </table>
+    </div>
+
+                    
+                        
+
+<input type="hidden" name="address_set-2-TOTAL_FORMS" value="3" id="id_address_set-2-TOTAL_FORMS" /><input type="hidden" name="address_set-2-INITIAL_FORMS" value="1" id="id_address_set-2-INITIAL_FORMS" /><input type="hidden" name="address_set-2-MAX_NUM_FORMS" value="3" id="id_address_set-2-MAX_NUM_FORMS" />
+
+
+    
+        
+            <h5>Other addresses</h5>
+        
+    
+    
+    
+    
+    
+        
+        <div class="address-fieldset" id="fieldset-3">
+            <h6>                 
+                
+                    <strong class="can-delete" title="Delete"><input type="checkbox" name="address_set-2-0-DELETE" id="id_address_set-2-0-DELETE" /></strong>
+                
+                Address 1
+            </h6>
+      
+
+        
+
+    <input type="hidden" name="address_set-2-0-id" value="172" id="id_address_set-2-0-id" />
+    <input type="hidden" name="address_set-2-0-contact" value="3514533" id="id_address_set-2-0-contact" />
+     
+           
+        <table>
+            <tbody>
+            
+                
+                    
+                    
+                        
+                        <tr class="type">
+                            <td class="left-td"><label for="id_address_set-2-0-type">Type<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <select name="address_set-2-0-type" id="id_address_set-2-0-type">
+<option value="">---------</option>
+<option value="2">Billing address</option>
+<option value="3" selected="selected">Shipping address</option>
+<option value="4">Mailing address</option>
+</select>
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="street1">
+                            <td class="left-td"><label for="id_address_set-2-0-street1">Street<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <input name="address_set-2-0-street1" value="Americka" class="vTextField" maxlength="200" type="text" id="id_address_set-2-0-street1" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="street2">
+                            <td class="left-td"><label for="id_address_set-2-0-street2">Street 2:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-2-0-street2" type="text" class="vTextField" name="address_set-2-0-street2" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="street3">
+                            <td class="left-td"><label for="id_address_set-2-0-street3">Street 3:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-2-0-street3" type="text" class="vTextField" name="address_set-2-0-street3" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="city">
+                            <td class="left-td"><label for="id_address_set-2-0-city">City<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <input name="address_set-2-0-city" value="Praha" class="vTextField" maxlength="200" type="text" id="id_address_set-2-0-city" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="state">
+                            <td class="left-td"><label for="id_address_set-2-0-state">State:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-2-0-state" type="text" class="vTextField" name="address_set-2-0-state" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="postal_code">
+                            <td class="left-td"><label for="id_address_set-2-0-postal_code">Postal code<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <input name="address_set-2-0-postal_code" value="12000" class="vTextField" maxlength="50" type="text" id="id_address_set-2-0-postal_code" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="country">
+                            <td class="left-td"><label for="id_address_set-2-0-country">Country<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <select name="address_set-2-0-country" id="id_address_set-2-0-country">
+<option value="AF">AFGHANISTAN</option>
+<option value="AX">ALAND ISLANDS</option>
+<option value="AL">ALBANIA</option>
+<option value="DZ">ALGERIA</option>
+<option value="AS">AMERICAN SAMOA</option>
+<option value="AD">ANDORRA</option>
+<option value="AO">ANGOLA</option>
+<option value="AI">ANGUILLA</option>
+<option value="AQ">ANTARCTICA</option>
+<option value="AG">ANTIGUA AND BARBUDA</option>
+<option value="AR">ARGENTINA</option>
+<option value="AM">ARMENIA</option>
+<option value="AW">ARUBA</option>
+<option value="AU">AUSTRALIA</option>
+<option value="AT">AUSTRIA</option>
+<option value="AZ">AZERBAIJAN</option>
+<option value="BS">BAHAMAS</option>
+<option value="BH">BAHRAIN</option>
+<option value="BD">BANGLADESH</option>
+<option value="BB">BARBADOS</option>
+<option value="BY">BELARUS</option>
+<option value="BE">BELGIUM</option>
+<option value="BZ">BELIZE</option>
+<option value="BJ">BENIN</option>
+<option value="BM">BERMUDA</option>
+<option value="BT">BHUTAN</option>
+<option value="BO">BOLIVIA</option>
+<option value="BA">BOSNIA AND HERZEGOVINA</option>
+<option value="BW">BOTSWANA</option>
+<option value="BV">BOUVET ISLAND</option>
+<option value="BR">BRAZIL</option>
+<option value="IO">BRITISH INDIAN OCEAN TERRITORY</option>
+<option value="BN">BRUNEI DARUSSALAM</option>
+<option value="BG">BULGARIA</option>
+<option value="BF">BURKINA FASO</option>
+<option value="BI">BURUNDI</option>
+<option value="KH">CAMBODIA</option>
+<option value="CM">CAMEROON</option>
+<option value="CA">CANADA</option>
+<option value="CV">CAPE VERDE</option>
+<option value="KY">CAYMAN ISLANDS</option>
+<option value="CF">CENTRAL AFRICAN REPUBLIC</option>
+<option value="TD">CHAD</option>
+<option value="CL">CHILE</option>
+<option value="CN">CHINA</option>
+<option value="CX">CHRISTMAS ISLAND</option>
+<option value="CC">COCOS (KEELING); ISLANDS</option>
+<option value="CO">COLOMBIA</option>
+<option value="KM">COMOROS</option>
+<option value="CG">CONGO</option>
+<option value="CD">CONGO, THE DEMOCRATIC REPUBLIC OF THE</option>
+<option value="CK">COOK ISLANDS</option>
+<option value="CR">COSTA RICA</option>
+<option value="HR">CROATIA</option>
+<option value="CU">CUBA</option>
+<option value="CY">CYPRUS</option>
+<option value="CZ" selected="selected">CZECH REPUBLIC</option>
+<option value="DK">DENMARK</option>
+<option value="DJ">DJIBOUTI</option>
+<option value="DM">DOMINICA</option>
+<option value="DO">DOMINICAN REPUBLIC</option>
+<option value="EC">ECUADOR</option>
+<option value="EG">EGYPT</option>
+<option value="SV">EL SALVADOR</option>
+<option value="GQ">EQUATORIAL GUINEA</option>
+<option value="ER">ERITREA</option>
+<option value="EE">ESTONIA</option>
+<option value="ET">ETHIOPIA</option>
+<option value="FK">FALKLAND ISLANDS (MALVINAS);</option>
+<option value="FO">FAROE ISLANDS</option>
+<option value="FJ">FIJI</option>
+<option value="FI">FINLAND</option>
+<option value="FR">FRANCE</option>
+<option value="GF">FRENCH GUIANA</option>
+<option value="PF">FRENCH POLYNESIA</option>
+<option value="TF">FRENCH SOUTHERN TERRITORIES</option>
+<option value="GA">GABON</option>
+<option value="GM">GAMBIA</option>
+<option value="GE">GEORGIA</option>
+<option value="DE">GERMANY</option>
+<option value="GH">GHANA</option>
+<option value="GI">GIBRALTAR</option>
+<option value="GR">GREECE</option>
+<option value="GL">GREENLAND</option>
+<option value="GD">GRENADA</option>
+<option value="GP">GUADELOUPE</option>
+<option value="GU">GUAM</option>
+<option value="GT">GUATEMALA</option>
+<option value="GG">GUERNSEY</option>
+<option value="GN">GUINEA</option>
+<option value="GW">GUINEA-BISSAU</option>
+<option value="GY">GUYANA</option>
+<option value="HT">HAITI</option>
+<option value="HM">HEARD ISLAND AND MCDONALD ISLANDS</option>
+<option value="VA">HOLY SEE (VATICAN CITY STATE);</option>
+<option value="HN">HONDURAS</option>
+<option value="HK">HONG KONG</option>
+<option value="HU">HUNGARY</option>
+<option value="IS">ICELAND</option>
+<option value="IN">INDIA</option>
+<option value="ID">INDONESIA</option>
+<option value="IR">IRAN, ISLAMIC REPUBLIC OF</option>
+<option value="IQ">IRAQ</option>
+<option value="IE">IRELAND</option>
+<option value="IM">ISLE OF MAN</option>
+<option value="IL">ISRAEL</option>
+<option value="IT">ITALY</option>
+<option value="JM">JAMAICA</option>
+<option value="JP">JAPAN</option>
+<option value="JE">JERSEY</option>
+<option value="JO">JORDAN</option>
+<option value="KZ">KAZAKHSTAN</option>
+<option value="KE">KENYA</option>
+<option value="KI">KIRIBATI</option>
+<option value="KR">KOREA, REPUBLIC OF</option>
+<option value="KW">KUWAIT</option>
+<option value="KG">KYRGYZSTAN</option>
+<option value="LV">LATVIA</option>
+<option value="LB">LEBANON</option>
+<option value="LS">LESOTHO</option>
+<option value="LR">LIBERIA</option>
+<option value="LY">LIBYAN ARAB JAMAHIRIYA</option>
+<option value="LI">LIECHTENSTEIN</option>
+<option value="LT">LITHUANIA</option>
+<option value="LU">LUXEMBOURG</option>
+<option value="MO">MACAO</option>
+<option value="MK">MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</option>
+<option value="MG">MADAGASCAR</option>
+<option value="MW">MALAWI</option>
+<option value="MY">MALAYSIA</option>
+<option value="MV">MALDIVES</option>
+<option value="ML">MALI</option>
+<option value="MT">MALTA</option>
+<option value="MH">MARSHALL ISLANDS</option>
+<option value="MQ">MARTINIQUE</option>
+<option value="MR">MAURITANIA</option>
+<option value="MU">MAURITIUS</option>
+<option value="YT">MAYOTTE</option>
+<option value="MX">MEXICO</option>
+<option value="FM">MICRONESIA, FEDERATED STATES OF</option>
+<option value="MD">MOLDOVA, REPUBLIC OF</option>
+<option value="MC">MONACO</option>
+<option value="MN">MONGOLIA</option>
+<option value="ME">MONTENEGRO</option>
+<option value="MS">MONTSERRAT</option>
+<option value="MA">MOROCCO</option>
+<option value="MZ">MOZAMBIQUE</option>
+<option value="MM">MYANMAR</option>
+<option value="NA">NAMIBIA</option>
+<option value="NR">NAURU</option>
+<option value="NP">NEPAL</option>
+<option value="NL">NETHERLANDS</option>
+<option value="AN">NETHERLANDS ANTILLES</option>
+<option value="NC">NEW CALEDONIA</option>
+<option value="NZ">NEW ZEALAND</option>
+<option value="NI">NICARAGUA</option>
+<option value="NE">NIGER</option>
+<option value="NG">NIGERIA</option>
+<option value="NU">NIUE</option>
+<option value="NF">NORFOLK ISLAND</option>
+<option value="MP">NORTHERN MARIANA ISLANDS</option>
+<option value="NO">NORWAY</option>
+<option value="OM">OMAN</option>
+<option value="PK">PAKISTAN</option>
+<option value="PW">PALAU</option>
+<option value="PS">PALESTINIAN TERRITORY, OCCUPIED</option>
+<option value="PA">PANAMA</option>
+<option value="PG">PAPUA NEW GUINEA</option>
+<option value="PY">PARAGUAY</option>
+<option value="PE">PERU</option>
+<option value="PH">PHILIPPINES</option>
+<option value="PN">PITCAIRN</option>
+<option value="PL">POLAND</option>
+<option value="PT">PORTUGAL</option>
+<option value="PR">PUERTO RICO</option>
+<option value="QA">QATAR</option>
+<option value="RE">REUNION</option>
+<option value="RO">ROMANIA</option>
+<option value="RU">RUSSIAN FEDERATION</option>
+<option value="RW">RWANDA</option>
+<option value="SH">SAINT HELENA</option>
+<option value="KN">SAINT KITTS AND NEVIS</option>
+<option value="LC">SAINT LUCIA</option>
+<option value="PM">SAINT PIERRE AND MIQUELON</option>
+<option value="VC">SAINT VINCENT AND THE GRENADINES</option>
+<option value="WS">SAMOA</option>
+<option value="SM">SAN MARINO</option>
+<option value="ST">SAO TOME AND PRINCIPE</option>
+<option value="SA">SAUDI ARABIA</option>
+<option value="SN">SENEGAL</option>
+<option value="RS">SERBIA</option>
+<option value="CS">SERBIA AND MONTENEGRO</option>
+<option value="SC">SEYCHELLES</option>
+<option value="SL">SIERRA LEONE</option>
+<option value="SG">SINGAPORE</option>
+<option value="SK">SLOVAKIA</option>
+<option value="SI">SLOVENIA</option>
+<option value="SB">SOLOMON ISLANDS</option>
+<option value="SO">SOMALIA</option>
+<option value="ZA">SOUTH AFRICA</option>
+<option value="GS">SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</option>
+<option value="ES">SPAIN</option>
+<option value="LK">SRI LANKA</option>
+<option value="SD">SUDAN</option>
+<option value="SR">SURINAME</option>
+<option value="SJ">SVALBARD AND JAN MAYEN</option>
+<option value="SZ">SWAZILAND</option>
+<option value="SE">SWEDEN</option>
+<option value="CH">SWITZERLAND</option>
+<option value="SY">SYRIAN ARAB REPUBLIC</option>
+<option value="TW">TAIWAN, PROVINCE OF CHINA</option>
+<option value="TJ">TAJIKISTAN</option>
+<option value="TZ">TANZANIA, UNITED REPUBLIC OF</option>
+<option value="TH">THAILAND</option>
+<option value="TL">TIMOR-LESTE</option>
+<option value="TG">TOGO</option>
+<option value="TK">TOKELAU</option>
+<option value="TO">TONGA</option>
+<option value="TT">TRINIDAD AND TOBAGO</option>
+<option value="TN">TUNISIA</option>
+<option value="TR">TURKEY</option>
+<option value="TM">TURKMENISTAN</option>
+<option value="TC">TURKS AND CAICOS ISLANDS</option>
+<option value="TV">TUVALU</option>
+<option value="UG">UGANDA</option>
+<option value="UA">UKRAINE</option>
+<option value="AE">UNITED ARAB EMIRATES</option>
+<option value="GB">UNITED KINGDOM</option>
+<option value="US">UNITED STATES</option>
+<option value="UM">UNITED STATES MINOR OUTLYING ISLANDS</option>
+<option value="UY">URUGUAY</option>
+<option value="UZ">UZBEKISTAN</option>
+<option value="VU">VANUATU</option>
+<option value="VE">VENEZUELA</option>
+<option value="VN">VIET NAM</option>
+<option value="VG">VIRGIN ISLANDS, BRITISH</option>
+<option value="VI">VIRGIN ISLANDS, U.S.</option>
+<option value="WF">WALLIS AND FUTUNA</option>
+<option value="EH">WESTERN SAHARA</option>
+<option value="YE">YEMEN</option>
+<option value="YU">YUGOSLAVIA</option>
+<option value="ZM">ZAMBIA</option>
+<option value="ZW">ZIMBABWE</option>
+</select>
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+            
+            </tbody>
+        </table>
+    </div>
+
+    
+        
+    
+    
+    
+    
+    
+        
+        <div class="address-fieldset">
+            <h6>                 
+                
+                Address 2
+            </h6>
+      
+
+        
+
+    <input type="hidden" name="address_set-2-1-id" id="id_address_set-2-1-id" />
+    <input type="hidden" name="address_set-2-1-contact" value="3514533" id="id_address_set-2-1-contact" />
+     
+           
+        <table>
+            <tbody>
+            
+                
+                    
+                    
+                        
+                        <tr class="type">
+                            <td class="left-td"><label for="id_address_set-2-1-type">Type<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <select name="address_set-2-1-type" id="id_address_set-2-1-type">
+<option value="" selected="selected">---------</option>
+<option value="2">Billing address</option>
+<option value="3">Shipping address</option>
+<option value="4">Mailing address</option>
+</select>
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="street1">
+                            <td class="left-td"><label for="id_address_set-2-1-street1">Street<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-2-1-street1" type="text" class="vTextField" name="address_set-2-1-street1" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="street2">
+                            <td class="left-td"><label for="id_address_set-2-1-street2">Street 2:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-2-1-street2" type="text" class="vTextField" name="address_set-2-1-street2" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="street3">
+                            <td class="left-td"><label for="id_address_set-2-1-street3">Street 3:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-2-1-street3" type="text" class="vTextField" name="address_set-2-1-street3" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="city">
+                            <td class="left-td"><label for="id_address_set-2-1-city">City<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-2-1-city" type="text" class="vTextField" name="address_set-2-1-city" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="state">
+                            <td class="left-td"><label for="id_address_set-2-1-state">State:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-2-1-state" type="text" class="vTextField" name="address_set-2-1-state" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="postal_code">
+                            <td class="left-td"><label for="id_address_set-2-1-postal_code">Postal code<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-2-1-postal_code" type="text" class="vTextField" name="address_set-2-1-postal_code" maxlength="50" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="country">
+                            <td class="left-td"><label for="id_address_set-2-1-country">Country<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <select name="address_set-2-1-country" id="id_address_set-2-1-country">
+<option value="AF">AFGHANISTAN</option>
+<option value="AX">ALAND ISLANDS</option>
+<option value="AL">ALBANIA</option>
+<option value="DZ">ALGERIA</option>
+<option value="AS">AMERICAN SAMOA</option>
+<option value="AD">ANDORRA</option>
+<option value="AO">ANGOLA</option>
+<option value="AI">ANGUILLA</option>
+<option value="AQ">ANTARCTICA</option>
+<option value="AG">ANTIGUA AND BARBUDA</option>
+<option value="AR">ARGENTINA</option>
+<option value="AM">ARMENIA</option>
+<option value="AW">ARUBA</option>
+<option value="AU">AUSTRALIA</option>
+<option value="AT">AUSTRIA</option>
+<option value="AZ">AZERBAIJAN</option>
+<option value="BS">BAHAMAS</option>
+<option value="BH">BAHRAIN</option>
+<option value="BD">BANGLADESH</option>
+<option value="BB">BARBADOS</option>
+<option value="BY">BELARUS</option>
+<option value="BE">BELGIUM</option>
+<option value="BZ">BELIZE</option>
+<option value="BJ">BENIN</option>
+<option value="BM">BERMUDA</option>
+<option value="BT">BHUTAN</option>
+<option value="BO">BOLIVIA</option>
+<option value="BA">BOSNIA AND HERZEGOVINA</option>
+<option value="BW">BOTSWANA</option>
+<option value="BV">BOUVET ISLAND</option>
+<option value="BR">BRAZIL</option>
+<option value="IO">BRITISH INDIAN OCEAN TERRITORY</option>
+<option value="BN">BRUNEI DARUSSALAM</option>
+<option value="BG">BULGARIA</option>
+<option value="BF">BURKINA FASO</option>
+<option value="BI">BURUNDI</option>
+<option value="KH">CAMBODIA</option>
+<option value="CM">CAMEROON</option>
+<option value="CA">CANADA</option>
+<option value="CV">CAPE VERDE</option>
+<option value="KY">CAYMAN ISLANDS</option>
+<option value="CF">CENTRAL AFRICAN REPUBLIC</option>
+<option value="TD">CHAD</option>
+<option value="CL">CHILE</option>
+<option value="CN">CHINA</option>
+<option value="CX">CHRISTMAS ISLAND</option>
+<option value="CC">COCOS (KEELING); ISLANDS</option>
+<option value="CO">COLOMBIA</option>
+<option value="KM">COMOROS</option>
+<option value="CG">CONGO</option>
+<option value="CD">CONGO, THE DEMOCRATIC REPUBLIC OF THE</option>
+<option value="CK">COOK ISLANDS</option>
+<option value="CR">COSTA RICA</option>
+<option value="HR">CROATIA</option>
+<option value="CU">CUBA</option>
+<option value="CY">CYPRUS</option>
+<option value="CZ" selected="selected">CZECH REPUBLIC</option>
+<option value="DK">DENMARK</option>
+<option value="DJ">DJIBOUTI</option>
+<option value="DM">DOMINICA</option>
+<option value="DO">DOMINICAN REPUBLIC</option>
+<option value="EC">ECUADOR</option>
+<option value="EG">EGYPT</option>
+<option value="SV">EL SALVADOR</option>
+<option value="GQ">EQUATORIAL GUINEA</option>
+<option value="ER">ERITREA</option>
+<option value="EE">ESTONIA</option>
+<option value="ET">ETHIOPIA</option>
+<option value="FK">FALKLAND ISLANDS (MALVINAS);</option>
+<option value="FO">FAROE ISLANDS</option>
+<option value="FJ">FIJI</option>
+<option value="FI">FINLAND</option>
+<option value="FR">FRANCE</option>
+<option value="GF">FRENCH GUIANA</option>
+<option value="PF">FRENCH POLYNESIA</option>
+<option value="TF">FRENCH SOUTHERN TERRITORIES</option>
+<option value="GA">GABON</option>
+<option value="GM">GAMBIA</option>
+<option value="GE">GEORGIA</option>
+<option value="DE">GERMANY</option>
+<option value="GH">GHANA</option>
+<option value="GI">GIBRALTAR</option>
+<option value="GR">GREECE</option>
+<option value="GL">GREENLAND</option>
+<option value="GD">GRENADA</option>
+<option value="GP">GUADELOUPE</option>
+<option value="GU">GUAM</option>
+<option value="GT">GUATEMALA</option>
+<option value="GG">GUERNSEY</option>
+<option value="GN">GUINEA</option>
+<option value="GW">GUINEA-BISSAU</option>
+<option value="GY">GUYANA</option>
+<option value="HT">HAITI</option>
+<option value="HM">HEARD ISLAND AND MCDONALD ISLANDS</option>
+<option value="VA">HOLY SEE (VATICAN CITY STATE);</option>
+<option value="HN">HONDURAS</option>
+<option value="HK">HONG KONG</option>
+<option value="HU">HUNGARY</option>
+<option value="IS">ICELAND</option>
+<option value="IN">INDIA</option>
+<option value="ID">INDONESIA</option>
+<option value="IR">IRAN, ISLAMIC REPUBLIC OF</option>
+<option value="IQ">IRAQ</option>
+<option value="IE">IRELAND</option>
+<option value="IM">ISLE OF MAN</option>
+<option value="IL">ISRAEL</option>
+<option value="IT">ITALY</option>
+<option value="JM">JAMAICA</option>
+<option value="JP">JAPAN</option>
+<option value="JE">JERSEY</option>
+<option value="JO">JORDAN</option>
+<option value="KZ">KAZAKHSTAN</option>
+<option value="KE">KENYA</option>
+<option value="KI">KIRIBATI</option>
+<option value="KR">KOREA, REPUBLIC OF</option>
+<option value="KW">KUWAIT</option>
+<option value="KG">KYRGYZSTAN</option>
+<option value="LV">LATVIA</option>
+<option value="LB">LEBANON</option>
+<option value="LS">LESOTHO</option>
+<option value="LR">LIBERIA</option>
+<option value="LY">LIBYAN ARAB JAMAHIRIYA</option>
+<option value="LI">LIECHTENSTEIN</option>
+<option value="LT">LITHUANIA</option>
+<option value="LU">LUXEMBOURG</option>
+<option value="MO">MACAO</option>
+<option value="MK">MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</option>
+<option value="MG">MADAGASCAR</option>
+<option value="MW">MALAWI</option>
+<option value="MY">MALAYSIA</option>
+<option value="MV">MALDIVES</option>
+<option value="ML">MALI</option>
+<option value="MT">MALTA</option>
+<option value="MH">MARSHALL ISLANDS</option>
+<option value="MQ">MARTINIQUE</option>
+<option value="MR">MAURITANIA</option>
+<option value="MU">MAURITIUS</option>
+<option value="YT">MAYOTTE</option>
+<option value="MX">MEXICO</option>
+<option value="FM">MICRONESIA, FEDERATED STATES OF</option>
+<option value="MD">MOLDOVA, REPUBLIC OF</option>
+<option value="MC">MONACO</option>
+<option value="MN">MONGOLIA</option>
+<option value="ME">MONTENEGRO</option>
+<option value="MS">MONTSERRAT</option>
+<option value="MA">MOROCCO</option>
+<option value="MZ">MOZAMBIQUE</option>
+<option value="MM">MYANMAR</option>
+<option value="NA">NAMIBIA</option>
+<option value="NR">NAURU</option>
+<option value="NP">NEPAL</option>
+<option value="NL">NETHERLANDS</option>
+<option value="AN">NETHERLANDS ANTILLES</option>
+<option value="NC">NEW CALEDONIA</option>
+<option value="NZ">NEW ZEALAND</option>
+<option value="NI">NICARAGUA</option>
+<option value="NE">NIGER</option>
+<option value="NG">NIGERIA</option>
+<option value="NU">NIUE</option>
+<option value="NF">NORFOLK ISLAND</option>
+<option value="MP">NORTHERN MARIANA ISLANDS</option>
+<option value="NO">NORWAY</option>
+<option value="OM">OMAN</option>
+<option value="PK">PAKISTAN</option>
+<option value="PW">PALAU</option>
+<option value="PS">PALESTINIAN TERRITORY, OCCUPIED</option>
+<option value="PA">PANAMA</option>
+<option value="PG">PAPUA NEW GUINEA</option>
+<option value="PY">PARAGUAY</option>
+<option value="PE">PERU</option>
+<option value="PH">PHILIPPINES</option>
+<option value="PN">PITCAIRN</option>
+<option value="PL">POLAND</option>
+<option value="PT">PORTUGAL</option>
+<option value="PR">PUERTO RICO</option>
+<option value="QA">QATAR</option>
+<option value="RE">REUNION</option>
+<option value="RO">ROMANIA</option>
+<option value="RU">RUSSIAN FEDERATION</option>
+<option value="RW">RWANDA</option>
+<option value="SH">SAINT HELENA</option>
+<option value="KN">SAINT KITTS AND NEVIS</option>
+<option value="LC">SAINT LUCIA</option>
+<option value="PM">SAINT PIERRE AND MIQUELON</option>
+<option value="VC">SAINT VINCENT AND THE GRENADINES</option>
+<option value="WS">SAMOA</option>
+<option value="SM">SAN MARINO</option>
+<option value="ST">SAO TOME AND PRINCIPE</option>
+<option value="SA">SAUDI ARABIA</option>
+<option value="SN">SENEGAL</option>
+<option value="RS">SERBIA</option>
+<option value="CS">SERBIA AND MONTENEGRO</option>
+<option value="SC">SEYCHELLES</option>
+<option value="SL">SIERRA LEONE</option>
+<option value="SG">SINGAPORE</option>
+<option value="SK">SLOVAKIA</option>
+<option value="SI">SLOVENIA</option>
+<option value="SB">SOLOMON ISLANDS</option>
+<option value="SO">SOMALIA</option>
+<option value="ZA">SOUTH AFRICA</option>
+<option value="GS">SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</option>
+<option value="ES">SPAIN</option>
+<option value="LK">SRI LANKA</option>
+<option value="SD">SUDAN</option>
+<option value="SR">SURINAME</option>
+<option value="SJ">SVALBARD AND JAN MAYEN</option>
+<option value="SZ">SWAZILAND</option>
+<option value="SE">SWEDEN</option>
+<option value="CH">SWITZERLAND</option>
+<option value="SY">SYRIAN ARAB REPUBLIC</option>
+<option value="TW">TAIWAN, PROVINCE OF CHINA</option>
+<option value="TJ">TAJIKISTAN</option>
+<option value="TZ">TANZANIA, UNITED REPUBLIC OF</option>
+<option value="TH">THAILAND</option>
+<option value="TL">TIMOR-LESTE</option>
+<option value="TG">TOGO</option>
+<option value="TK">TOKELAU</option>
+<option value="TO">TONGA</option>
+<option value="TT">TRINIDAD AND TOBAGO</option>
+<option value="TN">TUNISIA</option>
+<option value="TR">TURKEY</option>
+<option value="TM">TURKMENISTAN</option>
+<option value="TC">TURKS AND CAICOS ISLANDS</option>
+<option value="TV">TUVALU</option>
+<option value="UG">UGANDA</option>
+<option value="UA">UKRAINE</option>
+<option value="AE">UNITED ARAB EMIRATES</option>
+<option value="GB">UNITED KINGDOM</option>
+<option value="US">UNITED STATES</option>
+<option value="UM">UNITED STATES MINOR OUTLYING ISLANDS</option>
+<option value="UY">URUGUAY</option>
+<option value="UZ">UZBEKISTAN</option>
+<option value="VU">VANUATU</option>
+<option value="VE">VENEZUELA</option>
+<option value="VN">VIET NAM</option>
+<option value="VG">VIRGIN ISLANDS, BRITISH</option>
+<option value="VI">VIRGIN ISLANDS, U.S.</option>
+<option value="WF">WALLIS AND FUTUNA</option>
+<option value="EH">WESTERN SAHARA</option>
+<option value="YE">YEMEN</option>
+<option value="YU">YUGOSLAVIA</option>
+<option value="ZM">ZAMBIA</option>
+<option value="ZW">ZIMBABWE</option>
+</select>
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+            
+            </tbody>
+        </table>
+    </div>
+
+    
+        
+    
+    
+    
+    
+    
+        
+        <div class="address-fieldset">
+            <h6>                 
+                
+                Address 3
+            </h6>
+      
+
+        
+
+    <input type="hidden" name="address_set-2-2-id" id="id_address_set-2-2-id" />
+    <input type="hidden" name="address_set-2-2-contact" value="3514533" id="id_address_set-2-2-contact" />
+     
+           
+        <table>
+            <tbody>
+            
+                
+                    
+                    
+                        
+                        <tr class="type">
+                            <td class="left-td"><label for="id_address_set-2-2-type">Type<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <select name="address_set-2-2-type" id="id_address_set-2-2-type">
+<option value="" selected="selected">---------</option>
+<option value="2">Billing address</option>
+<option value="3">Shipping address</option>
+<option value="4">Mailing address</option>
+</select>
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="street1">
+                            <td class="left-td"><label for="id_address_set-2-2-street1">Street<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-2-2-street1" type="text" class="vTextField" name="address_set-2-2-street1" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="street2">
+                            <td class="left-td"><label for="id_address_set-2-2-street2">Street 2:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-2-2-street2" type="text" class="vTextField" name="address_set-2-2-street2" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="street3">
+                            <td class="left-td"><label for="id_address_set-2-2-street3">Street 3:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-2-2-street3" type="text" class="vTextField" name="address_set-2-2-street3" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="city">
+                            <td class="left-td"><label for="id_address_set-2-2-city">City<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-2-2-city" type="text" class="vTextField" name="address_set-2-2-city" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="state">
+                            <td class="left-td"><label for="id_address_set-2-2-state">State:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-2-2-state" type="text" class="vTextField" name="address_set-2-2-state" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="postal_code">
+                            <td class="left-td"><label for="id_address_set-2-2-postal_code">Postal code<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-2-2-postal_code" type="text" class="vTextField" name="address_set-2-2-postal_code" maxlength="50" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="country">
+                            <td class="left-td"><label for="id_address_set-2-2-country">Country<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <select name="address_set-2-2-country" id="id_address_set-2-2-country">
+<option value="AF">AFGHANISTAN</option>
+<option value="AX">ALAND ISLANDS</option>
+<option value="AL">ALBANIA</option>
+<option value="DZ">ALGERIA</option>
+<option value="AS">AMERICAN SAMOA</option>
+<option value="AD">ANDORRA</option>
+<option value="AO">ANGOLA</option>
+<option value="AI">ANGUILLA</option>
+<option value="AQ">ANTARCTICA</option>
+<option value="AG">ANTIGUA AND BARBUDA</option>
+<option value="AR">ARGENTINA</option>
+<option value="AM">ARMENIA</option>
+<option value="AW">ARUBA</option>
+<option value="AU">AUSTRALIA</option>
+<option value="AT">AUSTRIA</option>
+<option value="AZ">AZERBAIJAN</option>
+<option value="BS">BAHAMAS</option>
+<option value="BH">BAHRAIN</option>
+<option value="BD">BANGLADESH</option>
+<option value="BB">BARBADOS</option>
+<option value="BY">BELARUS</option>
+<option value="BE">BELGIUM</option>
+<option value="BZ">BELIZE</option>
+<option value="BJ">BENIN</option>
+<option value="BM">BERMUDA</option>
+<option value="BT">BHUTAN</option>
+<option value="BO">BOLIVIA</option>
+<option value="BA">BOSNIA AND HERZEGOVINA</option>
+<option value="BW">BOTSWANA</option>
+<option value="BV">BOUVET ISLAND</option>
+<option value="BR">BRAZIL</option>
+<option value="IO">BRITISH INDIAN OCEAN TERRITORY</option>
+<option value="BN">BRUNEI DARUSSALAM</option>
+<option value="BG">BULGARIA</option>
+<option value="BF">BURKINA FASO</option>
+<option value="BI">BURUNDI</option>
+<option value="KH">CAMBODIA</option>
+<option value="CM">CAMEROON</option>
+<option value="CA">CANADA</option>
+<option value="CV">CAPE VERDE</option>
+<option value="KY">CAYMAN ISLANDS</option>
+<option value="CF">CENTRAL AFRICAN REPUBLIC</option>
+<option value="TD">CHAD</option>
+<option value="CL">CHILE</option>
+<option value="CN">CHINA</option>
+<option value="CX">CHRISTMAS ISLAND</option>
+<option value="CC">COCOS (KEELING); ISLANDS</option>
+<option value="CO">COLOMBIA</option>
+<option value="KM">COMOROS</option>
+<option value="CG">CONGO</option>
+<option value="CD">CONGO, THE DEMOCRATIC REPUBLIC OF THE</option>
+<option value="CK">COOK ISLANDS</option>
+<option value="CR">COSTA RICA</option>
+<option value="HR">CROATIA</option>
+<option value="CU">CUBA</option>
+<option value="CY">CYPRUS</option>
+<option value="CZ" selected="selected">CZECH REPUBLIC</option>
+<option value="DK">DENMARK</option>
+<option value="DJ">DJIBOUTI</option>
+<option value="DM">DOMINICA</option>
+<option value="DO">DOMINICAN REPUBLIC</option>
+<option value="EC">ECUADOR</option>
+<option value="EG">EGYPT</option>
+<option value="SV">EL SALVADOR</option>
+<option value="GQ">EQUATORIAL GUINEA</option>
+<option value="ER">ERITREA</option>
+<option value="EE">ESTONIA</option>
+<option value="ET">ETHIOPIA</option>
+<option value="FK">FALKLAND ISLANDS (MALVINAS);</option>
+<option value="FO">FAROE ISLANDS</option>
+<option value="FJ">FIJI</option>
+<option value="FI">FINLAND</option>
+<option value="FR">FRANCE</option>
+<option value="GF">FRENCH GUIANA</option>
+<option value="PF">FRENCH POLYNESIA</option>
+<option value="TF">FRENCH SOUTHERN TERRITORIES</option>
+<option value="GA">GABON</option>
+<option value="GM">GAMBIA</option>
+<option value="GE">GEORGIA</option>
+<option value="DE">GERMANY</option>
+<option value="GH">GHANA</option>
+<option value="GI">GIBRALTAR</option>
+<option value="GR">GREECE</option>
+<option value="GL">GREENLAND</option>
+<option value="GD">GRENADA</option>
+<option value="GP">GUADELOUPE</option>
+<option value="GU">GUAM</option>
+<option value="GT">GUATEMALA</option>
+<option value="GG">GUERNSEY</option>
+<option value="GN">GUINEA</option>
+<option value="GW">GUINEA-BISSAU</option>
+<option value="GY">GUYANA</option>
+<option value="HT">HAITI</option>
+<option value="HM">HEARD ISLAND AND MCDONALD ISLANDS</option>
+<option value="VA">HOLY SEE (VATICAN CITY STATE);</option>
+<option value="HN">HONDURAS</option>
+<option value="HK">HONG KONG</option>
+<option value="HU">HUNGARY</option>
+<option value="IS">ICELAND</option>
+<option value="IN">INDIA</option>
+<option value="ID">INDONESIA</option>
+<option value="IR">IRAN, ISLAMIC REPUBLIC OF</option>
+<option value="IQ">IRAQ</option>
+<option value="IE">IRELAND</option>
+<option value="IM">ISLE OF MAN</option>
+<option value="IL">ISRAEL</option>
+<option value="IT">ITALY</option>
+<option value="JM">JAMAICA</option>
+<option value="JP">JAPAN</option>
+<option value="JE">JERSEY</option>
+<option value="JO">JORDAN</option>
+<option value="KZ">KAZAKHSTAN</option>
+<option value="KE">KENYA</option>
+<option value="KI">KIRIBATI</option>
+<option value="KR">KOREA, REPUBLIC OF</option>
+<option value="KW">KUWAIT</option>
+<option value="KG">KYRGYZSTAN</option>
+<option value="LV">LATVIA</option>
+<option value="LB">LEBANON</option>
+<option value="LS">LESOTHO</option>
+<option value="LR">LIBERIA</option>
+<option value="LY">LIBYAN ARAB JAMAHIRIYA</option>
+<option value="LI">LIECHTENSTEIN</option>
+<option value="LT">LITHUANIA</option>
+<option value="LU">LUXEMBOURG</option>
+<option value="MO">MACAO</option>
+<option value="MK">MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</option>
+<option value="MG">MADAGASCAR</option>
+<option value="MW">MALAWI</option>
+<option value="MY">MALAYSIA</option>
+<option value="MV">MALDIVES</option>
+<option value="ML">MALI</option>
+<option value="MT">MALTA</option>
+<option value="MH">MARSHALL ISLANDS</option>
+<option value="MQ">MARTINIQUE</option>
+<option value="MR">MAURITANIA</option>
+<option value="MU">MAURITIUS</option>
+<option value="YT">MAYOTTE</option>
+<option value="MX">MEXICO</option>
+<option value="FM">MICRONESIA, FEDERATED STATES OF</option>
+<option value="MD">MOLDOVA, REPUBLIC OF</option>
+<option value="MC">MONACO</option>
+<option value="MN">MONGOLIA</option>
+<option value="ME">MONTENEGRO</option>
+<option value="MS">MONTSERRAT</option>
+<option value="MA">MOROCCO</option>
+<option value="MZ">MOZAMBIQUE</option>
+<option value="MM">MYANMAR</option>
+<option value="NA">NAMIBIA</option>
+<option value="NR">NAURU</option>
+<option value="NP">NEPAL</option>
+<option value="NL">NETHERLANDS</option>
+<option value="AN">NETHERLANDS ANTILLES</option>
+<option value="NC">NEW CALEDONIA</option>
+<option value="NZ">NEW ZEALAND</option>
+<option value="NI">NICARAGUA</option>
+<option value="NE">NIGER</option>
+<option value="NG">NIGERIA</option>
+<option value="NU">NIUE</option>
+<option value="NF">NORFOLK ISLAND</option>
+<option value="MP">NORTHERN MARIANA ISLANDS</option>
+<option value="NO">NORWAY</option>
+<option value="OM">OMAN</option>
+<option value="PK">PAKISTAN</option>
+<option value="PW">PALAU</option>
+<option value="PS">PALESTINIAN TERRITORY, OCCUPIED</option>
+<option value="PA">PANAMA</option>
+<option value="PG">PAPUA NEW GUINEA</option>
+<option value="PY">PARAGUAY</option>
+<option value="PE">PERU</option>
+<option value="PH">PHILIPPINES</option>
+<option value="PN">PITCAIRN</option>
+<option value="PL">POLAND</option>
+<option value="PT">PORTUGAL</option>
+<option value="PR">PUERTO RICO</option>
+<option value="QA">QATAR</option>
+<option value="RE">REUNION</option>
+<option value="RO">ROMANIA</option>
+<option value="RU">RUSSIAN FEDERATION</option>
+<option value="RW">RWANDA</option>
+<option value="SH">SAINT HELENA</option>
+<option value="KN">SAINT KITTS AND NEVIS</option>
+<option value="LC">SAINT LUCIA</option>
+<option value="PM">SAINT PIERRE AND MIQUELON</option>
+<option value="VC">SAINT VINCENT AND THE GRENADINES</option>
+<option value="WS">SAMOA</option>
+<option value="SM">SAN MARINO</option>
+<option value="ST">SAO TOME AND PRINCIPE</option>
+<option value="SA">SAUDI ARABIA</option>
+<option value="SN">SENEGAL</option>
+<option value="RS">SERBIA</option>
+<option value="CS">SERBIA AND MONTENEGRO</option>
+<option value="SC">SEYCHELLES</option>
+<option value="SL">SIERRA LEONE</option>
+<option value="SG">SINGAPORE</option>
+<option value="SK">SLOVAKIA</option>
+<option value="SI">SLOVENIA</option>
+<option value="SB">SOLOMON ISLANDS</option>
+<option value="SO">SOMALIA</option>
+<option value="ZA">SOUTH AFRICA</option>
+<option value="GS">SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</option>
+<option value="ES">SPAIN</option>
+<option value="LK">SRI LANKA</option>
+<option value="SD">SUDAN</option>
+<option value="SR">SURINAME</option>
+<option value="SJ">SVALBARD AND JAN MAYEN</option>
+<option value="SZ">SWAZILAND</option>
+<option value="SE">SWEDEN</option>
+<option value="CH">SWITZERLAND</option>
+<option value="SY">SYRIAN ARAB REPUBLIC</option>
+<option value="TW">TAIWAN, PROVINCE OF CHINA</option>
+<option value="TJ">TAJIKISTAN</option>
+<option value="TZ">TANZANIA, UNITED REPUBLIC OF</option>
+<option value="TH">THAILAND</option>
+<option value="TL">TIMOR-LESTE</option>
+<option value="TG">TOGO</option>
+<option value="TK">TOKELAU</option>
+<option value="TO">TONGA</option>
+<option value="TT">TRINIDAD AND TOBAGO</option>
+<option value="TN">TUNISIA</option>
+<option value="TR">TURKEY</option>
+<option value="TM">TURKMENISTAN</option>
+<option value="TC">TURKS AND CAICOS ISLANDS</option>
+<option value="TV">TUVALU</option>
+<option value="UG">UGANDA</option>
+<option value="UA">UKRAINE</option>
+<option value="AE">UNITED ARAB EMIRATES</option>
+<option value="GB">UNITED KINGDOM</option>
+<option value="US">UNITED STATES</option>
+<option value="UM">UNITED STATES MINOR OUTLYING ISLANDS</option>
+<option value="UY">URUGUAY</option>
+<option value="UZ">UZBEKISTAN</option>
+<option value="VU">VANUATU</option>
+<option value="VE">VENEZUELA</option>
+<option value="VN">VIET NAM</option>
+<option value="VG">VIRGIN ISLANDS, BRITISH</option>
+<option value="VI">VIRGIN ISLANDS, U.S.</option>
+<option value="WF">WALLIS AND FUTUNA</option>
+<option value="EH">WESTERN SAHARA</option>
+<option value="YE">YEMEN</option>
+<option value="YU">YUGOSLAVIA</option>
+<option value="ZM">ZAMBIA</option>
+<option value="ZW">ZIMBABWE</option>
+</select>
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+            
+            </tbody>
+        </table>
+    </div>
+
+    
+        
+    
+    
+    
+    
+    
+        
+        <div class="address-fieldset-invisible invisible">
+            <h6>                 
+                
+                Address 4
+            </h6>
+      
+
+        
+
+    <input type="hidden" name="address_set-2-__prefix__-id" id="id_address_set-2-__prefix__-id" />
+    <input type="hidden" name="address_set-2-__prefix__-contact" value="3514533" id="id_address_set-2-__prefix__-contact" />
+     
+           
+        <table>
+            <tbody>
+            
+                
+                    
+                    
+                        
+                        <tr class="type">
+                            <td class="left-td"><label for="id_address_set-2-__prefix__-type">Type<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <select name="address_set-2-__prefix__-type" id="id_address_set-2-__prefix__-type">
+<option value="" selected="selected">---------</option>
+<option value="2">Billing address</option>
+<option value="3">Shipping address</option>
+<option value="4">Mailing address</option>
+</select>
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="street1">
+                            <td class="left-td"><label for="id_address_set-2-__prefix__-street1">Street<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-2-__prefix__-street1" type="text" class="vTextField" name="address_set-2-__prefix__-street1" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="street2">
+                            <td class="left-td"><label for="id_address_set-2-__prefix__-street2">Street 2:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-2-__prefix__-street2" type="text" class="vTextField" name="address_set-2-__prefix__-street2" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="street3">
+                            <td class="left-td"><label for="id_address_set-2-__prefix__-street3">Street 3:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-2-__prefix__-street3" type="text" class="vTextField" name="address_set-2-__prefix__-street3" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="city">
+                            <td class="left-td"><label for="id_address_set-2-__prefix__-city">City<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-2-__prefix__-city" type="text" class="vTextField" name="address_set-2-__prefix__-city" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="state">
+                            <td class="left-td"><label for="id_address_set-2-__prefix__-state">State:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-2-__prefix__-state" type="text" class="vTextField" name="address_set-2-__prefix__-state" maxlength="200" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="postal_code">
+                            <td class="left-td"><label for="id_address_set-2-__prefix__-postal_code">Postal code<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <input id="id_address_set-2-__prefix__-postal_code" type="text" class="vTextField" name="address_set-2-__prefix__-postal_code" maxlength="50" />
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+                    
+                    
+                        
+                        <tr class="country">
+                            <td class="left-td"><label for="id_address_set-2-__prefix__-country">Country<em class="required">*</em>:</label></td>
+                            <td class="right-td">
+                                
+                                    <select name="address_set-2-__prefix__-country" id="id_address_set-2-__prefix__-country">
+<option value="AF">AFGHANISTAN</option>
+<option value="AX">ALAND ISLANDS</option>
+<option value="AL">ALBANIA</option>
+<option value="DZ">ALGERIA</option>
+<option value="AS">AMERICAN SAMOA</option>
+<option value="AD">ANDORRA</option>
+<option value="AO">ANGOLA</option>
+<option value="AI">ANGUILLA</option>
+<option value="AQ">ANTARCTICA</option>
+<option value="AG">ANTIGUA AND BARBUDA</option>
+<option value="AR">ARGENTINA</option>
+<option value="AM">ARMENIA</option>
+<option value="AW">ARUBA</option>
+<option value="AU">AUSTRALIA</option>
+<option value="AT">AUSTRIA</option>
+<option value="AZ">AZERBAIJAN</option>
+<option value="BS">BAHAMAS</option>
+<option value="BH">BAHRAIN</option>
+<option value="BD">BANGLADESH</option>
+<option value="BB">BARBADOS</option>
+<option value="BY">BELARUS</option>
+<option value="BE">BELGIUM</option>
+<option value="BZ">BELIZE</option>
+<option value="BJ">BENIN</option>
+<option value="BM">BERMUDA</option>
+<option value="BT">BHUTAN</option>
+<option value="BO">BOLIVIA</option>
+<option value="BA">BOSNIA AND HERZEGOVINA</option>
+<option value="BW">BOTSWANA</option>
+<option value="BV">BOUVET ISLAND</option>
+<option value="BR">BRAZIL</option>
+<option value="IO">BRITISH INDIAN OCEAN TERRITORY</option>
+<option value="BN">BRUNEI DARUSSALAM</option>
+<option value="BG">BULGARIA</option>
+<option value="BF">BURKINA FASO</option>
+<option value="BI">BURUNDI</option>
+<option value="KH">CAMBODIA</option>
+<option value="CM">CAMEROON</option>
+<option value="CA">CANADA</option>
+<option value="CV">CAPE VERDE</option>
+<option value="KY">CAYMAN ISLANDS</option>
+<option value="CF">CENTRAL AFRICAN REPUBLIC</option>
+<option value="TD">CHAD</option>
+<option value="CL">CHILE</option>
+<option value="CN">CHINA</option>
+<option value="CX">CHRISTMAS ISLAND</option>
+<option value="CC">COCOS (KEELING); ISLANDS</option>
+<option value="CO">COLOMBIA</option>
+<option value="KM">COMOROS</option>
+<option value="CG">CONGO</option>
+<option value="CD">CONGO, THE DEMOCRATIC REPUBLIC OF THE</option>
+<option value="CK">COOK ISLANDS</option>
+<option value="CR">COSTA RICA</option>
+<option value="HR">CROATIA</option>
+<option value="CU">CUBA</option>
+<option value="CY">CYPRUS</option>
+<option value="CZ" selected="selected">CZECH REPUBLIC</option>
+<option value="DK">DENMARK</option>
+<option value="DJ">DJIBOUTI</option>
+<option value="DM">DOMINICA</option>
+<option value="DO">DOMINICAN REPUBLIC</option>
+<option value="EC">ECUADOR</option>
+<option value="EG">EGYPT</option>
+<option value="SV">EL SALVADOR</option>
+<option value="GQ">EQUATORIAL GUINEA</option>
+<option value="ER">ERITREA</option>
+<option value="EE">ESTONIA</option>
+<option value="ET">ETHIOPIA</option>
+<option value="FK">FALKLAND ISLANDS (MALVINAS);</option>
+<option value="FO">FAROE ISLANDS</option>
+<option value="FJ">FIJI</option>
+<option value="FI">FINLAND</option>
+<option value="FR">FRANCE</option>
+<option value="GF">FRENCH GUIANA</option>
+<option value="PF">FRENCH POLYNESIA</option>
+<option value="TF">FRENCH SOUTHERN TERRITORIES</option>
+<option value="GA">GABON</option>
+<option value="GM">GAMBIA</option>
+<option value="GE">GEORGIA</option>
+<option value="DE">GERMANY</option>
+<option value="GH">GHANA</option>
+<option value="GI">GIBRALTAR</option>
+<option value="GR">GREECE</option>
+<option value="GL">GREENLAND</option>
+<option value="GD">GRENADA</option>
+<option value="GP">GUADELOUPE</option>
+<option value="GU">GUAM</option>
+<option value="GT">GUATEMALA</option>
+<option value="GG">GUERNSEY</option>
+<option value="GN">GUINEA</option>
+<option value="GW">GUINEA-BISSAU</option>
+<option value="GY">GUYANA</option>
+<option value="HT">HAITI</option>
+<option value="HM">HEARD ISLAND AND MCDONALD ISLANDS</option>
+<option value="VA">HOLY SEE (VATICAN CITY STATE);</option>
+<option value="HN">HONDURAS</option>
+<option value="HK">HONG KONG</option>
+<option value="HU">HUNGARY</option>
+<option value="IS">ICELAND</option>
+<option value="IN">INDIA</option>
+<option value="ID">INDONESIA</option>
+<option value="IR">IRAN, ISLAMIC REPUBLIC OF</option>
+<option value="IQ">IRAQ</option>
+<option value="IE">IRELAND</option>
+<option value="IM">ISLE OF MAN</option>
+<option value="IL">ISRAEL</option>
+<option value="IT">ITALY</option>
+<option value="JM">JAMAICA</option>
+<option value="JP">JAPAN</option>
+<option value="JE">JERSEY</option>
+<option value="JO">JORDAN</option>
+<option value="KZ">KAZAKHSTAN</option>
+<option value="KE">KENYA</option>
+<option value="KI">KIRIBATI</option>
+<option value="KR">KOREA, REPUBLIC OF</option>
+<option value="KW">KUWAIT</option>
+<option value="KG">KYRGYZSTAN</option>
+<option value="LV">LATVIA</option>
+<option value="LB">LEBANON</option>
+<option value="LS">LESOTHO</option>
+<option value="LR">LIBERIA</option>
+<option value="LY">LIBYAN ARAB JAMAHIRIYA</option>
+<option value="LI">LIECHTENSTEIN</option>
+<option value="LT">LITHUANIA</option>
+<option value="LU">LUXEMBOURG</option>
+<option value="MO">MACAO</option>
+<option value="MK">MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF</option>
+<option value="MG">MADAGASCAR</option>
+<option value="MW">MALAWI</option>
+<option value="MY">MALAYSIA</option>
+<option value="MV">MALDIVES</option>
+<option value="ML">MALI</option>
+<option value="MT">MALTA</option>
+<option value="MH">MARSHALL ISLANDS</option>
+<option value="MQ">MARTINIQUE</option>
+<option value="MR">MAURITANIA</option>
+<option value="MU">MAURITIUS</option>
+<option value="YT">MAYOTTE</option>
+<option value="MX">MEXICO</option>
+<option value="FM">MICRONESIA, FEDERATED STATES OF</option>
+<option value="MD">MOLDOVA, REPUBLIC OF</option>
+<option value="MC">MONACO</option>
+<option value="MN">MONGOLIA</option>
+<option value="ME">MONTENEGRO</option>
+<option value="MS">MONTSERRAT</option>
+<option value="MA">MOROCCO</option>
+<option value="MZ">MOZAMBIQUE</option>
+<option value="MM">MYANMAR</option>
+<option value="NA">NAMIBIA</option>
+<option value="NR">NAURU</option>
+<option value="NP">NEPAL</option>
+<option value="NL">NETHERLANDS</option>
+<option value="AN">NETHERLANDS ANTILLES</option>
+<option value="NC">NEW CALEDONIA</option>
+<option value="NZ">NEW ZEALAND</option>
+<option value="NI">NICARAGUA</option>
+<option value="NE">NIGER</option>
+<option value="NG">NIGERIA</option>
+<option value="NU">NIUE</option>
+<option value="NF">NORFOLK ISLAND</option>
+<option value="MP">NORTHERN MARIANA ISLANDS</option>
+<option value="NO">NORWAY</option>
+<option value="OM">OMAN</option>
+<option value="PK">PAKISTAN</option>
+<option value="PW">PALAU</option>
+<option value="PS">PALESTINIAN TERRITORY, OCCUPIED</option>
+<option value="PA">PANAMA</option>
+<option value="PG">PAPUA NEW GUINEA</option>
+<option value="PY">PARAGUAY</option>
+<option value="PE">PERU</option>
+<option value="PH">PHILIPPINES</option>
+<option value="PN">PITCAIRN</option>
+<option value="PL">POLAND</option>
+<option value="PT">PORTUGAL</option>
+<option value="PR">PUERTO RICO</option>
+<option value="QA">QATAR</option>
+<option value="RE">REUNION</option>
+<option value="RO">ROMANIA</option>
+<option value="RU">RUSSIAN FEDERATION</option>
+<option value="RW">RWANDA</option>
+<option value="SH">SAINT HELENA</option>
+<option value="KN">SAINT KITTS AND NEVIS</option>
+<option value="LC">SAINT LUCIA</option>
+<option value="PM">SAINT PIERRE AND MIQUELON</option>
+<option value="VC">SAINT VINCENT AND THE GRENADINES</option>
+<option value="WS">SAMOA</option>
+<option value="SM">SAN MARINO</option>
+<option value="ST">SAO TOME AND PRINCIPE</option>
+<option value="SA">SAUDI ARABIA</option>
+<option value="SN">SENEGAL</option>
+<option value="RS">SERBIA</option>
+<option value="CS">SERBIA AND MONTENEGRO</option>
+<option value="SC">SEYCHELLES</option>
+<option value="SL">SIERRA LEONE</option>
+<option value="SG">SINGAPORE</option>
+<option value="SK">SLOVAKIA</option>
+<option value="SI">SLOVENIA</option>
+<option value="SB">SOLOMON ISLANDS</option>
+<option value="SO">SOMALIA</option>
+<option value="ZA">SOUTH AFRICA</option>
+<option value="GS">SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS</option>
+<option value="ES">SPAIN</option>
+<option value="LK">SRI LANKA</option>
+<option value="SD">SUDAN</option>
+<option value="SR">SURINAME</option>
+<option value="SJ">SVALBARD AND JAN MAYEN</option>
+<option value="SZ">SWAZILAND</option>
+<option value="SE">SWEDEN</option>
+<option value="CH">SWITZERLAND</option>
+<option value="SY">SYRIAN ARAB REPUBLIC</option>
+<option value="TW">TAIWAN, PROVINCE OF CHINA</option>
+<option value="TJ">TAJIKISTAN</option>
+<option value="TZ">TANZANIA, UNITED REPUBLIC OF</option>
+<option value="TH">THAILAND</option>
+<option value="TL">TIMOR-LESTE</option>
+<option value="TG">TOGO</option>
+<option value="TK">TOKELAU</option>
+<option value="TO">TONGA</option>
+<option value="TT">TRINIDAD AND TOBAGO</option>
+<option value="TN">TUNISIA</option>
+<option value="TR">TURKEY</option>
+<option value="TM">TURKMENISTAN</option>
+<option value="TC">TURKS AND CAICOS ISLANDS</option>
+<option value="TV">TUVALU</option>
+<option value="UG">UGANDA</option>
+<option value="UA">UKRAINE</option>
+<option value="AE">UNITED ARAB EMIRATES</option>
+<option value="GB">UNITED KINGDOM</option>
+<option value="US">UNITED STATES</option>
+<option value="UM">UNITED STATES MINOR OUTLYING ISLANDS</option>
+<option value="UY">URUGUAY</option>
+<option value="UZ">UZBEKISTAN</option>
+<option value="VU">VANUATU</option>
+<option value="VE">VENEZUELA</option>
+<option value="VN">VIET NAM</option>
+<option value="VG">VIRGIN ISLANDS, BRITISH</option>
+<option value="VI">VIRGIN ISLANDS, U.S.</option>
+<option value="WF">WALLIS AND FUTUNA</option>
+<option value="EH">WESTERN SAHARA</option>
+<option value="YE">YEMEN</option>
+<option value="YU">YUGOSLAVIA</option>
+<option value="ZM">ZAMBIA</option>
+<option value="ZW">ZIMBABWE</option>
+</select>
+                                
+                                
+                                
+                            </td>
+                        </tr>
+                        
+                    
+                    
+                
+            
+            </tbody>
+        </table>
+    </div>
+
+                    
+                </fieldset>
+            </div>
+        </div>
+       
+        <div class="submit-row">
+            <input type="submit" value="Save" class="button" name="_save" />
+        </div>
+        
+
+          
+        
+
+        
+
+	</form>
+
+
+                            </div>
+                        </div>
+        
+                        
+                            
+                        
+                                        
+                    </div>
+                </div>
+            
+        </body>
+    
+
+</html>

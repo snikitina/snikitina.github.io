@@ -1,0 +1,530 @@
+/* FORM AND TABLE ------------------------------------------------ */
+form {
+    margin: 0;
+    padding: 0;
+}
+fieldset {
+    border: none;
+    margin: 0 0 15px;
+    padding: 0;
+}
+.form-column {
+    float: right;
+    padding: 0;
+    width: auto;
+}
+.form-column:first-child {
+    float: left;
+    margin-right: 0;
+    /*margin-right: 76px;*/
+}
+.form-column table {
+    border: none;
+    border-spacing: 0;
+    margin: 0;
+    padding: 0;
+}
+.form-column td, .form-column th {
+    border: none;
+    padding: 0;
+}
+.form-column .left-td, .form-column .right-td {
+    padding: 7px 0;
+}
+.form-column .left-td {
+    padding-right: 6px;
+    text-align: right;
+    width: 159px;
+}
+/*.form-column .right-td {
+    width: 220px;
+}*/
+.form-column h5 {
+    margin: 0 0 10px;
+    width: 385px;
+}
+.form-column h6 {
+    border-bottom: 1px solid #000;
+    font-size: 1em; 
+    font-weight: normal;
+    margin: 0 0 9px;
+    padding-bottom: 1px;
+    text-align: left;
+    width: 385px;
+}
+.has-heading th {
+    text-align: left;
+}
+#profile-form .form-column th {
+    background-color: transparent;
+}
+.submit-row { 
+    text-align: right;
+}
+.authorizedrequest-form {
+    margin: 0 0 2em;
+    width: 385px;
+}
+.authorizedrequest-form label {
+    display: -moz-inline-box;
+    display: inline-block;
+    padding-right: 6px;
+    text-align: right;
+    width: 159px;
+}
+.authorizedrequest-form .submit-row {
+    padding: 14px 0 0 0;
+}
+.authorizedrequest-form .fields input {
+    width: 215px;
+}
+.authorizedrequest-form .close-popup {
+    display: none;
+}
+
+
+/* FORM ELEMENTS ------------------------------------------------- */
+td input[type="text"], td input[type="password"], select {    
+    position: relative;
+    top: -2px;
+}
+.form-column .right-td .vTextField, .form-column .right-td .vURLField, .form-column .right-td .txt {
+    width: 215px;
+}
+.form-column .left-td select {
+    width: 158px;
+}
+.form-column .right-td select, .image input[type="file"] {
+    width: 220px;
+}
+.form-column .right-td input[type="text"], .form-column .right-td select {
+    float: left;
+}
+/* user image */
+.image input[type="file"] {
+    display: block;
+}
+.user-image {
+    border: 1px solid #626262;
+    display: block;
+    margin-bottom: 8px;
+}
+.form-column .image p {
+    margin: 0 0 3px;
+}
+.form-column .image .left-td {
+    padding-top: 11px;
+}
+.form-column .image .right-td {
+    padding-bottom: 9px;
+}
+.form-column .image .file-input-text {
+    top: 0;
+    width: 127px;
+}
+.form-column .image input[type="checkbox"] {
+    vertical-align: middle;
+} 
+.form-column .image .right-td label {
+    position: relative;
+    top: 7px;
+}
+#editor .image .right-td input[type="text"] {
+    top: 0;
+}
+.form-column .image input[type="checkbox"] {
+    margin-right: 8px;
+}
+.form-column .image .right-td span, .form-column .image .right-td label {
+    position: absolute;
+    top: 0px;
+    z-index: 5;
+}
+.form-column .image span {
+    left: 134px;
+    margin-top: 0;
+}
+.form-column .image label {
+    left: 158px;
+    top: 4px;
+}
+.form-column .image .image-input {
+    position: relative;
+    width: 220px;
+}
+.form-column .image .right-td .help-icon {
+    bottom: 4px;
+    left: 225px;
+    margin: 0;
+    position: absolute;
+    top: auto;
+}
+.form-column .image .errorlist {
+    margin-top: 3px;
+}
+.form-column .image .button-2 {
+    left: 134px;
+}
+.form-column .image .button, .form-column .image .file-input-button {
+    min-width: 84px;
+    width: 84px;
+}
+.form-column .image .no-image span input, .form-column .image .no-image label, 
+.form-column .image .no-image .checked, .form-column .image .no-image .unchecked {
+    display: none;
+}
+.js .form-column .file-reader p, #editor.js .form-column .file-reader .file-input-text {
+    display: none; 
+}
+#editor.js .file-reader .file-input-div {
+    position: absolute;
+    top: 0;
+    left: 132px;
+}
+.js .form-column .file-reader span {
+    top: 35px;
+}
+.js .form-column .file-reader label {
+    top: 35px;
+}
+.js .form-column .file-reader .help-icon {
+    top: 3px;
+}
+.js .form-column .file-reader .user-image {
+    margin-bottom: 0;
+}
+/* student */
+.form-column .student input {
+    float: left;
+    position: relative;
+    top: 1px;
+}
+.form-column .student .checked, .form-column .student .unchecked { 
+    margin-right: 0;
+}
+.form-column .student .help-icon {
+    float: none;
+    position: relative;
+    right: 0;
+    top: -1px;
+    vertical-align: middle;
+}
+/* new */
+#editor .right-td input[type="text"], #editor .right-td select, #editor .left-td select  {  
+    border-width: 1px;
+    border-style: solid; 
+    position: relative; 
+}
+#editor .right-td input[type="text"] {
+    top: -3px;    
+}
+#editor .right-td select, #editor .left-td select {
+    top: -2px;
+}
+#editor input[type="text"] { 
+    padding: 3px 0 3px 3px;  
+}
+#editor select { 
+    padding: 1px 0 0; 
+}
+#editor .form-column .right-td input.disabled {
+    background-color: #f0f0f0;
+    color: #a0a0a0;
+}
+/* date field */
+.form-column .vDateField {
+    margin-right: 5px;
+    width: 125px;
+}
+.birth_date #id_birth_date_month {
+    width: 96px;
+}
+.birth_date #id_birth_date_year {
+    width: 61px;
+}
+.birth_date #id_birth_date_day {
+    width: 49px;
+}
+.birth_date #id_birth_date_day, .birth_date #id_birth_date_month {
+    margin-right: 7px;
+}
+#user_form .submit-row span.fake-button {
+    display: none;
+}
+.required {
+    color: red;
+    font-style: normal;
+}
+
+
+/* WARNING FORM AND POPUP ---------------------------------------- */
+#warning-columns, #warning-popup-content .submit-row {
+    display: none;
+}
+#warning-popup-content {
+    width: 400px;
+}
+.warning-form {
+    background: url('big_warning.png') no-repeat 0 0.25em;
+    margin-top: 1.2em;
+    padding: 0 0 0 48px;
+}
+.warning-form .errorlist {
+    margin-bottom: 1em;
+}
+#answer ul {
+    margin: 0;
+    padding: 0;
+}
+#answer ul li {
+    list-style-type: none;
+    margin: 0 0 0.3em;
+    padding: 0;
+}
+#answer ul li input {
+    margin-right: 0.5em;
+}
+
+
+/* JS STYLES */
+.js .address-fieldset {
+    margin: 0;
+}
+.js .opened {
+    margin: 1em 0;
+}
+.js .form-column .image .help-text {
+    clear: both;
+    margin-bottom: 0.5em;
+    position: relative;
+    top: 0.5em;
+}
+.js #warning-popup-content .submit-row {
+    display: block;
+    padding: 15px 0;
+}
+.js .warning-form {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.js .authorizedrequest-form {
+    width: 36em;
+}
+.js .authorizedrequest-form .fields, .js .authorizedrequest-form .submit-row, .js .authorizedrequest-form p {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.js .authorizedrequest-form .submit-row {
+    margin-bottom: 15px;
+    /*padding-left: 70px;*/
+    padding-left: 90px;
+    text-align: left;
+}
+.js .authorizedrequest-form .submit-row input.button {
+    float: left;
+    margin-right: 15px;
+}
+.js .authorizedrequest-form .fields label {
+    padding-right: 15px;
+    /*width: 40px;*/
+    width: 60px;
+}
+.js .authorizedrequest-form .fields input {
+    width: 188px;
+}
+.js .authorizedrequest-form .close-popup {
+    display: -moz-inline-box;
+    display: inline-block;
+    float: left;
+}
+.js #contact-block .popup-link {
+    background: url('warning_icon.png') no-repeat 0 0;
+    cursor: pointer;
+    display: -moz-inline-box;
+    display: inline-block;
+    height: 16px;
+    margin-left: 5px;
+    width: 16px;
+}
+
+
+
+/* FIELDSETS ----------------------------------------------------- */
+.address-fieldset {
+    margin: 1em 0;
+}
+#fieldset-1 {
+    margin: 15px 0;
+}
+
+
+/* DELETE AND ADD BUTTONS ---------------------------------------- */
+.address-fieldset h6 .can-delete {
+    float: right;
+}
+.can-delete {
+    background: url('remove.png') no-repeat 100% 20%;
+    cursor: pointer;
+    display: -moz-inline-box;
+    display: inline-block;
+    float: left;
+    height: 16px;
+    line-height: 1em;/*left: 220px;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    margin-left: 5px;
+    width: 33px;
+}
+.can-delete input {
+    /*left: 4px;*/
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 1px;
+}
+h6.can-delete-wrapper .can-delete {
+    left: auto;
+    right: 0;   
+}
+#address-block .deletable {
+    border-right: 1px solid #000;
+    margin-bottom: 15px;
+    padding-top: 2px;
+    padding-right: 13px;
+    position: relative;
+    width: 100%;
+}
+#contact-block .deletable .can-delete {
+    /*left: 225px;
+        top: 1px;*/
+    width: 16px;
+}
+#contact-block .deletable .can-delete input {
+    display: none;
+}
+.deletable .delete-button {
+    background: url("remove.png") no-repeat 0 0;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    height: 16px;
+    margin-top: -6px;
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    width: 16px;
+}
+.form-column h5 {
+    position: relative;
+}
+#contact-block-add, .add-street-button {
+    background: url("add.png") no-repeat 0 0;
+    cursor: pointer;
+    display: block;
+    font-size: 12px;
+    height: 16px;
+    width: 16px;
+}
+#contact-block-add {
+    position: absolute;
+    right: -21px;
+    top: 2px;
+}
+.add-street-button {
+    float: left;
+    margin-left: 5px;
+}
+#profile-form .invisible {
+    display: none; /* #address-block-add, #contact-block-add { display: block } had higher priority than invisible { display: none } */
+}
+.set-to-primary {
+    clear: left;
+    cursor: pointer;
+    display: block;
+    text-decoration: underline;
+}
+.help-icon {
+    background: url("help_2.png") no-repeat 0 0 ;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    height: 16px;
+    margin-left: 5px;
+    position: relative;
+    /*position: absolute;
+        right: -21px;
+        top: 0px;*/
+    width: 16px;
+}
+/*.can-delete ~ .help-icon {
+    right: -55px;
+}*/
+.help-icon strong {
+    background-color: #fcefae;
+    border: 1px solid #000;
+    display: block;
+    font-size: 0.917em;
+    font-weight: normal;
+    left: 22px;
+    line-height: 1.2em;
+    padding: 4px 6px;
+    position: absolute;
+    /*right: 21px;*/
+    top: 8px;
+    width: 200px;
+    z-index: 5;
+}
+.help-icon .repositioned {
+    left: auto;
+    right: 21px;
+}
+.help-icon strong {
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 4px 4px 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 4px 4px 4px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 4px 4px 4px;
+}
+
+
+/* ERRORS AND NOTICE MESSAGES ------------------------------------ */
+.form-column td ul.errorlist {
+    clear: left;
+    margin: 0 0 5px;
+    position: relative;
+    top: 5px;
+    width: 184px;
+}
+.form-column .errors-message ul.errorlist, .form-column ul.fixed-width {
+    position: static;
+    width: 349px;
+}
+.deletable > ul.errorlist {
+    margin: 5px 0px !important;
+}
+
+
+/* other */
+#calendar li {
+    background-image: none;
+}
+/* widgets override */
+.selector h2 { 
+    /* for some reason this background style is forgotten in widget.css */
+    background: url("nav-bg.gif") repeat-x left bottom;
+    margin: 0;
+}
+form .selector ul.selector-chooser {
+    background: none;
+    margin: 8em 5px 0;
+    position: static;
+    width: auto;
+}
+form .add-another {
+    display: -moz-inline-box;
+    display: inline-block;
+    margin-bottom: 0.5em;
+    position: relative;
+    top: 0.1em;
+}
+form .selector {
+    float: none;
+}

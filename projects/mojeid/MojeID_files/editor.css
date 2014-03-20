@@ -1,0 +1,1235 @@
+html { 
+    height: 100%; 
+}
+body {
+    font-size: 75%;
+    margin: 0;
+    min-height: 100%;
+    position: relative;
+}
+*, body input, body textarea, body select {
+    font-family: "Lucida Grande", Arial, sans-serif;
+}
+textarea, input, select, button {
+    font-size: 1em; 
+    margin: 0;
+}
+select {
+    background-color: #fff;  /* in Opera the background of a select box is transparent*/
+    padding: 0;
+}
+select option {
+    padding: 1px 1px 0;
+}
+input[type="text"], input[type="password"], textarea { 
+    padding: 3px 0 3px 3px;
+}
+input[type="file"] {
+    padding: 2px 0 2px 1px;
+}
+input[type="text"], input[type="password"], textarea, select {
+    border: 1px solid #626262;
+}
+p, div, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset { 
+    line-height: 1.416em; 
+}
+p { 
+    margin: 1em 0; 
+}
+a img { 
+    border: none; 
+}
+a, a:visited { 
+    color: #000; 
+}
+form { 
+    margin: 0; 
+}
+
+
+/* CONTENT ------------------------------------------------------- */
+#wrapper {
+    margin: 0 auto;
+}
+#wrapper {
+    font-size: 1em;
+    margin-top: -1px;
+    padding: 1px 0 0;
+    /*position: relative;*/
+}
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+}
+#header, #content, #footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#header, #content, #footer-wrapper {
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+#content-wrapper-no-css3 {
+    min-height: 400px;
+}
+
+
+/* HEADER -------------------------------------------------------- */
+#header { 
+    position: relative;
+}
+#header h1 {
+    float: left;
+    font-size: 1.3em;
+    margin: 0 10px 0 0; 
+    padding: 0;
+}
+#header h1 a, #header h1 a:visited {
+    color: #fff;
+}
+#header h1 img {
+    display: block;
+}
+#account-info {
+    float: left;
+}
+#account-info p {
+    color: #bbb;
+    margin: 0;
+    overflow: hidden;
+}
+#account-info p span {
+    float: left;
+    margin-right: 1em;
+    text-align: right;
+    width: 11em;
+}
+#account-info p strong {
+    color: #fff;
+}
+#lang-logout {
+    float: right;
+}
+/*#logout {
+    border-left: 1px solid #fff;
+    color: #fff;
+    margin-left: 1em;
+    padding-left: 1em;
+}*/
+#account {
+    float: right;
+    margin: 3px 0 0;
+    padding: 0;
+}
+#account li {
+    border-left: 1px solid #bbb;
+    float: left;
+    line-height: 1.2em;
+    list-style-type: none;
+    margin: 0 0 0 10px;
+    padding: 1px 0 0 10px;
+}
+#account li:first-child {
+    border: none;
+}
+#account .username, #account .support, #account .logout {
+    background-repeat: no-repeat;
+    background-position: 10px 0;
+    padding-left: 30px;
+}
+#account .username {
+    background-image: url('user.png');
+    padding-left: 32px;
+}
+#account .support {
+    background-image: url('support.png');
+    background-position: 10px 1px;
+}
+#account .logout {
+    background-image: url('logout.png');
+}
+#account a { 
+    color: #fff;
+}
+#account #set-language img {
+    position: relative;
+    top: 1px;
+}
+/* validaiton icons */
+#account .username {
+    position: relative;
+}
+#account .identified-1 {
+    background-image: url('user_identified_1.png');
+}
+#account .identified-2 {
+    background-image: url('user_identified_2.png');
+}
+#account .identified-3 {
+    background-image: url('user_identified_3.png');
+}
+#account .tooltip {
+    color: #000;
+    display: block;
+    font-size: 11px;
+    left: -999em;
+    padding-top: 0.9em;
+    position: absolute;
+    top: 1em;
+    width: 240px;
+    z-index: 10;
+}
+#account .tooltip strong {
+    background-color: #eee;
+    border: 1px solid #000;
+    border-bottom: none;
+    font-weight: normal;
+}
+#account .tooltip strong, #account .tooltip span {
+    display: block;
+    padding: 4px 6px;
+}
+#account .tooltip span {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-top: none;
+}
+#account .tooltip a, #account .tooltip a:visited {
+    color: #000;
+}
+#account .username:hover .tooltip {
+    left: 9px;
+}
+
+
+/* NAVIGATION ---------------------------------------------------- */
+#nav-wrapper {
+    clear: both;
+    padding-top: 15px;
+}
+#nav {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+#nav li {
+    border-right: 1px solid rgba(0, 0, 0, 0.2); 
+    border-left: 1px solid rgba(255, 255, 255, 0.2);  
+    float: left;    
+    list-style-type: none;    
+    margin: 0;
+    padding: 0.5em 15px; 
+}
+#nav li a {
+    display: -moz-inline-box;
+    display: inline-block;
+    text-decoration: none;
+}
+#nav li.active a { 
+    text-decoration: none;
+}
+
+
+/* FOOTER -------------------------------------------------------- */
+#footer p {
+    margin: 0;
+}
+#footer a img {
+    display: block;
+}
+#footer .right {
+    float: right;
+}
+
+
+/* BUTTONS ------------------------------------------------------- */
+.button, .file-input-button { 
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.2) 20px);
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.2) 20px); 
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(0, 0, 0, 0.2))); 
+    cursor: pointer; 
+    display: -moz-inline-box;
+    display: inline-block;
+    -moz-border-radius: 4px; 
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    line-height: 1.24em;
+    padding: 0.25em 0;
+    box-shadow: inset 0 1px 1px #eee;
+    -moz-box-shadow: inset 0 1px 1px #eee;
+    -o-box-shadow: inset 0 1px 1px #eee;
+    -webkit-box-shadow: inset 0 1px 1px #eee; 
+    text-align: center;
+    min-width: 7.1em;
+}
+.button::-moz-focus-inner, .file-input-button::-moz-focus-inner { /* fix for Firefox - input buttons have some extra padding */ 
+    border: 0;
+    padding: 0;
+}
+.big-button {
+    min-width: 11em;
+}
+a.button {
+    text-decoration: none;
+}
+/* submit row */
+.submit-row {
+    text-align: right;
+}
+.popup .submit-row {
+    text-align: right;
+}
+.js .popup .submit-row {
+    text-align: left;
+}
+
+
+/* REALMS AND GROUPS SELECT ------------------------------------------------- */
+#trust-attributes-form {
+    min-height: 355px;
+    padding-bottom: 45px;
+    position: relative;
+}
+#trust-attributes-form .submit-row {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+}
+#trust-attributes-form .submit-row label {
+    display: none;
+}
+#left-column {
+    float: left;
+    margin-right: 20px;
+    width: 240px;
+}
+#left-column ul p, #left-column ul input {
+    display: none;
+}
+#left-column ul {
+    background-color: #fff;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+#left-column h6 {
+    border: 1px solid #000;
+    font-size: 1em;
+    margin: 0;
+    padding: 8px 6px;
+}
+.realms-wrapper ul li {
+    border-top: 1px solid #000;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.realms-wrapper {
+    border: 1px solid #000;
+    border-top: none;
+}
+#custom-realms {    
+    max-height: 23em;
+    overflow: auto;
+}
+#predefined-realms {
+    margin-bottom: 15px;
+}
+.realms-wrapper ul:first-child li:first-child {
+    border-top: none;
+}
+.realms-wrapper li span, .realms-wrapper li a {     
+    display: block; 
+    padding: 8px 6px;
+}
+.realms-wrapper li a, .realms-wrapper li a:visited { 
+    outline: none;
+}
+.realms-wrapper li span {
+    font-weight: bold;
+}
+/* right column */
+#right-column {
+    float: left;
+    /*width: 560px;*/
+}
+#right-column p, #group-form div {
+    margin: 0 0 0.5em;
+    padding-left: 10px;
+}
+#group-form {
+    margin-top: 1.5em;
+}
+#group-form p, #group-form ul input {
+    display: none;
+}
+#group-form ul {
+    margin: 0;
+    padding: 0;
+}
+#group-form ul li, #group-form ul li label, #group-form ul li label a, #group-form ul li span {
+    display: -moz-inline-box;
+    display: inline-block;    
+}
+#group-form ul li label, #group-form ul li label a, #group-form ul li span {
+    height: 2.4em;
+}
+#group-form ul li {
+    border: 1px solid #fff;
+    border-bottom: none;
+    float: left;
+    list-style-type: none;
+    margin: 0 0 0 0;
+    padding-left: 10px;
+}
+#group-form ul li label {
+    padding: 0 10px 0 0;
+}
+#group-form ul li a, #group-form ul li a:visited {
+    text-decoration: none;
+}
+#group-form ul li a, #group-form ul li span {
+    background: url("level.png") no-repeat 0 47%;  
+}
+#group-form ul li a, #group-form ul li a:visited, #group-form ul li span { 
+    line-height: 2.4em;
+    padding-left: 24px;
+}
+#editor #group-form ul .active {
+    background: #fff;
+    border-color: #000;
+    /*height: 30px;*/
+    margin-bottom: -1px;
+    padding-bottom: 1px;
+    position: relative;
+    z-index: 2;
+}
+#group-form ul .active a, #group-form ul .active span {
+    background-image: url("level_custom.png");
+}
+#changelist { 
+    position: relative;
+    width: 100%;
+}
+#remove-realm-form {    
+    left: 0;
+    margin-right: 1px;
+    position: absolute;
+    top: 0;
+    width: 888px;
+    z-index: 2;
+}
+.remove-realm-button {
+    background: url('delete.png') no-repeat 0 0;
+    border: none;
+    cursor: pointer;
+    display: block;
+    float: right;
+    margin: 0;
+    padding: 1px 0 1px 23px; 
+    text-decoration: underline;
+    width: auto;
+}
+.remove-realm-button::-moz-focus-inner { /* fix for firefox which adds some extra padding to the input button */
+    border: 0;
+    padding: 0;
+}
+#id_immediate {
+    margin-right: 10px;
+}
+
+
+
+/* attributes select --------------------------------------------- */
+#attributes-wrapper {
+    padding: 1px;
+}
+.attributes-table {
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0 0 10px;
+    width: 615px;
+}
+#attributes-wrapper { /* with css3 */
+    background-color: #fff;
+    border: 1px solid #000;
+}
+.attributes-table li {
+    border: 1px solid #ebebeb;
+    border-left: none;
+    border-top: none;
+    display: block;
+    float: left;
+    list-style-type: none;
+    margin: 0 -1px -1px 0;
+    padding: 9px 0 8px 9px;
+    width: 196px;
+}
+.attributes-table li input {
+    margin-right: 10px;
+}
+.attributes-table .invisible {
+    display: none;
+}
+.attributes-table .group-heading {
+    border-top: 1px solid #ebebeb;
+    margin-left: -10px;
+    padding-left: 10px;
+    width: 615px;
+}
+.attributes-table .group-heading:first-child {
+    border-top: none;
+}
+.attributes-table .group-heading input {
+    display: none;
+}
+.attributes-table .group-heading label {
+    font-weight: bold;
+}
+.attributes-table .inner-group-heading {
+    margin-left: 0;
+    width: 605px;
+}
+/* whois */
+#trust-attributes-form .whois .attributes-table {
+    padding: 0;
+    width: 624px;
+}
+.whois .attributes-table li.attr {
+    width: 199px;
+}
+.whois .attributes-table li img {
+    margin-left: 1px;
+    margin-right: 9px;
+}
+.whois .attributes-table li img[alt="True"], .whois .attributes-table li img[alt="False"] {
+    height: 0;
+    margin-bottom: -3px;
+    opacity: 0.5;
+    padding: 16px 0 0 16px;
+    position: relative;
+    width: 0;
+}
+.whois .attributes-table li img[alt="True"] ~ label, .whois .attributes-table li img[alt="False"] ~ label {
+    opacity: 0.5;
+}
+.whois .attributes-table li img[alt="True"] {
+    background-image: url("check.png");
+}
+.whois .attributes-table li img[alt="False"] {
+    background-image: url("uncheck.png");
+}
+
+/* js */
+.js .attributes-table {
+    padding-left: 24px;
+    width: 600px;
+}
+.js .attributes-table .attr {
+    width: 191px;
+}
+.js .attributes-table li.inner-attr {
+    left: 24px;
+    position: relative;
+    width: 183px;
+}
+.js .attributes-table .group-heading {
+    background: url("toggle_down.gif") no-repeat 11px 1em;
+    cursor: pointer;
+    margin-left: -24px;
+    padding-left: 33px;
+    position: relative;
+    width: 591px;
+}
+.js .attributes-table .inner-group-heading {
+    margin-left: 0px;
+}
+.js .attributes-table .inner-group-heading { 
+    width: 567px; 
+}
+.js .attributes-table .group-closed {
+    background: url("toggle_left.gif") no-repeat 11px 1em;
+}
+.js .attributes-table .group-closed label {
+    font-weight: normal;
+}
+.js .attributes-table label { 
+    cursor: pointer;
+}
+
+
+/* HISTORY ------------------------------------------------------- */
+#history-filter {
+    margin: 0;
+}
+#history-filter > .errorlist {
+    margin-bottom: 15px;
+}
+#history-filter .form-fields li .errorlist {
+    margin-top: 8px;
+}
+#history-filter .form-fields {
+    margin: 0 0 20px;
+    padding: 0;
+}
+#history-filter .form-fields > li {
+    float: left;
+    list-style-type: none;
+    margin: 0 20px 0 0;
+    padding: 0;
+}
+#history-filter .form-fields li label {
+    margin-right: 7px;
+}
+#history-filter .form-fields input[type="text"] {
+    width: 100px;
+}
+#history-filter .form-fields select {
+    position: relative;
+    top: 1px;
+    width: 170px;
+}
+#history-filter .form-fields .black-button {
+    left: 3px;
+    position: relative;
+    top: -1px;
+}
+#history-filter .form-fields img {
+    display: none;
+    margin-left: 5px;
+    margin-top: -2px;
+    vertical-align: middle;
+}
+.js #history-filter .form-fields img {
+    cursor: pointer;
+    display: inline;
+}
+#editor #calendar {
+    font-size: 0.917em;
+}
+/* results table */
+/* set the width for the cells so that the width of the table cells don't cange when details are shown
+ (if details are longer than the first detail) */
+#change-history {
+    margin-bottom: 20px;
+    width: 100%;
+}
+#change-history tbody th {
+    background: #fff;
+    font-weight: normal;
+    white-space: nowrap;
+}
+#change-history tbody th {
+    width: 14em;
+}
+#change-history .action-cell {
+    width: 13em;
+}
+/* details block */
+#change-history .details {
+    padding-right: 30px;
+    position: relative;
+}
+#change-history .details em {
+    margin-right: 3px;
+}
+#change-history .details p {
+    margin: 0;
+}
+#change-history .details .warning-icon {
+    display: block;
+    position: absolute;
+    right: 2px;
+    top: 1px;
+}
+.js #change-history .toggle-details {
+    background: url("toggle_left.gif") no-repeat 0 0;
+    cursor: pointer;
+    display: block;
+    height: 9px;
+    left: 1px;
+    position: absolute;
+    top: 0.3em;
+    width: 9px;
+}
+.js #change-history .more-details {
+    display: none;
+}
+.js #change-history .details {
+    padding-left: 16px;
+}
+.js #change-history .details-opened .more-details {
+    display: block;
+}
+.js #change-history .details-opened .toggle-details {
+    background-image: url("toggle_down.gif");
+}
+/* pagination */
+.pagination {
+    float: left;
+}
+.results-counter {
+    float: right;
+}
+.results-counter select {
+    margin: 0 0.2em;
+}
+.step-links a {
+    text-decoration: none;
+}
+.step-links a img {
+    position: relative;
+    top: 1px;
+}
+.step-links a, .step-links span  {
+    margin-right: 0.6em;
+}
+.step-links .current {
+    font-weight: bold;
+}
+
+
+/* CHANGE PASSWORD FORMS ----------------------------------------- */
+.form-column {
+    float: right;
+    width: 400px;
+}
+.left-column {
+    float: left;
+    margin-right: 90px;
+}
+.two-column-form .clear-fix { 
+    margin: 14px 0;
+}
+.two-column-form .clear-fix label, .two-column-form .clear-fix .label {
+    display: block;
+    float: left;
+    margin-right: 15px;
+    text-align: right;
+    width: 160px;
+}
+.two-column-form .input-block {
+    float: left;
+}
+.two-column-form .input-block input {
+    display: block;
+}
+.two-column-form .input-block label {
+    float: none;
+    margin-bottom: 0.2em; 
+    text-align: left;
+    width: auto;
+}
+.two-column-form input[type="text"], .two-column-form input[type="password"] {
+    width: 188px;
+}
+h5 {
+    border-bottom: 1px solid #000;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 0 0 1em;
+}
+.two-column-form .errorlist {
+    margin: 0.5em 0 0;
+}
+.two-column-form .submit-row {
+    margin: 14px 0 8px 175px;  
+}
+.two-column-form .right-block-only {
+    margin-left: 175px;
+}
+#password-with-captcha {
+    margin-top: -10px;
+    min-height: 365px;
+    overflow: hidden; /* fix for strange behaviour in Opera/Safari/Chrome - margins don't collapse */
+    padding: 0;
+    position: relative;
+}
+#password-with-captcha .submit-row {
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+}
+#password-with-captcha .input-block .errorlist {
+    max-width: 670px;
+}
+/* captcha */
+#captcha_frame {
+    margin-bottom: 14px;
+}
+#captcha_img {
+    display: block;
+    height: 60px;
+    width: 192px;
+}
+#captcha_frame a {
+    outline: none;
+    text-decoration: none;
+}
+#captcha_frame #captcha_updating {
+    border: none;    
+    font-size: 1em;
+    margin: 0;    
+    padding: 0.5em 0;    
+    width: 192px;
+}
+#password-with-captcha .security-note {
+    margin-bottom: 5px;
+}
+#captcha-error {
+    width: 157px;
+}
+
+
+/* ACCOUNT PAGE -------------------------------------------------- */
+#full-ident-form input[type="text"] {
+    margin-right: 15px;
+    width: 188px;
+}
+#full-ident-form label {
+    float: left;
+    padding-top: 3px;
+    width: 48px;
+}
+#full-ident-form .input-block .errorlist {
+    margin-left: 48px;
+    margin-top: 0.5em;
+    width: 157px;
+}
+#full-ident-form .input-block .black-button {
+    float: right;
+    margin-top: -1px;
+}
+#full-ident-form .submit-row {
+    text-align: left;
+}
+#account-state {
+    background: url('info_icon.png') no-repeat 0 0;
+}
+#unidentify_form {
+    background: url('delete_user_icon.png') no-repeat 0 0;
+}
+#account-state, #unidentify_form {
+    margin-bottom: 1.5em;
+    padding-left: 48px;
+    padding-bottom: 5px;
+}
+.missing-for-validation {
+    margin: 0;
+    padding: 0 0 0 1.5em;
+}
+.missing-for-validation li {
+    font-style: italic;
+    list-style-type: square;
+    margin: 0;
+}
+#unidentify_form .submit-row {
+    text-align: right;
+}
+#unidentify_form > .submit-row {
+    display: none;
+}
+#unidentify_form .popup h5, #unidentify_form .popup .close-popup {
+    display: none;
+}
+#unidentify_form p label {
+    margin-left: 8px;
+}
+.transfer-block {
+    margin: 0 0 1.5em;
+}
+.transfer-block:last-child {
+    margin-bottom: 0;
+}
+.transfer-block .submit-row, .transfer-block .close-popup {
+    display: none;
+}
+.transfer-block .submit-row {
+    text-align: right;
+}
+form.transfer-block .submit-row {
+    display: block;
+}
+.transfer-block .submit-row span {
+    margin-left: 15px;
+}
+.transfer-block label {
+    padding-top: 0.2em;
+}
+.transfer-block .input-block .errorlist {
+    width: 156px;
+}
+/* js styles */
+.js #unidentify_form > .submit-row {
+    display: block;
+}
+.js #unidentify_form .popup h5 {
+    display: block;
+}
+.js #unidentify_form .popup .close-popup {
+    display: -moz-inline-box;
+    display: inline-block;
+    margin-left: 15px;
+}
+.js #delete-user-popup-content, .js #changes-popup {
+    background-image: url('big_warning.png');
+    background-repeat: no-repeat;
+    background-position: 16px 5.5em;
+}
+.js #delete-user-popup-content {
+    width: 500px;
+}
+.js #delete-user-popup-content p, .js #delete-user-popup-content div, .js #changes-popup p, .js #changes-popup div {
+    margin-left: 64px;
+    margin-right: 16px;    
+}
+.js #changes-popup p {
+    padding: 8px 0;
+}
+.js #delete-user-popup-content .submit-row, .js #changes-popup .submit-row {
+    margin-bottom: 15px;
+}
+.js #delete-user-popup-content .errorlist {
+    margin: 1em 16px 1em 64px;
+}
+.js #changes-popup .submit-row span { 
+    margin-right: 15px;
+}
+.js #unidentify_form .checked, .js #unidentify_form .unchecked {
+    margin-right: 0;
+}
+.js #unidentify_form input.disabled { 
+    cursor: default;
+    opacity: 0.5;
+}
+.js label.disabled, .js span.disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+.js .transfer-block .submit-row {
+    display: block;
+}
+.js .transfer-block .close-popup {
+    display: inline-block;
+}
+.js #transfer-popup-content, .js #transfer-change-popup-content {
+    width: 33em;
+}
+.js #transfer-popup-content div {
+    margin: 15px;
+}
+.js #transfer-popup-content .submit-row {
+    text-align: right;
+}
+.js .transfer-block .submit-row {
+    margin-bottom: 15px;
+}
+
+
+/* POPUP --------------------------------------------------------- */
+#overlay {
+	background-color: black;
+	display: none;
+	height: 100%;
+	left: 0%;
+	position: absolute;
+	top: 0%;
+	width: 100%;
+	z-index: 100;
+	opacity: 0.50;
+	filter: alpha(opacity=50);
+}
+.js .popup {
+    background-color: #fff;
+    border: 1px solid #333;
+    display: none;
+    position: absolute;
+    z-index: 101;
+}
+.js .popup h5 {
+    margin-bottom: 1.5em;
+    padding: 1em 15px;
+}
+
+
+/* ERRORS AND MESSAGES ------------------------------------------- */
+#messages-wrapper {    
+    left: 50%;
+    margin-left: -465px;    
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 930px;
+    z-index: 101;
+}
+#messages-wrapper ul {
+    background: url("black_transparent_bg.png") repeat 0 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: -moz-inline-box;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 8px 10px;
+    text-align: left;
+}
+#messages-wrapper ul li {
+    color: white;
+    font-weight: normal;
+    list-style-type: none;
+    margin: 0 0 2px;
+    padding: 0.5em 0;
+}
+#messages-wrapper .success, #messages-wrapper .error, #messages-wrapper .info, #messages-wrapper .warning {
+    padding-left: 32px;
+}
+#messages-wrapper .success {
+    background: url('success_message.png') no-repeat -1px 0;
+}
+#messages-wrapper .error {
+    background: url('error_message.png') no-repeat 0 0.25em;
+    /*color: #f44; */
+}
+#messages-wrapper .warning {
+    background: url('warning_message.png') no-repeat 0 0.16em;
+}
+#messages-wrapper .info {
+    background: url('info_message.png') no-repeat 1px 0.25em;
+}
+.errorlist {
+    background: #fceeae url('warning_icon.png') no-repeat 7px 0.45em;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: #000;
+    margin: 0;
+    padding: 6px 6px 0 30px;
+}
+.errorlist li {
+    list-style-type: none;
+    line-height: 1.4em;
+    padding: 0 0 4px;
+}
+.errornote, .error, .messagelist .error {
+    background: #fceeae url('error_2.png') 7px 0.45em no-repeat;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: red;
+    margin: 0 0 15px;
+    padding: 6px 6px 4px 30px;
+}
+.messagelist {
+    /*background: url('success_2.png') 0 0.25em no-repeat;*/
+    margin: 0 0 15px;
+    /*padding: 3px 6px 3px 24px;*/
+    padding: 3px 0;
+}
+.messagelist li {
+   /* background-image: none;*/
+    display: block;
+    /*font-size: 12px !important;*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 3px;
+    text-align: left;
+}
+.messagelist .error, .messagelist .warning {
+    margin-bottom: 0.5em;
+}
+.messagelist .warning {
+    background: #fceeae url('warning_icon.png') no-repeat 7px 0.45em;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    font-weight: bold;
+    padding: 5px 6px 4px 30px;
+}
+.messagelist .success, .messagelist .info {
+    padding-left: 24px;
+}
+.messagelist .success {
+    background: url('success_2.png') 0 0 no-repeat;
+}
+.messagelist .info {
+    /*background: url('/media/mojeid/img/redesign/info.png') 0 0 no-repeat;*/
+    background: url('success_2.png') 0 0 no-repeat;
+}
+#content .left-td .errorlist {
+    margin-top: 8px !important;
+    text-align: left;
+}
+#content > div > .errorlist, #content > div > .messagelist {
+    margin-bottom: 15px;
+}
+.help-text {
+    font-size: 0.916em;
+    font-style: italic;
+    margin-top: 0.167em;
+}
+
+
+/* COMMON STYLES ------------------------------------------------- */
+.clear-fix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;    
+    visibility: hidden; 
+}
+.invisible {
+    display: none;
+}
+td, th { 
+    vertical-align: top; 
+}
+.white-table {
+    background-color: #fff;
+    border-collapse: collapse;
+    border: 1px solid #000;
+    font-size: 1em;
+    width: 100%;
+}
+.white-table td, .white-table th {
+    border-bottom: 1px solid #000000;
+    border-right: 1px dotted #000000;
+    padding: 6px;
+    text-align: left;
+    vertical-align: top;
+}
+.white-table tbody {
+    background-color: #fff;
+}
+.white-table tbody th {
+    background-color: #fccc00;
+}
+
+
+/* STYLED FILE INPUTS FROM WIDGET */
+#editor .file-input-text {
+    display: none;
+	float: left;
+	margin-top: 1px;
+}
+#editor.js .file-input-div {
+    float: left;
+	height: 2.1em; 
+	overflow: hidden;
+	position: relative; 
+	width: 88px;    
+}
+#editor .file-input-button {    
+    display: none;
+    margin-left: 2px;
+	position: absolute; 
+    top: 1px;
+}
+#editor.js .file-input {
+	font-size: 3.5em; /*45px;*/ 
+	position: absolute; 
+	right: 0px; 
+	top: 0px; 
+	opacity: 0; 	
+	filter: alpha(opacity=0); 
+	-ms-filter: "alpha(opacity=0)"; 
+	-khtml-opacity: 0; 
+	-moz-opacity: 0;
+}
+#editor.js .file-input-text, #editor.js .file-input-button {
+    display: -moz-inline-box; 
+    display: inline-block;
+}
+
+/* js_checkboxes */
+/*#editor.js .js-checkbox { position:absolute; left: -9999px;}*/
+span.disabled, #attributes-table li.disabled {
+    cursor: default;
+    opacity: 0.5;    
+}
+span.disabled ~ label {
+    opacity: 0.5;
+}
+.submit-row input.disabled, .submit-row button.disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+.checked, .unchecked, .somechecked {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: -moz-inline-box;
+    display: inline-block;
+    height: 16px;
+    margin-right: 8px;
+    margin-top: -2px;
+    vertical-align: middle;
+    width: 16px;
+}
+.checked input, .unchecked input, .somechecked input {
+    display: none;
+}
+.checked {
+    background-image: url('check.png');
+}
+.unchecked {
+    background-image: url('uncheck.png');
+}
+.somechecked {
+    background-image: url('somecheck.png');
+}
+
+
+/* mojeID styles - the ones that are used by default (i.e. with no comsumer styles) */
+body, input, select, textarea, button {
+    color: #000;
+}
+body { 
+    background-color: #777; 
+}
+#header, #header a, #header a:visited, .js .popup h5 { 
+    color: #fff; 
+} 
+#header, .js .popup h5 { 
+    background-color: #000;
+}
+#header { 
+    margin: 15px 0 0; 
+}
+#content, .js .popup { 
+    background-color: #fccc00;
+}
+#wrapper { 
+    width: 930px;
+}
+a, a:visited { 
+    color: #000000; 
+}
+#group-form ul li {
+    border-color: #fccc00;
+}
+.button {
+    background-color: #292929; 
+    border: 1px solid #262626;     
+}
+.button, .button:visited {
+    color: #fff;
+}
+.button-2, .file-input-button {
+    background-color: #ffffff;
+    border: 1px solid #292929;
+}
+.button-2, .button-2:visited, .file-input-button {
+    color: #000;
+}
+#nav {
+    background-color: #555;
+    margin: 0 -15px -15px;
+}
+#nav a, #nav a:visited {
+    color: #fff;
+}
+#nav .active {
+    background-color: #777;
+}
+#nav .active a, #nav .active a:visited {
+    color: #fff;
+}

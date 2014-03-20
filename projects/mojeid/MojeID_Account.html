@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html><!-- Source is https://mojeid.cz/account/ -->
+
+    
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+            <meta name="robots" content="NONE,NOARCHIVE" />
+
+            
+            
+        
+            <title>MojeID - Account</title>
+        
+            
+        	    <link rel="icon" type="image/png" href="MojeID_files/favicon.png" />
+                <!--[if IE ]><link rel="shortcut icon" type="image/x-icon" href="MojeID_files/favicon.ico" /><![endif]-->
+            
+                
+            
+    <link href="MojeID_files/editor.css" rel="stylesheet" type="text/css" media="screen" />
+    
+        <link href="MojeID_files/mojeid_editor.css" rel="stylesheet" type="text/css" media="screen" />
+    
+    <!--[if IE]><link href="MojeID_files/base_msie.css" rel="stylesheet" type="text/css" media="screen" /><![endif]-->
+
+            
+        	<!--[if IE]><link href="MojeID_files/base_msie.css" rel="stylesheet" type="text/css" media="screen" /><![endif]-->
+        
+            <script type="text/javascript" charset="utf-8" src="MojeID_files/MochiKit.js"></script>
+        	<script type="text/javascript" src="MojeID_files/base-1.js"></script>        	
+            <script type="text/javascript" charset="utf-8" src="MojeID_files/new_captcha.js"></script>        
+            
+    
+    
+    <script type="text/javascript" src="MojeID_files/account.js"></script>
+    <script type="text/javascript" src="MojeID_files/changes_validation.js"></script>
+    <script type="text/javascript">
+    connect(window, "onload", function () {   
+        JsCheckboxes.onLoad(true);
+        JsFileInputs.onLoad();
+        Popup.onLoad();
+        Messages.onLoad();
+        Changes.onLoad();
+        EventHandlers.onLoad();
+    });
+    </script>
+        
+        
+            <script type="text/javascript">
+                /* prevent displaying this page in frame */
+                if (top != self) { top.location.replace(self.location.href); }
+            </script>
+        </head>
+        
+        <body id="editor" class="mojeid">
+            
+            <script type="text/javascript">
+            // <![CDATA[
+                document.body.className = document.body.className ? (document.body.className + " js") : "js";      
+            //]]>  
+            </script>
+        
+            
+            <div id="overlay"></div>
+        
+            
+                <div id="outer-wrapper">
+        		    <div id="wrapper">
+                    
+                        
+                            <div id="header" class="clear-fix">
+                                
+                                <h1>
+                                    
+                                	    <a href="/" id="logo"><img src="MojeID_files/small_logo.png" alt="mojeID" /></a>
+                                	
+                                </h1>                            
+                                <ul id="account">                                
+                                    
+                                    
+                                        
+                    				
+                                        
+                    						<li class="first"><a href="/setlang/?language=cs" id="set-language" title="Česky"><img src="MojeID_files/cs.png" alt="Česky" /></a></li>
+                    					
+                    				
+                                
+                                    
+
+    
+	           
+        <li class="username">sveta</li>
+    
+    
+    
+    <li class="support"><a href="/support/">Support</a></li>
+    
+    
+     
+        
+        <li class="logout">
+        
+            <a href="/logout/" id="logout">
+        
+        Log out</a></li>
+    
+    
+                                
+                                </ul>
+                                
+    
+    
+    
+    
+    
+    
+    
+         
+        <div id="nav-wrapper">   
+            <ul id="nav">
+                <li class="active first"><a href="/account/">Account</a></li>
+                <li class="not-active"><a href="/editor/">Profile</a></li>
+                <li class="not-active"><a href="/password_change/">Authentication</a></li>
+                <li class="not-active"><a href="/trust/">Data handover</a></li>
+                <li class="not-active last"><a href="/history/">History</a></li>
+            </ul>
+        </div>
+        
+    
+                             
+                            </div>                    
+                        
+        
+                        <div id="content">            
+                            <div id="content-wrapper-no-css3">
+                                
+                                    
+                                
+                                
+
+<div class="clear-fix">
+    <div class="form-column left-column">
+        <h5>Account status</h5>
+        <div id="account-state">
+        
+            <p>Account is active.</p> 
+        
+        </div>
+
+        
+            <h5>Account deactivation</h5>
+            <form action="" method="post" id="unidentify_form" class="clear-fix"> 
+                <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='b96df963b2a95be7c0b84db859e5c465' /></div>
+                <input type="hidden" name="unidentify_form" value="1">
+                
+                <p>Data from your profile will be removed by account deactivation.</p>
+                <div class="submit-row"><span class="popup-link button" id="delete-user-popup">Deactivate</span></div>
+                
+                <div id="delete-user-popup-content" class="popup clean-on-cancel">
+                    <h5>Account deactivation</h5>
+                    <p>By deactivating your account you lose a possibility to login to mojeID services. The main contact data - name, date of birth, organization, IR, VAT, emails, phones and the permanent address - they stay retained in the domain registry, where you can use them further. Other additional values in your profile will be removed.</p> 
+					<p>Do you really want to deactivate your account?</p>
+                    
+                    <p>
+                        <span><input id="id_check" type="checkbox" class="js-checkbox" name="check" /></span><label for="id_check">Delete MojeID</label>                       
+                    </p>                    
+                    <div class="submit-row">
+                        <input type="submit" name="deactivate_account" value="Deactivate" class="button" /><span class="close-popup button-2 button">Cancel</span>
+                    </div>                  
+                </div>
+            </form>
+        
+    </div>
+
+    <div class="form-column">
+    
+        
+        <h5>Validation</h5>
+        <p>In order to take full advantage of all mojeID features, we need to verify Your identity (so called validation process).</p>
+		
+		    <p>It is not possible to accomplish validation at the moment, because Your profile is not complete. Please fill in these missing values:</p>
+			<ul class="missing-for-validation">
+			
+			    <li>VAT identification number</li>
+			
+			    <li>VAT registration number</li>
+			
+			</ul>
+		
+		<br />
+        
+    
+    
+        <div class="transfer-block">
+            <h5>Transfer password</h5>
+            <p>Transfer password is used to change sponsoring registrar of objects in the domain registry.</p>
+            <div class="submit-row"><span class="popup-link button" id="transfer-popup">Show</span><span class="popup-link button" id="transfer-change-popup">Change</span></div>
+        </div>
+        <div id="transfer-popup-content" class="popup two-column-form transfer-block">
+            <h5>Transfer password</h5>
+            <div class="clear-fix">Your transfer password is: <strong>rg1hGX99</strong></div>
+            <div class="submit-row"><span class="close-popup button">OK</span></div>
+        </div>
+        <form action="" method="post" id="transfer-change-popup-content" class="popup two-column-form transfer-block clean-on-cancel" autocomplete="off"> 
+            <h5>Transfer password change</h5>            
+            <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='b96df963b2a95be7c0b84db859e5c465' /></div>
+            <div class="clear-fix">
+                <label for="id_password1">New password:</label>
+                <div class="input-block">
+                    <input id="id_password1" type="password" name="password1" maxlength="16" />
+                    
+                </div>
+            </div>
+            <div class="clear-fix">
+                <label for="id_password2">Verify new password:</label>
+                <div class="input-block">
+                    <input id="id_password2" type="password" name="password2" maxlength="16" />
+                    
+                </div>
+            </div>
+            <div class="submit-row">
+                <input type="hidden" name="auth_info_form" value="1" />
+                <input type="submit" value="Change" class="button" />
+                <span class="close-popup button-2 button">Cancel</span>
+            </div>
+        </form>
+     
+    </div>
+</div>
+
+                            </div>
+                        </div>
+        
+                        
+                            
+                        
+                                        
+                    </div>
+                </div>
+            
+        </body>
+    
+
+</html>

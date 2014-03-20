@@ -1,0 +1,90 @@
+#calendar {
+	background-color: #fff;
+	border: 1px solid #000;
+	font-size: 1.1em;
+	margin: 5px auto;
+	padding: 1px 0;
+	position: absolute;
+	text-align: center;
+	width: 243px;
+}
+#months, #days {
+    margin: 0;
+    padding: 0;
+}
+#months, #days, #elements {
+	height: 1%; 
+	overflow: hidden;
+}
+#days { 
+	padding-left: 1px;
+}
+#elements {
+	padding: 0 1px;
+}
+.months, .emptM, .headDay, .dayNormal, .dayBlank, .dayDisabled, 
+.dayWeekend, .dayCurrent, .yearBrowse, .monthDisabled, .currMonth {
+	margin: 1px 0 0 1px;
+	height: 18px;
+	line-height: 18px;
+	float: left;
+	text-align: center;
+	display: inline;
+}
+.months, .emptM, .monthDisabled, .currMonth {
+	width: 39px;
+}
+.headDay, .dayNormal, .dayBlank, .dayWeekend, .dayCurrent, .dayDisabled  {
+	width: 33px;
+}
+.headDay {
+	background-color: #000;
+	color: #fff;
+}
+.months, .dayNormal, .dayWeekend {
+	background-color: #eee;
+}
+.dayBlank {
+	background-color: #fff;
+}
+.dayCurrent, .currMonth { 
+	background-color: #fccc00; 
+}
+#calendar a {
+    color: #000;
+	text-decoration: none;
+}
+#days a, .months a {
+	display: block;
+} 
+#days .dayCurrent a, #months .currMonth a {
+	color: #fff;
+	font-weight: bold;
+}
+#closeBtn {
+	padding: 4px 3px 2px; 
+	text-align: right;
+}
+#closeBtn a { 
+	padding-bottom: 0px;
+	text-decoration: underline;
+}
+#months .yearBrowse a {
+    display: inline;
+    font-size: 1.1em;
+    font-weight: bold;  
+    padding: 0 3px;
+}
+.yearBrowse {
+	width: 240px; 
+	background-color: #fff; 
+	line-height: 18px;
+	padding-bottom: 1px;
+}
+.yearBrowse b {
+	margin: 0 5px; 
+}
+#days a:hover, #months a:hover, .yearBrowse a:hover {
+    background-color: #888;
+    color: #fff;
+}

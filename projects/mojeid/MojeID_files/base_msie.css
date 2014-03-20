@@ -1,0 +1,159 @@
+*:first-child+html .clear-fix { zoom: 1; }
+* html .clear-fix { zoom: 1; }
+* html body { height: 100%; }
+#editor .invisible { display: none; }
+.js #certificate-popup-content .file-input-div { width: 7.3em; }
+
+
+/* NAVIGATION - IE6 doesn't support multiple classes selectors */
+* html #editor.mojeid #nav { border-left: 1px solid #444; }
+* html #editor.mojeid #nav .last { border-right: 1px solid #444; }
+* html #editor.mojeid #nav .last a { background: url('nav_bg.png') repeat-x 0 0; }
+* html #editor.mojeid #nav .last a, * html #editor.mojeid #nav .first a { padding: 0 11px; }
+* html #editor.mojeid #nav .first, * html #editor.mojeid #nav .last  { background-image: none; padding: 0; }
+* html #editor.mojeid #nav li.active { background: url('nav_active.png') no-repeat 0 0; }
+* html #editor.mojeid #nav li.active a { background-image: url('nav_active.png'); }
+/* IE6,7 don't support table-cell property */
+* html #editor.mojeid #nav { left: 310px; }
+*:first-child+html #editor.mojeid #nav { left: 310px; }
+* html #editor.mojeid #nav { left: expression(parseInt((this.parentNode.offsetWidth - this.offsetWidth) / 2 + 20) + "px"); position: absolute; }
+*:first-child+html #editor.mojeid #nav { left: expression(parseInt((this.parentNode.offsetWidth - this.offsetWidth) / 2) + "px"); position: absolute; }
+* html #nav-wrapper { display: inline-block; }
+*:first-child+html #nav-wrapper { display: inline-block; }
+* html #editor #nav { position: relative; zoom: 1; }
+
+
+/* SIGN IN FORM -------------------------------------------------- */
+* html #ipv46-banner { display: none; }
+* html #signin-form fieldset span, * html #signin-form fieldset label { display: inline; }
+
+
+/* LAYOUT -------------------------------------------------------- */
+* html #content-wrapper-no-css3 { height: 400px; }
+* html #overlay { height: expression(document.body.clientHeight + "px"); }
+* html .block-with-heading, * html .block-with-header-content { height: 5.8em; }
+* html #footer span { height: 10px; line-height: 12px; padding-top: 11px; }
+* html #footer { zoom: 1; }
+* html #header h1 em { background-image: url('/media/mojeid/img/mojeid_logo_alpha.gif'); }
+* html #editor h1 { margin-top: 0px; }
+#account .first { border: none; }
+* html #content .messagelist { margin-bottom: 15px; }
+* html .left-column { margin-right: 90px; } /* IE6 doesn't support :first-child selector */
+/* support for logo (use gif instead of alpha transparent png) */
+* html #editor.mojeid #header h1 a img { display: none; }
+* html #editor.mojeid #header h1 a { background: url('small_logo.gif') no-repeat 0 0; display: block; height: 23px; width: 80px; }
+* html .messagelist, * html #profile-form fieldset .errorlist { zoom: 1; }
+*:first-child+html .messagelist { zoom: 1; }
+* html #account .username  { 
+    behavior: expression(this.onmouseover = new Function("this.className += ' hover'"), 
+        this.onmouseout = new Function("this.className = this.className.replace(' hover','')"),
+        this.style.behavior = null);
+}
+* html #account .hover .tooltip { left: 9px; }
+*:first-child+html #account .username:hover .tooltip { zoom: 1; } /* without it IE7 doesn't change left position */
+/* messages */
+* html #editor #messages-wrapper ul { background: #000; display: inline; filter: alpha(opacity=60); /*padding-left: 0; */}
+* html #editor #messages-wrapper ul li { padding-left: 20px; position: relative; /*zoom: 1; */}
+*:first-child+html #editor #messages-wrapper ul { display: inline; padding-left: 0; }
+*:first-child+html #editor #messages-wrapper ul li { zoom: 1; }
+
+
+/* REGISTRATION FORM --------------------------------------------- */
+* html .two-column-form input.txt { width: 160px; }
+* html .registration-form { padding-top: 1.5em; }
+*:first-child+html .registration-form { padding-top: 1.5em; }
+* html .registration-form .input-block { width: 400px; }
+
+
+/* FORMS ELEMENTS ------------------------------------------------ */
+* html input.txt, * html .vTextField, * html .form-column select, * html .vURLField, * html .file-input-text { border: 1px solid #626262; padding: 3px 0 3px 3px; }
+* html #password-popup-content .input-block input, * html #auth-data-change-block .file-input-text { border: 1px solid #626262; padding: 3px 0 3px 3px; width: 188px; }
+#id_cert_file { border: 1px solid #626262; }
+.cert_file .input-block { position: relative; z-index: 2; }
+* html .js .popup .submit-row .gray-button { vertical-align: top;  }
+*:first-child+html .js .popup .submit-row .gray-button { vertical-align: top; }
+#certificate-change .cert_file label { padding-top: 2px; }
+.js #certificate-change .cert_file label { padding-top: 4px; }
+* html .checked, * html .unchecked { margin-top: -1px; position: fixed; z-index: 2; }
+*:first-child+html .checked, *:first-child+html .unchecked { margin-top: -1px; }
+* html #details-popup-content { width: 400px; }
+span.disabled, #attributes-table li.disabled, .js #unidentify_form input.disabled { cursor: default; filter: alpha(opacity=50); }
+.submit-row input.disabled, .submit-row button.disabled { filter: alpha(opacity=50); }
+
+
+/* PROFILE ------------------------------------------------------- */
+* html #profile-form .left-column { float: left; margin-right: 0; }
+* html #profile-form .form-column fieldset { float: left; clear: left; }
+* html #profile-form .right-td input, #profile-form .right-td select { float: left; }
+* html #profile-form .form-column .left-td { padding: 9px 5px 7px 0; width: 155px; }
+* html #profile-form .form-column .left-td select { width: 155px; }
+*:first-child+html #profile-form .form-column .left-td select { width: 155px; }
+* html #profile-form .form-column .left-td label, * html #profile-form .form-column .left-td span { display: block; width: 155px; }
+* html #profile-form .form-column .left-td .invisible { display: none; }
+*:first-child+html #profile-form .form-column .left-td { padding-right: 5px; width: 156px; }
+* html #address-block .right-td select { width: 220px; }
+* html #address-block table { width: 428px; } /* dirty hack for IE6's fieldset problem :/ */
+* html #profile-form  #contact-block h5 { margin-bottom: -5px; }
+*:first-child+html #profile-form  #contact-block h5 { margin-bottom: -4px; } 
+* html .js #profile-form .user-image { display: inline-block; }
+* html .js #profile-form .image-input p { margin-bottom: 0; padding-bottom: 3px; }
+* html #image-preview { padding-bottom: 38px; }
+* html #image-preview .help-icon { bottom: 41px; left: 225px; }
+* html #image-preview span { bottom: 0; left: 0; top: auto; }
+* html #image-preview label { bottom: 0; left: 25px; top: auto; }
+*:first-child+html .js #profile-form .user-image { display: inline-block; }
+*:first-child+html .js #profile-form .image-input p { margin-bottom: 0; padding-bottom: 3px; }
+
+
+/* ATTRIBUTES, TRUSTS PAGE --------------------------------------- */
+* html #trust-attributes-form #left-column .realms-wrapper li { border: none; display: inline; }
+* html #trust-attributes-form #left-column .realms-wrapper li span, * html #trust-attributes-form #left-column .realms-wrapper li a { border-bottom: 1px solid #000; word-wrap: break-word; }
+* html #custom-realms { height: expression(this.scrollHeight > 282 ? "275px" : "auto"); }
+*:first-child+html #trust-attributes-form #left-column .realms-wrapper li { border: none; display: inline; }
+*:first-child+html #trust-attributes-form #left-column .realms-wrapper li span, *:first-child+html #trust-attributes-form #left-column .realms-wrapper li a { border-bottom: 1px solid #000; }
+#group-form ul { zoom: 1; }
+* html #attributes-wrapper { width: 540px; }
+* html .attributes-table .group-heading { /*float: none;*/display: inline;} /* strange bug with floats - some extra characters are shown when js toggling takes place */
+* html #remove-realm-form { display: inline; }
+*:first-child+html #remove-realm-form { display: inline; }
+*:first-child+html .remove-realm-button { overflow: visible; }
+* html .remove-realm-button { overflow: visible; width: 0; }
+* html .js #auth-settings .form-column { height: 376px; }
+* html #trust-attributes-form { height: 355px; }
+.attributes-table li.inner-attr { width: 158px; }
+.whois .attributes-table li img[alt="True"], .whois .attributes-table li img[alt="False"] { filter: alpha(opacity=50); }
+
+
+/* FORGOTTEN PASSWORD FORM AND ACCOUNT PAGE ---------------------- */
+#password-with-captcha { zoom: 1; }
+* html #password-with-captcha { height: 365px; }
+* html #password-with-captcha .input-block input, #id_password3 { border: 1px solid #626262; padding: 3px 0 3px 3px; width: 188px; }
+/*#full-ident-form .input-block { white-space: nowrap; }
+#id_password3 { margin-right: 15px; }*/
+#full-ident-form { margin: 1em 0; }
+* html #full-ident-form .input-block #id_password3 { float: left; }
+* html #full-ident-form .input-block .button { position: fixed; z-index: 2; }
+*:first-child+html #full-ident-form .input-block #id_password3 { float: left; }
+* html .transfer-block .input-block input { border: 1px solid #626262; padding: 3px 0 3px 3px; width: 188px; }
+
+
+/* HISTORY ------------------------------------------------------- */
+#history-filter .form-fields li { float: left; list-style-type: none; margin: 0 20px 0 0; padding: 0; }
+#history-filter .form-fields li li { float: none; }
+* html #history-filter .form-fields input, * html #history-filter .form-fields select { vertical-align: middle; }
+*:first-child+html #history-filter .form-fields input, *:first-child+html #history-filter .form-fields select { vertical-align: middle; }
+* html #history-filter .errorlist { margin-bottom: 15px; }
+* html #history-filter .form-fields .errorlist { margin-bottom: 0; }
+* html #history-filter table { margin-bottom: 0; }
+* html #history-filter .pagination, * html #history-filter .results-counter { margin-top: 15px; }
+*:first-child+html #history-filter table { margin-bottom: 0; }
+*:first-child+html #history-filter .pagination, *:first-child+html #history-filter .results-counter { margin-top: 15px; }
+* html .date_from input, * html .date_to input { border: 1px solid #626262; padding: 3px 0 3px 3px; width: 100px; }
+#history-filter .details { zoom: 1; }
+
+
+/* BUTTONS ------------------------------------------------------- */
+* html .button { width: 7.1em; }
+* html .big-button { width: 11em; }
+* html input.button, * html .file-input-button { padding: 0.15em 0; line-height: 1.2em; }
+*:first-child+html input.button, *:first-child+html .file-input-button { padding: 0.15em 0; line-height: 1.2em; }

@@ -1,0 +1,303 @@
+body {
+    background-color: #777;
+    color: #000;
+}
+body { 
+    background: #777 -moz-linear-gradient(top, #999, #777 400px); 
+    background-repeat: no-repeat;
+}
+
+
+/* LAYOUT -------------------------------------------------------- */
+#wrapper {
+    padding-bottom: 15px;
+    width: 930px;
+}
+#content {
+    background: #fccc00 url('yellow_top_no_css3.gif') no-repeat 0 0;
+    border: none;
+    margin-top: 26px;
+    padding: 30px 0 0;
+    background: rgba(252, 204, 0, 1.0); /* override background image style */
+    -moz-border-radius: 10px; 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow: rgba(0,0,0, 0.3) 0px 0px 8px;
+    box-shadow: rgba(0,0,0, 0.3) 0px 0px 8px;  
+    -webkit-box-shadow: rgba(0,0,0, 0.3) 0px 0px 8px;
+}
+#content-wrapper-no-css3 {
+    background: #fccc00 url('yellow_bottom_no_css3.gif') no-repeat 0 100%;
+    background: rgba(252, 204, 0, 1.0); /* override background image style */
+    -moz-border-radius: 10px; 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    padding: 0px 20px 20px;
+}
+
+
+/* HEADER -------------------------------------------------------- */
+#header { 
+    background-color: #000;    
+    padding: 16px 20px;
+    position: relative;
+    background: url('header_bg_no_css3.png') no-repeat 0 0;
+    background: -moz-linear-gradient(top, #555, #000000 50px); 
+    background: -webkit-gradient(linear, left top, left 50, from(#555), to(#000000));
+    border: 1px solid rgba(0, 0, 0, 1.0);  
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;  
+    -moz-box-shadow: rgba(0,0,0, 0.3) 0px 0px 8px;
+    box-shadow: rgba(0,0,0, 0.3) 0px 0px 8px;  
+    -webkit-box-shadow: rgba(0,0,0, 0.3) 0px 0px 8px;
+}
+#account li {
+    border-color: #bbb;
+}
+
+
+/* NAVIGATION ---------------------------------------------------- */
+#nav { 
+    background: none;
+    display: -moz-inline-box;
+    display: inline-block;
+    height: 24px;
+    margin: 0 auto;
+    padding: 0;
+}
+#nav {
+    -moz-box-shadow: rgba(0,0,0, 0.2) 0px 0px 10px;
+    box-shadow: rgba(0,0,0, 0.2) 0px 0px 10px;  
+    -webkit-box-shadow: rgba(0,0,0, 0.2) 0px 0px 10px;
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+#nav-wrapper {
+    bottom: -38px; /* -26px (content's margin-top) - 12px (1/2 of nav's height ) -2px */
+    display: table-cell;
+    height: 24px;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+#nav li {
+    border: none;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#nav li a {
+    background: url('nav_bg.png') repeat-x 0 0;
+    display: -moz-inline-box;
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 11px;
+    text-decoration: none;
+}
+#nav li {
+    border-right: 1px solid #444;    
+}
+#header #nav li a, #header #nav li a:visited {
+    color: #000;
+}
+#nav .last {
+    background: url('nav_bg_right.png') no-repeat 100% 0;
+    border: none;
+    padding-right: 5px;
+}
+#nav .first {
+    background: url('nav_bg_left.png') no-repeat 0 0;
+    padding-left: 5px;
+}
+#nav .first a {
+    padding-left: 8px;
+}
+#nav .last a {
+    padding-right: 8px;
+}
+#nav .active {
+    background: url('nav_active.png') no-repeat 0 0;
+    padding-left: 2px;
+}
+#nav .active a {
+    background: url('nav_active.png') no-repeat 100% 0;
+    padding-left: 8px;
+}
+#header #nav .active a, #header #nav .active a:visited {
+    color: #fff;
+}
+#nav .active.last {
+    background: url('nav_active_right.png') no-repeat 100% 0;
+    padding-left: 0;
+    padding-right: 5px;
+}
+#nav .active.last a {
+    background: url('nav_active.png') no-repeat 0 0;
+    padding-left: 10px;
+}
+#nav .active.first {
+    background: url('nav_active_left.png') no-repeat 0 0;
+    padding-left: 5px;
+}
+
+
+/* FORM FIELDS --------------------------------------------------- */
+select, input[type="text"], input[type="password"], textarea {
+    border: 1px solid #626262;
+}
+h5 {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.white-table thead th {
+    background-color: #fccc00;
+}
+
+
+/* BUTTONS ------------------------------------------------------- */
+.big-black-button {
+    background: url('rectangular_button.png') no-repeat 0 0; 
+    border: none; 
+    color: #fff;
+    cursor: pointer;
+    display: -moz-inline-box; 
+    display: inline-block;
+    height: 24px; 
+    line-height: 25px;
+    padding: 0 0 1px; /* padding-bottom is required for firefox, some vertical align problems */
+    text-align: center; 
+    width: 150px;
+}
+.black-button, .gray-button {
+    border: none;     
+    cursor: pointer;
+    display: -moz-inline-box; 
+    display: inline-block;
+    height: 24px; 
+    line-height: 25px;
+    padding: 0 0 1px; /* padding-bottom is needed for text vertical alignment in firefox */
+    text-align: center; 
+    width: 86px;
+}
+.black-button {
+    background: url('small_rectangular_button.png') no-repeat 0 0;  
+    color: #fff;
+}
+.gray-button {
+    background: url('small_rectangular_button_2.png') no-repeat 0 0; 
+    color: #000;
+}
+.big-black-button, .big-black-button:visited, .black-button, .black-button:visited {
+    color: #fff;
+    text-decoration: none;
+}
+/* submit row */
+.submit-row {
+    text-align: right;
+}
+.popup .submit-row {
+    text-align: right;
+}
+.js .popup .submit-row {
+    text-align: left;
+}
+.js .popup {
+    background-color: #fccc00;
+    border: 1px solid #000;
+}
+.js .popup h5 {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+/* ATTRIBUTES ---------------------------------------------------- */
+#editor #group-form ul li {
+    border: 1px solid #fccc00;
+    border-bottom: none;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+#editor #group-form ul li a, #editor #group-form ul li span {
+    background-position: 9px 50%;
+    padding-left: 34px;
+}
+#editor #group-form ul li:first-child {
+    padding-left: 0;
+}
+#editor #group-form ul .active  {
+    background-color: transparent;
+    padding-bottom: 0;
+    border: none;
+}
+#editor #group-form ul .active label {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-bottom-color: #fff;
+}
+/* for IE */
+#editor #group-form ul .active:first-child { 
+    border-left: 1px solid #000;
+}
+#editor #group-form ul .active:first-child label { 
+    border-left: none;
+}
+/* css 3 */
+#attributes-wrapper {
+    border-color: rgba(255, 255, 255, 0);
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+#editor #group-form ul li {
+    border: 0px solid rgba(0, 0, 0, 0);
+}
+#editor #group-form ul .active {
+    background: url("white_tab_right.png") no-repeat right bottom, url("white_tab_left.png") no-repeat left bottom rgba(0, 0, 0, 0);
+}
+#editor #group-form ul .active label {
+    border-radius: 6px 6px 0px 0px;
+    -moz-border-radius: 6px 6px 0px 0px;
+    -webkit-border-top-left-radius: 6px;
+    webkit-border-top-right-radius: 6px;
+    border: 0px solid rgba(0, 0, 0, 0);   
+}
+#editor #group-form ul .active:first-child { 
+    border-left: 0px solid rgba(0, 0, 0, 0);
+    -moz-box-shadow: rgba(255, 255, 255, 1) 0px 6px;
+    box-shadow: rgba(255, 255, 255, 1) 0px 6px;  
+    -webkit-box-shadow: rgba(255, 255, 255, 1) 0px 6px;
+}
+.mojeid #trust-attributes-form .whois #group-form ul .active {
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+/* realms list */
+.realms-wrapper li span {
+    background: #292929 url("black_gradient.gif") repeat-x 0 0;
+    color: #fff;
+    font-weight: normal;
+}
+.realms-wrapper li a {
+    text-decoration: none;
+}
+
+
+/* DEBUG TABLE --------------------------------------------------- */
+table.white-table td.debug {
+    background-color: #EDEDED;
+}
+table.debug th, table.debug td {
+    padding:2px 4px;
+}
+#history-filter table.debug th {
+    background-color: #FCCC00;
+}

@@ -1,0 +1,85 @@
+html body {
+    background: #fff;
+    font-size: 10pt;
+}
+body, #footer p, #footer p em {
+    color: #000;
+}
+#height-wrapper {
+    background: transparent none;
+    margin: 0;
+}
+#wrapper {
+    padding-bottom: 10pt;
+    width: auto;
+}
+#header {
+    height: auto;
+    margin-bottom: 20pt;
+    padding-top: 5pt;
+    position: static;
+    width: auto;
+}
+#header a {
+    font-size: 30pt;
+    text-decoration: none;
+}
+#header a, #header a:visited {
+    color: #000;
+}
+#header em {
+    display: block;
+    font-size: 14pt;
+    font-style: normal;
+}
+#header span, #sidebar, #set-language, #search-form {
+    display: none;
+}
+#content {
+    margin: 20pt 0;
+    padding: 0;
+}
+h2 {
+    background: none;
+    border-bottom: 2px solid #E12637;
+    padding-bottom: 0;
+}
+.markdown-text h2 {
+    border: none;
+}
+.markdown-text ul li, .markdown-text ul li ul li {
+    background: none;
+    list-style-type: square;
+    margin-left: 20pt;
+    padding-left: 5pt;
+}
+#content a:link:after, #content a:visited:after {
+   content: " (" attr(href) ") ";
+   font-size: 85%;
+}
+#content a[href^="/"]:after {
+   content: " (http://www.csirt.cz" attr(href) ") ";
+}
+.more {
+    display: none;
+}
+.articles li {
+    border-bottom: 1px solid #ccc;
+}
+.paginator, .more-news, hr {
+    border-top: 1px solid #ccc;
+}
+.markdown-text table td, .markdown-text table th {
+    border: 1px solid #ccc;
+}
+#footer {
+    background: transparent;
+    border-top: 1px solid #333;
+    height: auto;
+    margin: 30pt 0 0;
+    padding: 10pt 0 0;
+}
+#footer, #footer div {
+    margin: 0;
+    position: static;
+}

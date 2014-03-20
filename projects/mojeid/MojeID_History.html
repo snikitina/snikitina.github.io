@@ -1,0 +1,645 @@
+<!DOCTYPE HTML>
+<html><!-- Source is https://mojeid.cz/history/?page=1&page_size=20&date_from=2011-03-29&date_to=2011-06-27&action_flag=0 -->
+
+    
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+            <meta name="robots" content="NONE,NOARCHIVE" />
+
+            
+            
+        
+            <title>MojeID - History</title>
+        
+            
+        	    <link rel="icon" type="image/png" href="MojeID_files/favicon.png" />
+                <!--[if IE ]><link rel="shortcut icon" type="image/x-icon" href="MojeID_files/favicon.ico" /><![endif]-->
+            
+                
+            
+    <link href="MojeID_files/editor.css" rel="stylesheet" type="text/css" media="screen" />
+    
+        <link href="MojeID_files/mojeid_editor.css" rel="stylesheet" type="text/css" media="screen" />
+    
+    <!--[if IE]><link href="MojeID_files/base_msie.css" rel="stylesheet" type="text/css" media="screen" /><![endif]-->
+
+            
+        	<!--[if IE]><link href="MojeID_files/base_msie.css" rel="stylesheet" type="text/css" media="screen" /><![endif]-->
+        
+            <script type="text/javascript" charset="utf-8" src="MojeID_files/MochiKit.js"></script>
+        	<script type="text/javascript" src="MojeID_files/base-1.js"></script>        	
+            <script type="text/javascript" charset="utf-8" src="MojeID_files/new_captcha.js"></script>        
+            
+    
+    <link href="MojeID_files/calendar_editor.css" type="text/css" media="all" rel="stylesheet" />
+<script type="text/javascript" src="MojeID_files/calendar.js"></script>
+    <script type="text/javascript">
+    
+        var formatSplitter = "-";
+        var formatType = yearFormat + formatSplitter + monthFormat + formatSplitter + "dd";
+    
+    connect(window, "onload", function () { 
+        Messages.onLoad();
+    });
+    </script>
+    <script type="text/javascript" src="MojeID_files/history.js"></script>
+        
+        
+            <script type="text/javascript">
+                /* prevent displaying this page in frame */
+                if (top != self) { top.location.replace(self.location.href); }
+            </script>
+        </head>
+        
+        <body id="editor" class="mojeid">
+            
+            <script type="text/javascript">
+            // <![CDATA[
+                document.body.className = document.body.className ? (document.body.className + " js") : "js";      
+            //]]>  
+            </script>
+        
+            
+            <div id="overlay"></div>
+        
+            
+                <div id="outer-wrapper">
+        		    <div id="wrapper">
+                    
+                        
+                            <div id="header" class="clear-fix">
+                                
+                                <h1>
+                                    
+                                	    <a href="/" id="logo"><img src="MojeID_files/small_logo.png" alt="mojeID" /></a>
+                                	
+                                </h1>                            
+                                <ul id="account">                                
+                                    
+                                    
+                                        
+                    				
+                                        
+                    						<li class="first"><a href="/setlang/?language=cs" id="set-language" title="Česky"><img src="MojeID_files/cs.png" alt="Česky" /></a></li>
+                    					
+                    				
+                                
+                                    
+
+    
+	           
+        <li class="username">sveta</li>
+    
+    
+    
+    <li class="support"><a href="/support/">Support</a></li>
+    
+    
+     
+        
+        <li class="logout">
+        
+            <a href="/logout/" id="logout">
+        
+        Log out</a></li>
+    
+    
+                                
+                                </ul>
+                                
+    
+    
+    
+    
+    
+    
+    
+         
+        <div id="nav-wrapper">   
+            <ul id="nav">
+                <li class="not-active first"><a href="/account/">Account</a></li>
+                <li class="not-active"><a href="/editor/">Profile</a></li>
+                <li class="not-active"><a href="/password_change/">Authentication</a></li>
+                <li class="not-active"><a href="/trust/">Data handover</a></li>
+                <li class="active last"><a href="/history/">History</a></li>
+            </ul>
+        </div>
+        
+    
+                             
+                            </div>                    
+                        
+        
+                        <div id="content">            
+                            <div id="content-wrapper-no-css3">
+                                
+    
+
+                                
+    <form method="get" action="." id="history-filter" class="clear-fix">
+        <ul class="form-fields clear-fix">
+        
+            <li class="date_from"><label for="id_date_from">From:</label><input type="text" name="date_from" value="2011-03-29" id="id_date_from" /><img src="MojeID_files/calendar_editor.png" alt="" class="calendar" id="id_date_from_img" /> 
+                
+            </li>
+        
+            <li class="date_to"><label for="id_date_to">To:</label><input type="text" name="date_to" value="2011-06-27" id="id_date_to" /><img src="MojeID_files/calendar_editor.png" alt="" class="calendar" id="id_date_to_img" /> 
+                
+            </li>
+        
+            <li class="action_flag"><label for="id_action_flag">Type:</label><select name="action_flag" id="id_action_flag">
+<option value="0">--- All operations ---</option>
+<option value="1500">Login to service</option>
+<option value="1501">User authorization</option>
+<option value="1502">User logout</option>
+<option value="1504">Profile change</option>
+<option value="1507">Password regenerate request</option>
+<option value="1509">Data handover settings change</option>
+<option value="1511">Account status change</option>
+<option value="1512">Login settings</option>
+</select> 
+                
+            </li>
+        
+            <li><input type="submit" name="historylog_filter" id="id_historylog_filter" value="Display" class="button" /></li>
+        </ul>        
+        
+        <table id="change-history" class="white-table">
+            <thead>
+            <tr>
+                <th scope="col">Date/time</th>
+                <th scope="col">Action</th>
+                <th scope="col">Details</th>
+            </tr>
+            </thead>
+            <tbody>
+            
+            <tr>
+                <th scope="row">June 27, 2011, 4:12 p.m.</th>
+                <td class="action-cell">Login to service</td>
+                <td>
+                    
+                        <div class="details">
+                        
+                                                    
+                            
+                            <p>
+                                <em>Service provider:</em> 
+                                
+                                    MojeID profil
+                                
+                            </p>
+                            
+                        
+                        </div>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <th scope="row">June 27, 2011, 4:12 p.m.</th>
+                <td class="action-cell">User authorization</td>
+                <td>
+                    
+                        <div class="details">
+                        
+                                                    
+                            
+                            <p>
+                                <em>Method:</em> 
+                                
+                                    Password
+                                
+                            </p>
+                            
+                        
+                        </div>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <th scope="row">June 24, 2011, 2:28 p.m.</th>
+                <td class="action-cell">Login to service</td>
+                <td>
+                    
+                        <div class="details">
+                        
+                                                    
+                            
+                            <p>
+                                <em>Service provider:</em> 
+                                
+                                    MojeID profil
+                                
+                            </p>
+                            
+                        
+                        </div>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <th scope="row">June 15, 2011, 6:16 p.m.</th>
+                <td class="action-cell">User logout</td>
+                <td>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <th scope="row">June 15, 2011, 6:09 p.m.</th>
+                <td class="action-cell">Login to service</td>
+                <td>
+                    
+                        <div class="details">
+                        
+                                                    
+                            
+                            <p>
+                                <em>Service provider:</em> 
+                                
+                                    MojeID profil
+                                
+                            </p>
+                            
+                        
+                        </div>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <th scope="row">June 15, 2011, 5:55 p.m.</th>
+                <td class="action-cell">Login to service</td>
+                <td>
+                    
+                        <div class="details">
+                        
+                                                    
+                            
+                            <p>
+                                <em>Service provider:</em> 
+                                
+                                    MojeID profil
+                                
+                            </p>
+                            
+                        
+                        </div>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <th scope="row">June 15, 2011, 5:06 p.m.</th>
+                <td class="action-cell">Login to service</td>
+                <td>
+                    
+                        <div class="details">
+                        
+                                                    
+                            
+                            <p>
+                                <em>Service provider:</em> 
+                                
+                                    MojeID profil
+                                
+                            </p>
+                            
+                        
+                        </div>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <th scope="row">June 15, 2011, 5:06 p.m.</th>
+                <td class="action-cell">User authorization</td>
+                <td>
+                    
+                        <div class="details">
+                        
+                                                    
+                            
+                            <p>
+                                <em>Method:</em> 
+                                
+                                    Password
+                                
+                            </p>
+                            
+                        
+                        </div>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <th scope="row">June 15, 2011, 2:19 p.m.</th>
+                <td class="action-cell">User logout</td>
+                <td>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <th scope="row">June 15, 2011, 2:19 p.m.</th>
+                <td class="action-cell">Login to service</td>
+                <td>
+                    
+                        <div class="details">
+                        
+                                                    
+                            
+                            <p>
+                                <em>Service provider:</em> 
+                                
+                                    MojeID profil
+                                
+                            </p>
+                            
+                        
+                        </div>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <th scope="row">June 15, 2011, 2:18 p.m.</th>
+                <td class="action-cell">Login to service</td>
+                <td>
+                    
+                        <div class="details">
+                        
+                                                    
+                            
+                            <p>
+                                <em>Service provider:</em> 
+                                
+                                    http://www.nic.cz/akademie/endpoint/
+                                
+                            </p>
+                            
+                        
+                                                    
+                            <div class="more-details">
+                            <p>
+                                <em>Required attributes:</em> 
+                                
+                                    Main address - City, Last name, Main address - Postal code, Telephone, Main address - Street, First name, Email
+                                
+                            </p>
+                            
+                        
+                                                    
+                            
+                            <p>
+                                <em>Optional attributes:</em> 
+                                
+                                    Billing address - Postal code, VAT Reg. No., Billing address - City, Billing address - Street, VAT Ident. No., Organization
+                                
+                            </p>
+                            
+                        
+                                                    
+                            
+                            <p>
+                                <em>Returned attributes:</em> 
+                                
+                                    Main address - City, Last name, Main address - Postal code, Telephone, Main address - Street, First name, Organization, Email
+                                
+                            </p>
+                            
+                            </div>
+                            
+                        
+                        </div>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <th scope="row">June 15, 2011, 2:11 p.m.</th>
+                <td class="action-cell">Login to service</td>
+                <td>
+                    
+                        <div class="details">
+                        
+                                                    
+                            
+                            <p>
+                                <em>Service provider:</em> 
+                                
+                                    http://www.nic.cz/akademie/endpoint/
+                                
+                            </p>
+                            
+                        
+                                                    
+                            <div class="more-details">
+                            <p>
+                                <em>Required attributes:</em> 
+                                
+                                    Main address - City, Last name, Main address - Postal code, Telephone, Main address - Street, First name, Email
+                                
+                            </p>
+                            
+                        
+                                                    
+                            
+                            <p>
+                                <em>Optional attributes:</em> 
+                                
+                                    Billing address - Postal code, VAT Reg. No., Billing address - City, Billing address - Street, VAT Ident. No., Organization
+                                
+                            </p>
+                            
+                        
+                                                    
+                            
+                            <p>
+                                <em>Returned attributes:</em> 
+                                
+                                    Last name, Main address - Postal code, Telephone, Main address - Street, First name, Organization, Email
+                                
+                            </p>
+                            
+                            </div>
+                            
+                        
+                        </div>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <th scope="row">June 15, 2011, 2:11 p.m.</th>
+                <td class="action-cell">User authorization</td>
+                <td>
+                    
+                        <div class="details">
+                        
+                                                    
+                            
+                            <p>
+                                <em>Method:</em> 
+                                
+                                    Password
+                                
+                            </p>
+                            
+                        
+                        </div>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <th scope="row">June 15, 2011, 11:13 a.m.</th>
+                <td class="action-cell">User logout</td>
+                <td>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <th scope="row">June 15, 2011, 11:13 a.m.</th>
+                <td class="action-cell">Login to service</td>
+                <td>
+                    
+                        <div class="details">
+                        
+                                                    
+                            
+                            <p>
+                                <em>Service provider:</em> 
+                                
+                                    MojeID profil
+                                
+                            </p>
+                            
+                        
+                        </div>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <th scope="row">June 15, 2011, 11:13 a.m.</th>
+                <td class="action-cell">User authorization</td>
+                <td>
+                    
+                        <div class="details">
+                        
+                                                    
+                            
+                            <p>
+                                <em>Method:</em> 
+                                
+                                    Password
+                                
+                            </p>
+                            
+                        
+                        </div>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <th scope="row">June 14, 2011, 4:04 p.m.</th>
+                <td class="action-cell">User logout</td>
+                <td>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <th scope="row">June 14, 2011, 4:03 p.m.</th>
+                <td class="action-cell">Login to service</td>
+                <td>
+                    
+                        <div class="details">
+                        
+                                                    
+                            
+                            <p>
+                                <em>Service provider:</em> 
+                                
+                                    MojeID profil
+                                
+                            </p>
+                            
+                        
+                        </div>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <th scope="row">June 14, 2011, 4:03 p.m.</th>
+                <td class="action-cell">User authorization</td>
+                <td>
+                    
+                        <div class="details">
+                        
+                                                    
+                            
+                            <p>
+                                <em>Method:</em> 
+                                
+                                    Password
+                                
+                            </p>
+                            
+                        
+                        </div>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <th scope="row">June 14, 2011, 9:49 a.m.</th>
+                <td class="action-cell">User logout</td>
+                <td>
+                    
+                </td>
+            </tr>
+            
+            </tbody>
+        </table>
+        <div class="pagination">
+            <span class="step-links">
+                <span class="current" tite="Actual page">1</span><a href="?page=2&amp;page_size=20&amp;date_from=2011-03-29&amp;date_to=2011-06-27&amp;action_flag=0" title="page">2</a><a href="?page=3&amp;page_size=20&amp;date_from=2011-03-29&amp;date_to=2011-06-27&amp;action_flag=0" title="page">3</a><a href="?page=4&amp;page_size=20&amp;date_from=2011-03-29&amp;date_to=2011-06-27&amp;action_flag=0" title="page">4</a><a href="?page=2&amp;page_size=20&amp;date_from=2011-03-29&amp;date_to=2011-06-27&amp;action_flag=0" title="next"><img src="MojeID_files/next.png" alt="next" /></a>
+            </span>
+        </div>
+        
+        <div class="results-counter ">
+            Display <tr><th></th><td><select name="page_size" id="id_page_size">
+<option value="10">10</option>
+<option value="20" selected="selected">20</option>
+<option value="50">50</option>
+</select></td></tr> results.
+        </div>
+    </form>
+
+
+
+
+
+                            </div>
+                        </div>
+        
+                        
+                            
+                        
+                                        
+                    </div>
+                </div>
+            
+        </body>
+    
+
+</html>
