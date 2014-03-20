@@ -1,0 +1,82 @@
+- title: STUDITEMPS portal
+  type: Portal
+  year: 2013 &mdash; 2014
+  anchor: studi-portal
+  desc: <p>Missing description</p>
+  company: Studitemps GmbH
+  technologies:
+  - Design and UX
+  - HTML5
+  - CSS/SASS
+  - jQuery and jQuery UI, Bootstrap
+  - Django
+  thumbnails: 
+  - /img/projects/portal/company_mission_924.png
+
+- title: KISS
+  type: ERP system
+  year: 2012 &mdash; 2014
+  anchor: kiss
+  desc: <p>Missing description! KISS is a software application that incorporates all facets of the
+    business, and automate and facilitate the flow of data between critical
+    back-office functions, which may include financing, distribution,
+    accounting, inventory management, sales, marketing, planning, human
+    resources, manufacturing, and other operating units.</p>
+  company: Studitemps GmbH
+  technologies:
+  - Design and UX
+  - HTML5
+  - CSS/SASS
+  - jQuery and jQuery UI, DataTables
+  - Django
+  thumbnails: 
+  - /img/projects/kiss/hr_924.png
+
+- title: snikitina.com
+  type: Personal site
+  year: 2012
+  anchor: snikitina
+  desc: <p>The previous version of my online portfolio.</p>
+  company:
+  technologies:
+  - Design and UX
+  - HTML
+  - CSS
+  - jQuery
+  thumbnails: 
+  - /img/projects/snikitina/snikitina_index.png
+  - /img/projects/snikitina/snikitina_portfolio.png
+
+- title: IT10 Conference &amp; CSIRT.CZ
+  type: CMS-based pages
+  year: 2009 &mdash; 2011
+  anchor: mojeid
+  desc: <p>During my work at CZ.NIC I developed several web-sites based on CZ.NIC's proprietary CMS.</p>
+  company: CZ.NIC
+  technologies:
+  - HTML
+  - CSS
+  - jQuery and jQuery UI
+  - Django
+  thumbnails: 
+  - /img/projects/cms/it10.png
+  - /img/projects/cms/csirt.png
+
+- title: mojeID
+  type: openID provider
+  year: 2010 &mdash; 2012
+  anchor: mojeid
+  desc: <p>mojeID is a safe, fast and easy way to log in to multiple websites
+    and manage your private information among them. mojeID users have
+    access to a mojeID profile, where they can view and edit their personal
+    data and account settings.</p>
+  company: CZ.NIC
+  technologies:
+  - Design and UX
+  - HTML
+  - CSS
+  - jQuery and jQuery UI
+  - Django
+  thumbnails: 
+  - /img/projects/mojeid/data_handover.png
+  - /img/projects/mojeid/profile.png

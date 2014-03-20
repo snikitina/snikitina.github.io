@@ -1,33 +1,27 @@
-- title: Front-end web-developer
+- title: Front-end and Django developer
   company: <a href="http://studitemps.de/">STUDITEMPS GmbH</a>
   location: Cologne, Germany
   started: 2012-08-01
   finished: 2014-02-28
   responsibilites:
-  - Redesign of KISS and student portal
-  - Refactoring
-  - Requirements analysis, prototyping, and development of new features
+  - Redesigned a proprietary ERP system and the external STUDITEMPS
+    portal with a focus on providing an improved user experience
+  - Analysed technical and business requirements and developed prototypes
+  - Implemented new features using Django, HTML5, CSS/SASS, jQuery and jQuery UI
 
-- title: Web-designer and Python programmer
+- title: Front-end and Django developer
   company: <a href="http://nic.cz">CZ.NIC domain registry</a>
   location: Prague, Czech Republic
   started: 2009-04-01
   finished: 2012-07-31
   responsibilites:
-  - Develop the front-ends of alpha and beta versions of
+  - Developed the front-end of
     <a href="http://www.mojeid.cz/">mojeID</a> &mdash; an OpenID provider
-    service
-  - Design and develop the front and back-end of
+    service (has been redesigned since)
+  - Designed and developed the front and back-end of
     <a href="http://www.nic.cz/dnssectests/">DNSSEC hardware tester</a>
     service &mdash; an overview of DNSSEC compatible devices
-  - Extend the existing CMS to use new types of content, e.g. implement
-    solutions for conference registration
-    (<a href="http://www.nic.cz/it10/">IT10</a>,
-    <a href="http://www.nic.cz/it09/">IT9</a>) and landing pages
-    (<a href="http://www.dnssec-validator.cz/">DNSSEC Validator</a>)
-  - Design and develop front-end solutions for the whole range of CZ.NIC’s
-    public and internal services
-  - Create email newsletter templates
+  - Extended CZ.NIC's proprietary CMS to use new types of content
 
 - title: Front-end web-developer
   company: <a href="http://embria.com">Embria</a>
@@ -38,14 +32,9 @@
   - Developed part of the front-end of the social network
     <a href="http://www.fotostrana.ru/">fotostrana.ru</a>, including promo
     and landing pages
-  - Developed widgets and a messenger application for the social network
-    <a href="http://www.fotostrana.ru/">fotostrana.ru</a> utilizing jQuery
+  - Developed widgets and a messenger application for fotostrana.ru utilizing the jQuery
     framework
   - Created wireframes and prototypes
-  - Designed web pages
-  - Developed XHTML/CSS web pages for
-    <a href="http://www.rusim.ru/">rusim.ru</a> and
-    <a href="http://www.semrush.com/">semrush.com</a>
 
 - title: Front-end web-developer
   company: Versus
@@ -54,37 +43,12 @@
   finished: 2008-09-30
   responsibilites:
   - Developed the front-end of the social network
-    <a href="http://bable.ru/">bable.ru</a>
-  - Implemented user friendly interfaces utilizing jQuery/Prototype
+    <a href="http://bable.ru/">bable.ru</a> utilizing jQuery/Prototype
     frameworks and Ajax
-  - Designed web pages
 
-- title: Front-end web-developer
-  company: <a href="http://railsware.com">Railsware</a>
-  location: Kiev, Ukraine
-  started: 2007-10-01
+- title: Web-designer
+  company: Freelance
+  started: 2007-02-01
   finished: 2008-03-31
   responsibilites:
-  - Developed front-ends of Ruby on Rails applications using XHTML, CSS, and
-    jQuery framework
-  - Extended existing designs with web page elements (calendars, buttons,
-    popup messages, etc.)
-
-- title: XHTML/CSS coder
-  company: Design studio Identicum
-  location: Penza, Russia
-  started: 2006-12-01
-  finished: 2007-08-30
-  responsibilites:
-  - Developed XHTML/CSS web pages
-
-- title: Web-designer, web-content manager
-  company: Advertising Agency Infolab
-  location: Penza, Russia
-  started: 2006-09-01
-  finished: 2007-02-28
-  responsibilites:
-  - Collected and organized the content for
-    <a href="http://e58.ru/">e58.ru</a> (a catalogue of companies in Penza
-    and Penza region)
-  - Developed web pages
+  - Developed web-sites with HTML, CSS, and jQuery
