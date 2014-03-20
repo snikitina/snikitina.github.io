@@ -5,9 +5,10 @@
   finished: 2014-02-28
   responsibilites:
   - Redesigned a proprietary ERP system and the external STUDITEMPS
-    portal with a focus on providing an improved user experience
+    portal (has not been released yet) with a focus on providing an improved user experience
   - Analysed technical and business requirements and developed prototypes
-  - Implemented new features using Django, HTML5, CSS/SASS, jQuery and jQuery UI
+  - Implemented new features using Django, HTML5, CSS/SASS, jQuery, jQuery UI,
+    and Ajax
 
 - title: Front-end and Django developer
   company: <a href="http://nic.cz">CZ.NIC domain registry</a>
@@ -32,7 +33,7 @@
   - Developed part of the front-end of the social network
     <a href="http://www.fotostrana.ru/">fotostrana.ru</a>, including promo
     and landing pages
-  - Developed widgets and a messenger application for fotostrana.ru utilizing the jQuery
+  - Developed widgets and a messenger application for fotostrana.ru with the jQuery
     framework
   - Created wireframes and prototypes
 
@@ -43,10 +44,10 @@
   finished: 2008-09-30
   responsibilites:
   - Developed the front-end of the social network
-    <a href="http://bable.ru/">bable.ru</a> utilizing jQuery/Prototype
+    <a href="http://bable.ru/">bable.ru</a> utilizing the jQuery and Prototype
     frameworks and Ajax
 
-- title: Web-designer
+- title: Front-end web-developer
   company: Freelance
   started: 2007-02-01
   finished: 2008-03-31
