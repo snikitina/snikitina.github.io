@@ -25,8 +25,8 @@ title: Portfolio
           <li>{% for t in project.technologies %}{{ t }}{% if forloop.last == false %}, {% endif %}{% endfor %}</li>
         </ul>
         <div class="screenshot">
-          {% for s in project.thumbnails %}
-            <a href="#"><img src="{{ s }}" alt="" /></a>
+          {% for thumbnail in project.thumbnails %}
+            <a href="{{ thumbnail.url }}" title="{{ thumbnail.desc }}"><img src="{{ thumbnail.path }}" alt="{{ thumbnail.desc }}" /></a>
           {% endfor %}
         </div>
       </li>

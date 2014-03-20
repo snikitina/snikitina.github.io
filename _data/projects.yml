@@ -10,7 +10,7 @@
   - CSS/SASS
   - jQuery and jQuery UI, Bootstrap
   - Django
-  thumbnails: 
+  thumbnails:
   - /img/projects/portal/company_mission_924.png
 
 - title: KISS
@@ -44,8 +44,12 @@
   - CSS
   - jQuery
   thumbnails: 
-  - /img/projects/snikitina/snikitina_index.png
-  - /img/projects/snikitina/snikitina_portfolio.png
+  - path: /img/projects/snikitina/snikitina_index.png
+    url: /projects/snikitina/index.html
+    desc: snikitina.com - Homepage
+  - path: /img/projects/snikitina/snikitina_portfolio.png
+    url: /projects/snikitina/portfolio.html
+    desc: snikitina.com - Portfolio
 
 - title: IT10 Conference &amp; CSIRT.CZ
   type: CMS-based pages
@@ -58,9 +62,13 @@
   - CSS
   - jQuery and jQuery UI
   - Django
-  thumbnails: 
-  - /img/projects/cms/it10.png
-  - /img/projects/cms/csirt.png
+  thumbnails:
+  - path: /img/projects/cms/it10.png
+    url: http://www.nic.cz/it10/
+    desc: IT10 Conference
+  - path: /img/projects/cms/csirt.png
+    url: http://www.csirt.cz/
+    desc: CSIRT.CZ - A webiste of The National CSIRT Team of the Czech Republic
 
 - title: mojeID
   type: openID provider
@@ -78,5 +86,52 @@
   - jQuery and jQuery UI
   - Django
   thumbnails: 
-  - /img/projects/mojeid/data_handover.png
-  - /img/projects/mojeid/profile.png
+  - path: /img/projects/mojeid/data_handover.png
+    url: /projects/mojeid/MojeID_Datahandover.html
+    desc: MojeID - Data handover
+  - path: /img/projects/mojeid/profile.png
+    url: /projects/mojeid/MojeID_Profile.html
+    desc: MojeID - Profile
+
+- title: DNSSEC hardware tester
+  type: Web application
+  year: 2009
+  anchor: dnssec-tester
+  desc: <p>DNSSEC hardware tester service is an overview of DNSSEC compatible
+    devices. I developed the front and back-ends of the web application that
+    generates statistics from the data submitted by DNSSEC hardware tester (a
+    desktop application).</p>
+  company: CZ.NIC
+  technologies:
+  - Design and UX
+  - HTML
+  - CSS
+  - jQuery
+  - Django
+  thumbnails: 
+  - path: /img/projects/dnssectester/index.png
+    url: http://www.nic.cz/dnssectests/
+    desc: DNSSEC Hardware Tester - Homepage
+  - path: /img/projects/dnssectester/device_info.png
+    url: http://www.nic.cz/dnssectests/devicemodel/136/
+    desc: DNSSEC Hardware Tester - Device page
+
+- title: Bable
+  type: Social network
+  year: 2008
+  anchor: bable
+  desc: <p>bable.ru is a social network that uses the best of JavaScript
+    frameworks and AJAX techniques to deliver a rich user experience.</p>
+  company: Versus
+  technologies:
+  - HTML
+  - CSS
+  - jQuery and Prototype
+  - Zend framework
+  thumbnails: 
+  - path: /img/projects/bable/index.png
+    url: http://bable.ru/
+    desc: Bable.ru - Homepage
+  - path: /img/projects/bable/signup.png
+    url: http://bable.ru/signup/
+    desc: Bable.ru - Signup page
