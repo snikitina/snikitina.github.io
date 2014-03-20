@@ -2,13 +2,20 @@
 
   article {
 
-    section > ul > li {
-      margin-bottom: 1.5em;
-    }
+    section {
 
-    section ul ul {
-      list-style-type: disc;
-      padding-left: 2em;
+      > .no-bullets > li {
+        margin-bottom: 1.5em;
+      }
+
+      ul ul {
+        list-style-type: disc;
+        padding-left: 2em;
+      }
+
+      &:last-child ul {
+        padding-left: 2em;
+      }
     }
   }
 }
@@ -27,5 +34,28 @@
   .button-block {
     margin-top: 1.5em;
     text-align: center;
+  }
+}
+
+.resume-item-data {
+  color: #777;
+  margin-bottom: .75em;
+
+  strong {
+    color: $green;
+  }
+
+  em {
+    border-left: 1px solid #bbb;
+    font-style: normal;
+    margin-left: .5em;
+    padding-left: .75em;
+  }
+
+  span {
+    border-left: 1px solid #bbb;
+    font-style: normal;
+    margin-left: .5em;
+    padding-left: .75em;
   }
 }

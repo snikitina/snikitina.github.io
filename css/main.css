@@ -140,7 +140,11 @@ body > div > header h1 {
   margin: 0 18px;
   position: relative;
 }
-/* line 20, ../_sass/layout/_header.scss */
+/* line 19, ../_sass/layout/_header.scss */
+body > div > header h1 a:hover {
+  color: #202020 !important;
+}
+/* line 24, ../_sass/layout/_header.scss */
 body > div > header nav {
   float: right;
   font-size: 1em;
@@ -149,7 +153,7 @@ body > div > header nav {
   margin-right: 18px;
   text-transform: uppercase;
 }
-/* line 29, ../_sass/layout/_header.scss */
+/* line 33, ../_sass/layout/_header.scss */
 body > div > header nav ul {
   *zoom: 1;
   margin: 1.5em 0 0;
@@ -164,21 +168,21 @@ body > div > header nav ul:after {
   overflow: hidden;
   visibility: hidden;
 }
-/* line 35, ../_sass/layout/_header.scss */
+/* line 39, ../_sass/layout/_header.scss */
 body > div > header nav li {
   display: block;
   float: left;
   margin-left: 1em;
 }
-/* line 41, ../_sass/layout/_header.scss */
+/* line 45, ../_sass/layout/_header.scss */
 body > div > header nav a, body > div > header nav a:visited {
   color: #535353;
 }
-/* line 46, ../_sass/layout/_header.scss */
+/* line 50, ../_sass/layout/_header.scss */
 body > div > header a {
   text-decoration: none;
 }
-/* line 49, ../_sass/layout/_header.scss */
+/* line 53, ../_sass/layout/_header.scss */
 body > div > header a, body > div > header a:visited {
   color: #202020;
 }
@@ -327,260 +331,46 @@ main > article > div, main > article > section, main > aside > div, main > aside
   width: 320px;
 }
 
-/* line 1, ../_sass/_common.scss */
+/* Text styles ------------------------------------------------------------ */
+/* line 2, ../_sass/_common.scss */
 #wrapper, body > footer {
   font-size: 1.2em;
 }
 
-/* line 5, ../_sass/_common.scss */
-main > article > header {
-  background-color: #00bd9a;
-  color: rgba(255, 255, 255, 0.95);
+/* line 6, ../_sass/_common.scss */
+h2 {
+  color: #00bd9a;
   font-family: "Voces";
-  margin-bottom: 18px;
-  margin-top: -18px;
-  padding: 18px;
-}
-/* line 13, ../_sass/_common.scss */
-main > article > header h1 {
   font-size: 1.667em;
   font-weight: normal;
-  margin: 0;
-}
-/* line 19, ../_sass/_common.scss */
-main > article > header p {
-  font-size: 1.25em;
-  margin: .5em 0 0;
-}
-/* line 24, ../_sass/_common.scss */
-main > article > header em {
-  font-size: 1.08em;
-  color: white;
-  font-style: normal;
   letter-spacing: .03em;
 }
 
-/* line 32, ../_sass/_common.scss */
-main > aside {
-  color: #999999;
-}
-/* line 36, ../_sass/_common.scss */
-main > aside h3 {
-  background-color: rgba(255, 255, 255, 0.2);
-  font-size: 1.1666em;
-  font-weight: normal;
-  letter-spacing: .15em;
-  line-height: 1em;
-  margin: 1.25em 0;
-  text-align: center;
-  text-transform: uppercase;
-}
-/* line 46, ../_sass/_common.scss */
-main > aside h3:first-child {
-  margin-top: 0.25em;
-}
-/* line 50, ../_sass/_common.scss */
-main > aside h3 span {
-  background-color: #202020;
-  color: lightgrey;
-  padding: 0 1em;
+/* line 14, ../_sass/_common.scss */
+h3 {
+  font-family: "Voces";
+  font-size: 1.5em;
+  margin-bottom: .5em;
 }
 
-/* line 58, ../_sass/_common.scss */
-section:not(:last-child) {
-  margin-bottom: 2.5em;
+/* line 20, ../_sass/_common.scss */
+h4 {
+  font-size: 1.25em;
+  margin: 0 0 .5em;
 }
 
-/* line 5, ../_sass/pages/_resume.scss */
-#resume article section > ul > li {
-  margin-bottom: 1.5em;
-}
-/* line 9, ../_sass/pages/_resume.scss */
-#resume article section ul ul {
-  list-style-type: disc;
-  padding-left: 2em;
-}
-
-/* line 23, ../_sass/pages/_resume.scss */
-#resume-aside p {
-  font-size: 1.083em;
-}
-/* line 27, ../_sass/pages/_resume.scss */
-#resume-aside .button-block {
-  margin-top: 1.5em;
-  text-align: center;
-}
-
-/* line 15, ../_sass/main.scss */
+/* Interactive elements - buttons, links, etc. ---------------------------- */
+/* line 26, ../_sass/_common.scss */
 a, a:visited {
   color: #00bd9a;
   transition: all 0.2s linear 0s;
 }
-/* line 19, ../_sass/main.scss */
+/* line 30, ../_sass/_common.scss */
 a:not(.button):hover, a:visited:not(.button):hover {
   color: #008a70;
 }
 
-/* line 24, ../_sass/main.scss */
-article li {
-  margin: .4em 0 0;
-}
-
-/* line 28, ../_sass/main.scss */
-.bigger {
-  font-size: 14px;
-}
-
-/* line 32, ../_sass/main.scss */
-h2 {
-  color: #00bd9a;
-  font-family: "Voces";
-  font-size: 21.6px;
-  font-weight: normal;
-  letter-spacing: .03em;
-}
-
-/* line 40, ../_sass/main.scss */
-article h3 {
-  font-family: "Voces";
-  font-size: 18px;
-  margin-bottom: .5em;
-}
-
-/* line 47, ../_sass/main.scss */
-h4 {
-  font-size: 14px;
-  margin: 0 0 .5em;
-}
-
-/* line 55, ../_sass/main.scss */
-.resume-item-data {
-  color: #777;
-  margin-bottom: .75em;
-}
-/* line 59, ../_sass/main.scss */
-.resume-item-data strong {
-  color: #00bd9a;
-}
-/* line 63, ../_sass/main.scss */
-.resume-item-data em {
-  border-left: 1px solid #bbb;
-  font-style: normal;
-  margin-left: .5em;
-  padding-left: .75em;
-}
-/* line 70, ../_sass/main.scss */
-.resume-item-data span {
-  border-left: 1px solid #bbb;
-  font-style: normal;
-  margin-left: .5em;
-  padding-left: .75em;
-}
-
-/* transition: all 0.2s linear 0s; */
-/* line 79, ../_sass/main.scss */
-#recent-projects {
-  text-align: center;
-}
-/* line 82, ../_sass/main.scss */
-#recent-projects ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-/* line 88, ../_sass/main.scss */
-#recent-projects li {
-  display: block;
-  margin: 0 0 18px;
-  padding: 0;
-  /* just for testing */
-}
-/* line 93, ../_sass/main.scss */
-#recent-projects li a {
-  display: block;
-  height: 170px;
-  overflow: hidden;
-  position: relative;
-  width: 284px;
-}
-/* line 103, ../_sass/main.scss */
-#recent-projects li a:after {
-  border: 4px solid rgba(0, 0, 0, 0.4);
-  content: "";
-  display: block;
-  height: 162px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 276px;
-}
-/* line 114, ../_sass/main.scss */
-#recent-projects li img {
-  -webkit-transform: scale(0.5, 0.5);
-  -moz-transform: scale(0.5, 0.5);
-  -ms-transform: scale(0.5, 0.5);
-  -o-transform: scale(0.5, 0.5);
-  transform: scale(0.5, 0.5);
-}
-/* line 119, ../_sass/main.scss */
-#recent-projects li:first-child img {
-  position: relative;
-  top: -261px;
-  left: -360px;
-}
-/* line 126, ../_sass/main.scss */
-#recent-projects li:nth-child(2) img {
-  position: relative;
-  left: -455px;
-  top: -260px;
-}
-/* line 134, ../_sass/main.scss */
-#recent-projects li:nth-child(3) img {
-  position: relative;
-  left: -280px;
-  top: -186px;
-}
-/* line 143, ../_sass/main.scss */
-#recent-projects .button {
-  padding-left: 4em;
-  padding-right: 4em;
-}
-
-/* line 149, ../_sass/main.scss */
-#qualifications {
-  font-size: 14px;
-}
-/* line 152, ../_sass/main.scss */
-#qualifications ul {
-  padding-left: 1.7em;
-}
-
-/* line 162, ../_sass/main.scss */
-.contact-list [class^="icon-"]:before, .contact-list [class*=" icon-"]:before {
-  font-size: 18px;
-  margin-right: .6em;
-  vertical-align: middle;
-}
-/* line 170, ../_sass/main.scss */
-.contact-list li {
-  line-height: 2em;
-}
-
-/* line 175, ../_sass/main.scss */
-aside .contact-list {
-  font-size: 13px;
-}
-/* line 178, ../_sass/main.scss */
-aside .contact-list li {
-  line-height: 2em;
-}
-
-/* line 183, ../_sass/main.scss */
-#qualifications .contact-list {
-  padding-left: .4em;
-}
-
-/* line 187, ../_sass/main.scss */
+/* line 35, ../_sass/_common.scss */
 .button {
   background-color: #00bd9a;
   -webkit-border-radius: 2px;
@@ -595,11 +385,383 @@ aside .contact-list li {
   text-decoration: none;
   transition: all 0.2s linear 0s;
 }
-/* line 197, ../_sass/main.scss */
+/* line 45, ../_sass/_common.scss */
 .button, .button:visited {
   color: white;
 }
-/* line 201, ../_sass/main.scss */
+/* line 49, ../_sass/_common.scss */
 .button:hover {
   background-color: #008a70;
+}
+
+/* Blocks ----------------------------------------------------------------- */
+/* line 55, ../_sass/_common.scss */
+section:not(:last-child) {
+  margin-bottom: 2.5em;
+}
+
+/* line 63, ../_sass/_common.scss */
+.contact-list [class^="icon-"]:before, .contact-list [class*=" icon-"]:before {
+  font-size: 18px;
+  margin-right: .6em;
+  vertical-align: middle;
+}
+/* line 70, ../_sass/_common.scss */
+.contact-list li {
+  line-height: 2em;
+}
+
+/* line 75, ../_sass/_common.scss */
+aside .contact-list {
+  font-size: 1.083em;
+}
+
+/* Lists ------------------------------------------------------------------ */
+/* line 80, ../_sass/_common.scss */
+.green-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 85, ../_sass/_common.scss */
+.green-bullets li {
+  padding-left: 1.75em;
+  position: relative;
+}
+/* line 89, ../_sass/_common.scss */
+.green-bullets li:before {
+  color: #00bd9a;
+  content: "\e600";
+  font-family: "icomoon";
+  font-size: .8em;
+  left: 1px;
+  position: absolute;
+}
+
+/* Main content ----------------------------------------------------------- */
+/* line 102, ../_sass/_common.scss */
+main > article > header {
+  background-color: #00bd9a;
+  color: rgba(255, 255, 255, 0.95);
+  font-family: "Voces";
+  margin-bottom: 18px;
+  margin-top: -18px;
+  padding: 18px;
+}
+/* line 110, ../_sass/_common.scss */
+main > article > header h1 {
+  font-size: 1.667em;
+  font-weight: normal;
+  margin: 0;
+}
+/* line 116, ../_sass/_common.scss */
+main > article > header p {
+  font-size: 1.25em;
+  margin: .5em 0 0;
+}
+/* line 121, ../_sass/_common.scss */
+main > article > header em {
+  font-size: 1.08em;
+  color: white;
+  font-style: normal;
+  letter-spacing: .03em;
+}
+
+/* Sidebar ---------------------------------------------------------------- */
+/* line 130, ../_sass/_common.scss */
+main > aside {
+  color: #999999;
+}
+/* line 134, ../_sass/_common.scss */
+main > aside h3 {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 1.1666em;
+  font-weight: normal;
+  letter-spacing: .15em;
+  line-height: 1em;
+  margin: 1.25em 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* line 144, ../_sass/_common.scss */
+main > aside h3:first-child {
+  margin-top: 0.25em;
+}
+/* line 148, ../_sass/_common.scss */
+main > aside h3 span {
+  background-color: #202020;
+  color: lightgrey;
+  padding: 0 1em;
+}
+
+/* line 1, ../_sass/pages/_index.scss */
+#recent-projects {
+  text-align: center;
+}
+/* line 4, ../_sass/pages/_index.scss */
+#recent-projects ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 10, ../_sass/pages/_index.scss */
+#recent-projects li {
+  display: block;
+  margin: 0 0 18px;
+  padding: 0;
+  /* just for testing */
+}
+/* line 15, ../_sass/pages/_index.scss */
+#recent-projects li a {
+  display: block;
+  height: 170px;
+  overflow: hidden;
+  position: relative;
+  width: 284px;
+}
+/* line 25, ../_sass/pages/_index.scss */
+#recent-projects li a:after {
+  border: 4px solid rgba(0, 0, 0, 0.4);
+  content: "";
+  display: block;
+  height: 162px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 276px;
+}
+/* line 36, ../_sass/pages/_index.scss */
+#recent-projects li img {
+  -webkit-transform: scale(0.5, 0.5);
+  -moz-transform: scale(0.5, 0.5);
+  -ms-transform: scale(0.5, 0.5);
+  -o-transform: scale(0.5, 0.5);
+  transform: scale(0.5, 0.5);
+}
+/* line 41, ../_sass/pages/_index.scss */
+#recent-projects li:first-child img {
+  position: relative;
+  top: -261px;
+  left: -360px;
+}
+/* line 48, ../_sass/pages/_index.scss */
+#recent-projects li:nth-child(2) img {
+  position: relative;
+  left: -455px;
+  top: -260px;
+}
+/* line 56, ../_sass/pages/_index.scss */
+#recent-projects li:nth-child(3) img {
+  position: relative;
+  left: -280px;
+  top: -186px;
+}
+/* line 65, ../_sass/pages/_index.scss */
+#recent-projects .button {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+/* line 71, ../_sass/pages/_index.scss */
+#qualifications {
+  font-size: 14px;
+}
+/* line 74, ../_sass/pages/_index.scss */
+#qualifications p:nth-child(1), #qualifications p:nth-child(2) {
+  font-size: 1.15em;
+}
+/* line 78, ../_sass/pages/_index.scss */
+#qualifications em {
+  font-style: normal;
+  font-weight: bold;
+}
+/* line 83, ../_sass/pages/_index.scss */
+#qualifications .green-bullets {
+  margin-bottom: 1.5em;
+}
+/* line 87, ../_sass/pages/_index.scss */
+#qualifications .contact-list {
+  margin-bottom: 0;
+  margin-top: -.5em;
+  padding-left: 1px;
+}
+/* line 92, ../_sass/pages/_index.scss */
+#qualifications .contact-list li {
+  margin: 0;
+}
+
+/* line 3, ../_sass/pages/_portfolio.scss */
+#projects {
+  margin: -18px 0;
+  /*  > li:nth-child(2n) {
+      background-color: $footerBgColor;
+      color: #fff;
+    }
+  */
+}
+/* line 6, ../_sass/pages/_portfolio.scss */
+#projects > li {
+  clear: both;
+  margin: 0 -18px;
+  min-height: 180px;
+  overflow: hidden;
+  padding: 18px 18px 0;
+}
+/* line 14, ../_sass/pages/_portfolio.scss */
+#projects h3 {
+  float: left;
+}
+/* line 18, ../_sass/pages/_portfolio.scss */
+#projects h3, #projects h4 {
+  margin-top: 0;
+}
+/* line 22, ../_sass/pages/_portfolio.scss */
+#projects .num {
+  background-color: lightgrey;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  border-radius: 16px;
+  color: white;
+  display: inline-block;
+  float: right;
+  font-size: 19.2px;
+  font-weight: bold;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  width: 32px;
+}
+/* line 42, ../_sass/pages/_portfolio.scss */
+#projects .resume-item-data {
+  clear: both;
+}
+/* line 46, ../_sass/pages/_portfolio.scss */
+#projects .screenshot {
+  background: #202020;
+  clear: both;
+  margin: 18px -18px 0;
+  padding: 18px;
+  width: 924px;
+  overflow: hidden;
+}
+/* line 53, ../_sass/pages/_portfolio.scss */
+#projects .screenshot a {
+  display: block;
+  float: left;
+  height: 284px;
+  overflow: hidden;
+  position: relative;
+  width: 453px;
+}
+/* line 61, ../_sass/pages/_portfolio.scss */
+#projects .screenshot a:first-child {
+  margin-right: 18px;
+}
+/* line 65, ../_sass/pages/_portfolio.scss */
+#projects .screenshot a:after {
+  border: 4px solid rgba(0, 0, 0, 0.4);
+  content: "";
+  display: block;
+  height: 276px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 445px;
+}
+/* line 77, ../_sass/pages/_portfolio.scss */
+#projects .screenshot img {
+  display: block;
+}
+/* line 82, ../_sass/pages/_portfolio.scss */
+#projects .technologies {
+  list-style-type: disc;
+}
+/* line 86, ../_sass/pages/_portfolio.scss */
+#projects .project-thumbnail {
+  display: block;
+  float: right;
+  height: 170px;
+  margin-left: 2em;
+  overflow: hidden;
+  position: relative;
+  width: 284px;
+}
+/* line 96, ../_sass/pages/_portfolio.scss */
+#projects .project-thumbnail:after {
+  border: 4px solid rgba(0, 0, 0, 0.4);
+  content: "";
+  display: block;
+  height: 162px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 276px;
+}
+/* line 107, ../_sass/pages/_portfolio.scss */
+#projects .project-thumbnail img {
+  -webkit-transform: scale(0.5, 0.5);
+  -moz-transform: scale(0.5, 0.5);
+  -ms-transform: scale(0.5, 0.5);
+  -o-transform: scale(0.5, 0.5);
+  transform: scale(0.5, 0.5);
+}
+
+/* line 7, ../_sass/pages/_resume.scss */
+#resume article section > .no-bullets > li {
+  margin-bottom: 1.5em;
+}
+/* line 11, ../_sass/pages/_resume.scss */
+#resume article section ul ul {
+  list-style-type: disc;
+  padding-left: 2em;
+}
+/* line 16, ../_sass/pages/_resume.scss */
+#resume article section:last-child ul {
+  padding-left: 2em;
+}
+
+/* line 30, ../_sass/pages/_resume.scss */
+#resume-aside p {
+  font-size: 1.083em;
+}
+/* line 34, ../_sass/pages/_resume.scss */
+#resume-aside .button-block {
+  margin-top: 1.5em;
+  text-align: center;
+}
+
+/* line 40, ../_sass/pages/_resume.scss */
+.resume-item-data {
+  color: #777;
+  margin-bottom: .75em;
+}
+/* line 44, ../_sass/pages/_resume.scss */
+.resume-item-data strong {
+  color: #00bd9a;
+}
+/* line 48, ../_sass/pages/_resume.scss */
+.resume-item-data em {
+  border-left: 1px solid #bbb;
+  font-style: normal;
+  margin-left: .5em;
+  padding-left: .75em;
+}
+/* line 55, ../_sass/pages/_resume.scss */
+.resume-item-data span {
+  border-left: 1px solid #bbb;
+  font-style: normal;
+  margin-left: .5em;
+  padding-left: .75em;
+}
+
+/* line 17, ../_sass/main.scss */
+article li {
+  margin: .4em 0 0;
+}
+
+/* line 21, ../_sass/main.scss */
+.bigger {
+  font-size: 14px;
 }

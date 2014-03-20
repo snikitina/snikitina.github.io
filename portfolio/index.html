@@ -8,6 +8,31 @@ title: Portfolio
   <header>
     <h1><em>Portfolio</em></h1>
   </header>
-  <div>Projects</div>
+  <div>
+    <ul class="no-bullets" id="projects">
+      {% for project in site.data.projects %}
+      <li id="{{ project.anchor }}">
+        <h3>{{ project.title }}</h3>
+        <span class="num">{{ forloop.index }}</span>
+
+        <div class="resume-item-data">
+          <strong>{{ project.type }}</strong>
+          {% if project.company %}<em>{{ project.company }}</em>{% endif %}
+          <span>{{ project.year }}</span>
+        </div>
+        {{ project.desc }}
+        <ul class="green-bullets">
+          <li>{% for t in project.technologies %}{{ t }}{% if forloop.last == false %}, {% endif %}{% endfor %}</li>
+        </ul>
+        <div class="screenshot">
+          {% for s in project.thumbnails %}
+            <a href="#"><img src="{{ s }}" alt="" /></a>
+          {% endfor %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
 </article>
 

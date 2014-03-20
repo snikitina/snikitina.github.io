@@ -15,6 +15,10 @@ body > div > header {
     left: -.1em;
     margin: 0 $commonPadding;
     position: relative;
+
+    a:hover {
+      color: $textColor !important;
+    }
   }
 
   nav {

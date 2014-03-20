@@ -1,7 +1,104 @@
+/* Text styles ------------------------------------------------------------ */
 #wrapper, body > footer {
   font-size: $fontSize;
 }
 
+h2 {
+  color: $green;
+  font-family: "Voces";
+  font-size: 1.667em;
+  font-weight: normal;
+  letter-spacing: .03em;
+}
+
+h3 {
+  font-family: "Voces";
+  font-size: 1.5em;
+  margin-bottom: .5em;
+}
+
+h4 {
+  font-size: 1.25em;
+  margin: 0 0 .5em;
+}
+
+/* Interactive elements - buttons, links, etc. ---------------------------- */
+a, a:visited {
+  color: $green;
+  transition: all 0.2s linear 0s;
+
+  &:not(.button):hover {
+    color: darken($green, 10%);
+  }
+}
+
+.button {
+  background-color: $green;
+  @include border-radius(2px);
+  display: inline-block;
+  font-size: 1.16em;
+  padding: .5em 1em;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s linear 0s;
+
+  &, &:visited {
+    color: $mainBgColor;
+  }
+
+  &:hover {
+    background-color: darken($green, 10%);
+  }
+}
+
+/* Blocks ----------------------------------------------------------------- */
+section:not(:last-child) {
+  margin-bottom: 2.5em;
+}
+
+.contact-list {
+
+  [class^="icon-"], [class*=" icon-"] {
+
+    &:before {
+      font-size: 18px;
+      margin-right: .6em;
+      vertical-align: middle;
+    }
+  }
+
+  li {
+    line-height: 2em;
+  }
+}
+
+aside .contact-list {
+  font-size: 1.083em;
+}
+
+/* Lists ------------------------------------------------------------------ */
+.green-bullets {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding-left: 1.75em;
+    position: relative;
+
+    &:before {
+      color: $green;
+      content: "\e600";
+      font-family: "icomoon";
+      font-size: .8em;
+      left: 1px;
+      position: absolute;
+    }
+  }
+}
+
+
+/* Main content ----------------------------------------------------------- */
 main > article > header {
   background-color: $green;
   color: rgba($mainBgColor, .95);
@@ -29,6 +126,7 @@ main > article > header {
   }
 }
 
+/* Sidebar ---------------------------------------------------------------- */
 main > aside {
 
   color: darken($mainBgColor, 40%);
@@ -54,9 +152,3 @@ main > aside {
     }
   }
 }
-
-section:not(:last-child) {
-  margin-bottom: 2.5em;
-}
-
-
