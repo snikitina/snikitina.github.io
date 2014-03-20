@@ -8,6 +8,10 @@ title: Resume
   <header><h1><em>Resume</em></h1></header>
   <div>
     <section>
+      <h3>Status in Australia</h3>
+      <div style="font-size: 1.15em;">Permanent residency</div>
+    </section>
+    <section>
       <h3>Professional Experience</h3>
       <ul class="no-bullets">
         {% for job in site.data.jobs %}
@@ -15,9 +19,12 @@ title: Resume
             <h4>{{ job.title }}</h4>
             <div class="resume-item-data">
               <strong>{{ job.company }}</strong>
-              <em>{{ job.location }}</em>
+              {% if job.location %}<em>{{ job.location }}</em>{% endif %}
               <span>{{ job.started|date:"%b, %Y" }} &mdash; {{ job.finished|date:"%b, %Y" }}</span>
             </div>
+            {% if job.desc %}
+              <p>{{ job.desc }}</p>
+            {% endif %}
             <div class="resume-item-desc">
               <ul class="no-bullets">
                 {% for resp in job.responsibilites %}
@@ -54,25 +61,10 @@ title: Resume
     </section>
 
     <section>
-      <h3>Applications and Technologies</h3>
+      <h3>Command of English</h3>
       <ul>
-        <li>Programming languages — Python, PHP, JavaScript</li>
-        <li>Web and JavaScript frameworks — Django, Ruby on Rails, jQuery, Mochikit, Prototype</li>
-        <li>DBMS — MySQL, Postgresql</li>
-        <li>Graphic editors — Adobe Photoshop, GIMP</li>
-        <li>Version control system — Git, Mercurial, SVN</li>
-        <li>Development environment — Sublime, Textmate, IntelliJ IDEA, Eclipse</li>
-        <li>User experience — MacOS, Linux (Ubuntu), Windows</li>
-      </ul>
-    </section>
-
-    <section>
-      <h3>Languages</h3>
-      <ul>
-        <li>English (fluent)</li>
-        <li>Russian (native)</li>
-        <li>German (basic)</li>
-        <li>Czech (basic)</li>
+        <li>Fluent: IELTS 8.0 out of 9.0</li>
+        <li>Professional communication in English: 5 years</li>
       </ul>
     </section>
   </div>
