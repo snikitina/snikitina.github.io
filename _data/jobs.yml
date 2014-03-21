@@ -4,7 +4,7 @@
   started: 2012-08-01
   finished: 2014-02-28
   responsibilites:
-  - Redesigned a proprietary ERP system and the external STUDITEMPS
+  - Redesigned the front-end of a proprietary ERP system and the external STUDITEMPS
     portal (has not been released yet) with a focus on providing an improved user experience
   - Analysed technical and business requirements and developed prototypes
   - Implemented new features using Django, HTML5, CSS/SASS, jQuery, jQuery UI,

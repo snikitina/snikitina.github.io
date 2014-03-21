@@ -3,9 +3,9 @@
   year: 2013 &mdash; 2014
   anchor: studiportal
   desc: <p>STUDITEMPS GmbH is a recruitment agency providing temporary work
-    for students. All students employed by STUDITEMPS have an access to
-    the portal where they can
-    add and edit their personal data and working hours.</p>
+    for students. All students employed by STUDITEMPS have access to the
+    portal where they can add and edit their personal data and working hours.
+    </p>
   company: Studitemps GmbH
   technologies:
   - Design and UX
@@ -25,10 +25,7 @@
   type: ERP system
   year: 2012 &mdash; 2014
   anchor: kiss
-  desc: <p>KISS is STUDITEMPS's ERP system that incorporates all facets of the
-    business, and automate and facilitate the flow of data between critical
-    back-office functions, which include sales, human resources, planning,
-    marketing, accounting, and other operating units.</p>
+  desc: <p>KISS is STUDITEMPS's proprietary ERP system.</p>
   company: Studitemps GmbH
   technologies:
   - Design and UX
@@ -87,7 +84,7 @@
   year: 2010 &mdash; 2012
   anchor: mojeid
   desc: <p>mojeID is a safe, fast and easy way to log in to multiple websites
-    and manage your private information among them. mojeID users have
+    and manage your private information between them. mojeID users have
     access to a mojeID profile, where they can view and edit their personal
     data and account settings.</p>
   company: CZ.NIC
@@ -111,8 +108,7 @@
   anchor: dnssec-tester
   desc: <p>DNSSEC hardware tester service is an overview of DNSSEC compatible
     devices. I developed the front and back-ends of the web application that
-    generates statistics from the data submitted by DNSSEC hardware tester (a
-    desktop application).</p>
+    generates statistics from the data submitted by the users.</p>
   company: CZ.NIC
   technologies:
   - Design and UX
