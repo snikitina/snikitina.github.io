@@ -172,7 +172,7 @@ body > div > header nav ul:after {
 body > div > header nav li {
   display: block;
   float: left;
-  margin-left: 1em;
+  margin-left: 1.1em;
 }
 /* line 45, ../_sass/layout/_header.scss */
 body > div > header nav a, body > div > header nav a:visited {
