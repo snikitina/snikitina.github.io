@@ -14,7 +14,7 @@
 
     a {
       display: block;
-      height: 170px;
+      height: 175px;
       overflow: hidden;
       position: relative;
       width: 284px;
@@ -26,39 +26,11 @@
       border: $projectBorderWidth solid rgba(#000, .4);
       content: "";
       display: block;
-      height: 170px - 2 * $projectBorderWidth;
+      height: 175px - 2 * $projectBorderWidth;
       left: 0;
       position: absolute;
       top: 0;
       width: 284px - 2 * $projectBorderWidth;
-    }
-
-    img {
-      @include scale(0.5);
-    }
-
-    /* just for testing */
-    &:first-child img {
-      position: relative;
-      //top: -73px;
-      top: -261px;
-      left: -360px;
-    }
-
-    &:nth-child(2) img {
-      //left: -223px;
-      position: relative;
-      //top: -73px; 
-      left: -455px;
-      top: -260px;
-    }
-
-    &:nth-child(3) img {
-      //left: -40px;
-      position: relative;
-      //top: -14px; 
-      left: -280px;
-      top: -186px;
     }
   }
 

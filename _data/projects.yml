@@ -1,7 +1,7 @@
 - title: STUDITEMPS portal
   type: Portal
   year: 2013 &mdash; 2014
-  anchor: studi-portal
+  anchor: studiportal
   desc: <p>Missing description</p>
   company: Studitemps GmbH
   technologies:
@@ -11,7 +11,12 @@
   - jQuery and jQuery UI, Bootstrap
   - Django
   thumbnails:
-  - /img/projects/portal/company_mission_924.png
+  - path: /img/projects/portal/student_profile_thumbnail.png
+    url: /img/projects/portal/student_profile.png
+    desc: STUDITEMPS portal - Student profile
+  - path: /img/projects/portal/student_schedule_thumbnail.png
+    url: /img/projects/portal/student_schedule.png
+    desc: STUDITEMPS portal - Student working schedule
 
 - title: KISS
   type: ERP system
@@ -59,7 +64,7 @@
 - title: IT10 Conference &amp; CSIRT.CZ
   type: CMS-based pages
   year: 2009 &mdash; 2011
-  anchor: mojeid
+  anchor: cms
   desc: <p>During my work at CZ.NIC I developed several web-sites based on CZ.NIC's proprietary CMS.</p>
   company: CZ.NIC
   technologies:
