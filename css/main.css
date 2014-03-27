@@ -172,7 +172,7 @@ body > div > header nav ul:after {
 body > div > header nav li {
   display: block;
   float: left;
-  margin-left: 1.1em;
+  margin-left: 1.25em;
 }
 /* line 45, ../_sass/layout/_header.scss */
 body > div > header nav a, body > div > header nav a:visited {
@@ -185,6 +185,11 @@ body > div > header a {
 /* line 53, ../_sass/layout/_header.scss */
 body > div > header a, body > div > header a:visited {
   color: #202020;
+}
+/* line 58, ../_sass/layout/_header.scss */
+body > div > header .icon-github {
+  font-size: 1.25em;
+  margin-right: -.16em;
 }
 
 /* Sticky footer ---------------------------------------------------------- */

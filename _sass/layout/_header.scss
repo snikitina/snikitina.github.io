@@ -39,7 +39,7 @@ body > div > header {
     li {
       display: block;
       float: left;
-      margin-left: 1.1em;
+      margin-left: 1.25em;
     }
 
     a, a:visited {
@@ -53,5 +53,10 @@ body > div > header {
     &, &:visited {
       color: $textColor;
     }
+  }
+
+  .icon-github {
+    font-size: 1.25em;
+    margin-right: -.16em;
   }
 }
