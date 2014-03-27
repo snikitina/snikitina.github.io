@@ -1,3 +1,0 @@
-h1. This is my portfolio.
-
-The last version of my portfolio.
