@@ -34,10 +34,10 @@
   - jQuery and jQuery UI, DataTables
   - Django
   thumbnails: 
-  - path: /img/projects/kiss/dashboard_thumbnail.png
+  - path: /img/projects/kiss/dashboard_thumbnail.jpg
     url: /img/projects/kiss/dashboard.png
     desc: KISS - Employee dashboard
-  - path: /img/projects/kiss/student_thumbnail.png
+  - path: /img/projects/kiss/student_thumbnail.jpg
     url: /img/projects/kiss/student.png
     desc: KISS - Student page
 
