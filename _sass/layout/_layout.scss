@@ -71,17 +71,6 @@ main {
     width: auto;
   }
 
-  body > div > header {
-
-    h1, nav {
-      float: none;
-    }
-
-    nav ul {
-      margin-top: 1em;
-    }
-  }
-
   .two-columns main {
 
     & > article, & > aside {

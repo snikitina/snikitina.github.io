@@ -6,14 +6,18 @@ body > div > header {
 
   @include legacy-pie-clearfix;
   background-color: $bodyBgColor;
-  padding: 1em 0;
+  padding: 1em $commonPadding;
 
   h1 {
-    float: left;
+
+    @media screen and (min-width: 481px) {
+      float: left;
+    }
+
     font-family: "Montez", cursive;
     font-size: $headerFontSize;
-    left: -.1em;
-    margin: 0 $commonPadding;
+    left: -1px;
+    margin: 0;
     position: relative;
 
     a:hover {
@@ -23,16 +27,19 @@ body > div > header {
 
   nav {
 
-    float: right;
+    @media screen and (min-width: 481px) {
+      float: right;
+      margin-top: ($headerFontSize - $headerNavFontSize) / 2em * $lineHeight - .5em;
+    }
+
     font-size: $headerNavFontSize;
     font-weight: bold;
     letter-spacing: 1px;
-    margin-right: $commonPadding;
     text-transform: uppercase;
 
     ul {
       @include legacy-pie-clearfix;
-      margin: ($headerFontSize - $headerNavFontSize) / 2em * $lineHeight 0 0;
+      margin: .5em 0 0;
       padding: 0;
     }
 
@@ -40,6 +47,10 @@ body > div > header {
       display: block;
       float: left;
       margin-left: 1.25em;
+
+      &:first-child {
+        margin-left: 0;
+      }
     }
 
     a, a:visited {
