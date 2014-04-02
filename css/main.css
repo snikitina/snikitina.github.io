@@ -336,6 +336,54 @@ main > article > div, main > article > section, main > aside > div, main > aside
   width: 320px;
 }
 
+/* Responsive ------------------------------------------------------------- */
+@media screen and (max-device-width: 960px) {
+  /* line 70, ../_sass/layout/_layout.scss */
+  .content {
+    width: auto;
+  }
+
+  /* line 76, ../_sass/layout/_layout.scss */
+  body > div > header h1, body > div > header nav {
+    float: none;
+  }
+  /* line 80, ../_sass/layout/_layout.scss */
+  body > div > header nav ul {
+    margin-top: 1em;
+  }
+
+  /* line 87, ../_sass/layout/_layout.scss */
+  .two-columns main > article, .two-columns main > aside {
+    display: block;
+    width: auto;
+  }
+
+  /* line 95, ../_sass/layout/_layout.scss */
+  body > footer .content {
+    padding-top: .75em;
+  }
+  /* line 98, ../_sass/layout/_layout.scss */
+  body > footer .content aside {
+    float: none;
+  }
+  /* line 102, ../_sass/layout/_layout.scss */
+  body > footer .content nav {
+    float: none;
+    margin-left: 18px;
+    margin-top: .5em;
+  }
+  /* line 107, ../_sass/layout/_layout.scss */
+  body > footer .content nav ul {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+  /* line 113, ../_sass/layout/_layout.scss */
+  body > footer .content nav li {
+    margin-left: 0;
+    margin-right: 1.5em;
+  }
+}
 /* Text styles ------------------------------------------------------------ */
 /* line 2, ../_sass/_common.scss */
 #wrapper, body > footer {
@@ -568,6 +616,13 @@ main > aside h3 span {
   margin: 0;
 }
 
+@media screen and (max-device-width: 960px) {
+  /* line 72, ../_sass/pages/_index.scss */
+  #recent-projects li a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 /* line 3, ../_sass/pages/_portfolio.scss */
 #projects {
   margin: -18px 0;
