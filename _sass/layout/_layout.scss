@@ -9,7 +9,7 @@ body {
 .content {
   margin-left: auto;
   margin-right: auto;
-  width: $contentWidth;
+  //width: $contentWidth;
 }
 
 
@@ -52,29 +52,41 @@ main {
     > article {
       background-color: $mainBgColor; /* Fallback for the browsers that do
                                          not support CSS3 gradients */
-      width: $contentWidth / 3 * 2;
+      //width: $contentWidth / 3 * 2;
+      width: 66%;
     }
 
     > aside {
       background-color: $footerBgColor; /* Fallback for the browsers that do
                                            not support CSS3 gradients */
-      width: $contentWidth - ($contentWidth / 3 * 2);
+      //width: $contentWidth - ($contentWidth / 3 * 2);
+      //max-width: $contentWidth - ($contentWidth / 3 * 2);
+      max-width: 320px;
+      width: 34%;
     }
   }
 }
 
 
 /* Responsive ------------------------------------------------------------- */
-@media screen and (max-device-width: 960px) {
+@media screen and (min-width: 960px) {
+  .content {
+    width: $contentWidth;
+  }
+}
+
+@media screen and (max-width: 640px) {
 
   .content {
     width: auto;
   }
 
   .two-columns main {
+    display: block;
 
     & > article, & > aside {
       display: block;
+      max-width: 100%;
       width: auto;
     }
   }

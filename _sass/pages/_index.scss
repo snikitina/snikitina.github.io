@@ -14,23 +14,27 @@
 
     a {
       display: block;
-      height: 175px;
+      max-width: 547px;
       overflow: hidden;
       position: relative;
-      width: 284px;
     }
 
-    $projectBorderWidth: 4px;
-
+    $projectBorderWidth: 5px;
+    
     a:after {
-      border: $projectBorderWidth solid rgba(#000, .4);
+      @include box-shadow(inset 0 0 0 $projectBorderWidth rgba(#000, .4));
       content: "";
       display: block;
-      height: 175px - 2 * $projectBorderWidth;
+      height: 100%;
       left: 0;
       position: absolute;
       top: 0;
-      width: 284px - 2 * $projectBorderWidth;
+      width: 100%;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
     }
   }
 
@@ -67,7 +71,7 @@
   }
 }
 
-@media screen and (max-device-width: 960px) {
+@media screen and (max-width: 960px) {
 
   #recent-projects li a {
     margin-left: auto;

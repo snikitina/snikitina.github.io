@@ -296,7 +296,6 @@ body {
 .content {
   margin-left: auto;
   margin-right: auto;
-  width: 960px;
 }
 
 /* Default layout with one column ----------------------------------------- */
@@ -340,50 +339,62 @@ main > article > div, main > article > section, main > aside > div, main > aside
   background-color: white;
   /* Fallback for the browsers that do
      not support CSS3 gradients */
-  width: 640px;
+  width: 66%;
 }
-/* line 58, ../_sass/layout/_layout.scss */
+/* line 59, ../_sass/layout/_layout.scss */
 .two-columns main > aside {
   background-color: #202020;
   /* Fallback for the browsers that do
      not support CSS3 gradients */
-  width: 320px;
+  max-width: 320px;
+  width: 34%;
 }
 
 /* Responsive ------------------------------------------------------------- */
-@media screen and (max-device-width: 960px) {
-  /* line 70, ../_sass/layout/_layout.scss */
+@media screen and (min-width: 960px) {
+  /* line 73, ../_sass/layout/_layout.scss */
+  .content {
+    width: 960px;
+  }
+}
+@media screen and (max-width: 640px) {
+  /* line 80, ../_sass/layout/_layout.scss */
   .content {
     width: auto;
   }
 
-  /* line 76, ../_sass/layout/_layout.scss */
+  /* line 84, ../_sass/layout/_layout.scss */
+  .two-columns main {
+    display: block;
+  }
+  /* line 87, ../_sass/layout/_layout.scss */
   .two-columns main > article, .two-columns main > aside {
     display: block;
+    max-width: 100%;
     width: auto;
   }
 
-  /* line 84, ../_sass/layout/_layout.scss */
+  /* line 96, ../_sass/layout/_layout.scss */
   body > footer .content {
     padding-top: .75em;
   }
-  /* line 87, ../_sass/layout/_layout.scss */
+  /* line 99, ../_sass/layout/_layout.scss */
   body > footer .content aside {
     float: none;
   }
-  /* line 91, ../_sass/layout/_layout.scss */
+  /* line 103, ../_sass/layout/_layout.scss */
   body > footer .content nav {
     float: none;
     margin-left: 18px;
     margin-top: .5em;
   }
-  /* line 96, ../_sass/layout/_layout.scss */
+  /* line 108, ../_sass/layout/_layout.scss */
   body > footer .content nav ul {
     margin: 0;
     overflow: hidden;
     padding: 0;
   }
-  /* line 102, ../_sass/layout/_layout.scss */
+  /* line 114, ../_sass/layout/_layout.scss */
   body > footer .content nav li {
     margin-left: 0;
     margin-right: 1.5em;
@@ -571,58 +582,64 @@ main > aside h3 span {
 /* line 15, ../_sass/pages/_index.scss */
 #recent-projects li a {
   display: block;
-  height: 175px;
+  max-width: 547px;
   overflow: hidden;
   position: relative;
-  width: 284px;
 }
-/* line 25, ../_sass/pages/_index.scss */
+/* line 24, ../_sass/pages/_index.scss */
 #recent-projects li a:after {
-  border: 4px solid rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 0 0 0 5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0 0 0 5px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 0 5px rgba(0, 0, 0, 0.4);
   content: "";
   display: block;
-  height: 167px;
+  height: 100%;
   left: 0;
   position: absolute;
   top: 0;
-  width: 276px;
+  width: 100%;
 }
-/* line 37, ../_sass/pages/_index.scss */
+/* line 35, ../_sass/pages/_index.scss */
+#recent-projects li img {
+  display: block;
+  max-width: 100%;
+}
+/* line 41, ../_sass/pages/_index.scss */
 #recent-projects .button {
   padding-left: 4em;
   padding-right: 4em;
 }
 
-/* line 43, ../_sass/pages/_index.scss */
+/* line 47, ../_sass/pages/_index.scss */
 #qualifications {
   font-size: 14px;
 }
-/* line 46, ../_sass/pages/_index.scss */
+/* line 50, ../_sass/pages/_index.scss */
 #qualifications p:nth-child(1), #qualifications p:nth-child(2) {
   font-size: 1.15em;
 }
-/* line 50, ../_sass/pages/_index.scss */
+/* line 54, ../_sass/pages/_index.scss */
 #qualifications em {
   font-style: normal;
   font-weight: bold;
 }
-/* line 55, ../_sass/pages/_index.scss */
+/* line 59, ../_sass/pages/_index.scss */
 #qualifications .green-bullets {
   margin-bottom: 1.5em;
 }
-/* line 59, ../_sass/pages/_index.scss */
+/* line 63, ../_sass/pages/_index.scss */
 #qualifications .contact-list {
   margin-bottom: 0;
   margin-top: -.5em;
   padding-left: 1px;
 }
-/* line 64, ../_sass/pages/_index.scss */
+/* line 68, ../_sass/pages/_index.scss */
 #qualifications .contact-list li {
   margin: 0;
 }
 
-@media screen and (max-device-width: 960px) {
-  /* line 72, ../_sass/pages/_index.scss */
+@media screen and (max-width: 960px) {
+  /* line 76, ../_sass/pages/_index.scss */
   #recent-projects li a {
     margin-left: auto;
     margin-right: auto;
