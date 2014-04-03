@@ -580,13 +580,19 @@ main > aside h3 span {
   padding: 0;
 }
 /* line 15, ../_sass/pages/_index.scss */
+#recent-projects li:nth-child(4) {
+  display: none;
+}
+/* line 19, ../_sass/pages/_index.scss */
 #recent-projects li a {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 547px;
   overflow: hidden;
   position: relative;
 }
-/* line 24, ../_sass/pages/_index.scss */
+/* line 30, ../_sass/pages/_index.scss */
 #recent-projects li a:after {
   -webkit-box-shadow: inset 0 0 0 5px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: inset 0 0 0 5px rgba(0, 0, 0, 0.4);
@@ -599,50 +605,58 @@ main > aside h3 span {
   top: 0;
   width: 100%;
 }
-/* line 35, ../_sass/pages/_index.scss */
+/* line 41, ../_sass/pages/_index.scss */
 #recent-projects li img {
   display: block;
   max-width: 100%;
 }
-/* line 41, ../_sass/pages/_index.scss */
+/* line 47, ../_sass/pages/_index.scss */
 #recent-projects .button {
   padding-left: 4em;
   padding-right: 4em;
 }
 
-/* line 47, ../_sass/pages/_index.scss */
+/* line 53, ../_sass/pages/_index.scss */
 #qualifications {
   font-size: 14px;
 }
-/* line 50, ../_sass/pages/_index.scss */
+/* line 56, ../_sass/pages/_index.scss */
 #qualifications p:nth-child(1), #qualifications p:nth-child(2) {
   font-size: 1.15em;
 }
-/* line 54, ../_sass/pages/_index.scss */
+/* line 60, ../_sass/pages/_index.scss */
 #qualifications em {
   font-style: normal;
   font-weight: bold;
 }
-/* line 59, ../_sass/pages/_index.scss */
+/* line 65, ../_sass/pages/_index.scss */
 #qualifications .green-bullets {
   margin-bottom: 1.5em;
 }
-/* line 63, ../_sass/pages/_index.scss */
+/* line 69, ../_sass/pages/_index.scss */
 #qualifications .contact-list {
   margin-bottom: 0;
   margin-top: -.5em;
   padding-left: 1px;
 }
-/* line 68, ../_sass/pages/_index.scss */
+/* line 74, ../_sass/pages/_index.scss */
 #qualifications .contact-list li {
   margin: 0;
 }
 
-@media screen and (max-width: 960px) {
-  /* line 76, ../_sass/pages/_index.scss */
-  #recent-projects li a {
-    margin-left: auto;
-    margin-right: auto;
+@media screen and (min-width: 500px) and (max-width: 640px) {
+  /* line 84, ../_sass/pages/_index.scss */
+  #recent-projects li {
+    float: left;
+    width: 48.3%;
+  }
+  /* line 89, ../_sass/pages/_index.scss */
+  #recent-projects li:nth-child(2n+1) {
+    margin-right: 3.39%;
+  }
+  /* line 93, ../_sass/pages/_index.scss */
+  #recent-projects li:nth-child(4) {
+    display: block;
   }
 }
 /* line 3, ../_sass/pages/_portfolio.scss */
