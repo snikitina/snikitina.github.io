@@ -299,22 +299,22 @@ body {
 }
 
 /* Default layout with one column ----------------------------------------- */
-/* line 17, ../_sass/layout/_layout.scss */
+/* line 16, ../_sass/layout/_layout.scss */
 #wrapper {
   background: white;
 }
 
-/* line 23, ../_sass/layout/_layout.scss */
+/* line 22, ../_sass/layout/_layout.scss */
 main > article, main > aside {
   padding: 18px 0;
 }
-/* line 27, ../_sass/layout/_layout.scss */
+/* line 26, ../_sass/layout/_layout.scss */
 main > article > div, main > article > section, main > aside > div, main > aside > section {
   padding: 0 18px;
 }
 
 /* Two-column layout ------------------------------------------------------ */
-/* line 37, ../_sass/layout/_layout.scss */
+/* line 36, ../_sass/layout/_layout.scss */
 .two-columns #wrapper {
   background-color: transparent;
   /* Fallback for the browsers that do
@@ -325,23 +325,23 @@ main > article > div, main > article > section, main > aside > div, main > aside
   background-image: -o-linear-gradient(left, #ffffff, #ffffff 640px, #202020 640px, #202020 100%);
   background-image: linear-gradient(left, #ffffff, #ffffff 640px, #202020 640px, #202020 100%);
 }
-/* line 44, ../_sass/layout/_layout.scss */
+/* line 43, ../_sass/layout/_layout.scss */
 .two-columns main {
   display: table;
 }
-/* line 47, ../_sass/layout/_layout.scss */
+/* line 46, ../_sass/layout/_layout.scss */
 .two-columns main > article, .two-columns main > aside {
   display: table-cell;
   vertical-align: top;
 }
-/* line 52, ../_sass/layout/_layout.scss */
+/* line 51, ../_sass/layout/_layout.scss */
 .two-columns main > article {
   background-color: white;
   /* Fallback for the browsers that do
      not support CSS3 gradients */
   width: 66%;
 }
-/* line 59, ../_sass/layout/_layout.scss */
+/* line 58, ../_sass/layout/_layout.scss */
 .two-columns main > aside {
   background-color: #202020;
   /* Fallback for the browsers that do
@@ -352,49 +352,49 @@ main > article > div, main > article > section, main > aside > div, main > aside
 
 /* Responsive ------------------------------------------------------------- */
 @media screen and (min-width: 960px) {
-  /* line 73, ../_sass/layout/_layout.scss */
+  /* line 72, ../_sass/layout/_layout.scss */
   .content {
     width: 960px;
   }
 }
 @media screen and (max-width: 640px) {
-  /* line 80, ../_sass/layout/_layout.scss */
+  /* line 79, ../_sass/layout/_layout.scss */
   .content {
     width: auto;
   }
 
-  /* line 84, ../_sass/layout/_layout.scss */
+  /* line 83, ../_sass/layout/_layout.scss */
   .two-columns main {
     display: block;
   }
-  /* line 87, ../_sass/layout/_layout.scss */
+  /* line 86, ../_sass/layout/_layout.scss */
   .two-columns main > article, .two-columns main > aside {
     display: block;
     max-width: 100%;
     width: auto;
   }
 
-  /* line 96, ../_sass/layout/_layout.scss */
+  /* line 95, ../_sass/layout/_layout.scss */
   body > footer .content {
     padding-top: .75em;
   }
-  /* line 99, ../_sass/layout/_layout.scss */
+  /* line 98, ../_sass/layout/_layout.scss */
   body > footer .content aside {
     float: none;
   }
-  /* line 103, ../_sass/layout/_layout.scss */
+  /* line 102, ../_sass/layout/_layout.scss */
   body > footer .content nav {
     float: none;
     margin-left: 18px;
     margin-top: .5em;
   }
-  /* line 108, ../_sass/layout/_layout.scss */
+  /* line 107, ../_sass/layout/_layout.scss */
   body > footer .content nav ul {
     margin: 0;
     overflow: hidden;
     padding: 0;
   }
-  /* line 114, ../_sass/layout/_layout.scss */
+  /* line 113, ../_sass/layout/_layout.scss */
   body > footer .content nav li {
     margin-left: 0;
     margin-right: 1.5em;
@@ -662,11 +662,6 @@ main > aside h3 span {
 /* line 3, ../_sass/pages/_portfolio.scss */
 #projects {
   margin: -18px 0;
-  /*  > li:nth-child(2n) {
-      background-color: $footerBgColor;
-      color: #fff;
-    }
-  */
 }
 /* line 6, ../_sass/pages/_portfolio.scss */
 #projects > li {
@@ -702,81 +697,74 @@ main > aside h3 span {
   text-align: center;
   width: 32px;
 }
-/* line 42, ../_sass/pages/_portfolio.scss */
+/* line 37, ../_sass/pages/_portfolio.scss */
 #projects .resume-item-data {
   clear: both;
 }
-/* line 46, ../_sass/pages/_portfolio.scss */
+/* line 41, ../_sass/pages/_portfolio.scss */
 #projects .screenshot {
   background: #202020;
   clear: both;
   margin: 18px -18px 0;
-  padding: 18px;
-  width: 924px;
   overflow: hidden;
+  padding: 18px;
 }
-/* line 53, ../_sass/pages/_portfolio.scss */
-#projects .screenshot a {
+/* line 48, ../_sass/pages/_portfolio.scss */
+#projects .screenshot li {
   display: block;
   float: left;
-  height: 284px;
+  margin: 0;
+  padding: 0;
+  width: 49%;
+}
+/* line 55, ../_sass/pages/_portfolio.scss */
+#projects .screenshot li:nth-child(2n+1) {
+  margin-right: 2%;
+}
+/* line 59, ../_sass/pages/_portfolio.scss */
+#projects .screenshot li a {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 547px;
   overflow: hidden;
   position: relative;
-  width: 453px;
 }
-/* line 61, ../_sass/pages/_portfolio.scss */
-#projects .screenshot a:first-child {
-  margin-right: 18px;
-}
-/* line 65, ../_sass/pages/_portfolio.scss */
-#projects .screenshot a:after {
-  border: 4px solid rgba(0, 0, 0, 0.4);
+/* line 70, ../_sass/pages/_portfolio.scss */
+#projects .screenshot li a:after {
+  -webkit-box-shadow: inset 0 0 0 5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0 0 0 5px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 0 5px rgba(0, 0, 0, 0.4);
   content: "";
   display: block;
-  height: 276px;
+  height: 100%;
   left: 0;
   position: absolute;
   top: 0;
-  width: 445px;
+  width: 100%;
 }
-/* line 77, ../_sass/pages/_portfolio.scss */
-#projects .screenshot img {
+/* line 81, ../_sass/pages/_portfolio.scss */
+#projects .screenshot li img {
   display: block;
+  max-width: 100%;
 }
-/* line 82, ../_sass/pages/_portfolio.scss */
+/* line 88, ../_sass/pages/_portfolio.scss */
 #projects .technologies {
   list-style-type: disc;
 }
-/* line 86, ../_sass/pages/_portfolio.scss */
-#projects .project-thumbnail {
-  display: block;
-  float: right;
-  height: 170px;
-  margin-left: 2em;
-  overflow: hidden;
-  position: relative;
-  width: 284px;
-}
-/* line 96, ../_sass/pages/_portfolio.scss */
-#projects .project-thumbnail:after {
-  border: 4px solid rgba(0, 0, 0, 0.4);
-  content: "";
-  display: block;
-  height: 162px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 276px;
-}
-/* line 107, ../_sass/pages/_portfolio.scss */
-#projects .project-thumbnail img {
-  -webkit-transform: scale(0.5, 0.5);
-  -moz-transform: scale(0.5, 0.5);
-  -ms-transform: scale(0.5, 0.5);
-  -o-transform: scale(0.5, 0.5);
-  transform: scale(0.5, 0.5);
-}
 
+@media screen and (max-width: 500px) {
+  /* line 95, ../_sass/pages/_portfolio.scss */
+  #projects .screenshot li {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
+  /* line 100, ../_sass/pages/_portfolio.scss */
+  #projects .screenshot li:not(:last-child) {
+    margin-bottom: 18px;
+  }
+}
 /* line 7, ../_sass/pages/_resume.scss */
 #resume article section > .no-bullets > li {
   margin-bottom: 1.5em;

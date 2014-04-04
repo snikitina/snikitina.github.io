@@ -24,11 +24,13 @@ title: Portfolio
         <ul class="green-bullets">
           <li>{% for t in project.technologies %}{{ t }}{% if forloop.last == false %}, {% endif %}{% endfor %}</li>
         </ul>
-        <div class="screenshot">
+        <ul class="screenshot">
           {% for thumbnail in project.thumbnails %}
-            <a href="{{ thumbnail.url }}" title="{{ thumbnail.desc }}"><img src="{{ thumbnail.path }}" alt="{{ thumbnail.desc }}" /></a>
+            <li>
+              <a href="{{ thumbnail.url }}" title="{{ thumbnail.desc }}"><img src="{{ thumbnail.path }}" alt="{{ thumbnail.desc }}" /></a>
+            </li>
           {% endfor %}
-        </div>
+        </ul>
       </li>
       {% endfor %}
     </ul>
