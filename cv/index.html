@@ -20,7 +20,7 @@ title: CV
             <div class="resume-item-data">
               <strong>{{ job.company }}</strong>
               {% if job.location %}<em>{{ job.location }}</em>{% endif %}
-              <span>{{ job.started|date:"%b %Y" }} &mdash; {{ job.finished|date:"%b %Y" }}</span>
+              <span>{{ job.started|date:"%b %Y" }} &mdash; {% if job.finished %}{{ job.finished|date:"%b %Y" }}{% else %}Present{% endif %}</span>
             </div>
             {% if job.desc %}
               <p>{{ job.desc }}</p>

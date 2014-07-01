@@ -1,3 +1,11 @@
+- title: Front-end web-developer
+  company: <a href="http://brandnewmedia.com.au">Brand New Media</a>
+  location: Sydney, Australia
+  started: 2014-05-01
+  responsibilites:
+  - Develop the front-end of Ruby on Rails projects with HTML5, CSS/SASS,
+  JavaScript/CoffeeScript, jQuery, and Ajax
+
 - title: Front-end and Django developer
   company: <a href="http://studitemps.de/">STUDITEMPS GmbH</a>
   location: Cologne, Germany
