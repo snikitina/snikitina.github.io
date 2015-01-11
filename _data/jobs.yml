@@ -3,8 +3,13 @@
   location: Sydney, Australia
   started: 2014-05-01
   responsibilites:
-  - Develop the front-end of a Ruby on Rails project with HTML5, CSS/SASS,
-    JavaScript/CoffeeScript, jQuery, and Ajax
+  - Develop the front-end of
+    <a href="http://www.surfingaustraliahpc.com">surfingaustraliahpc.com</a>
+    &ndash; a responsive CMS-driven website which also includes a booking
+    system
+  - Develop the front-end of several other Ruby on Rails projects for one of
+    Australian national sporting organisations using HTML5/Haml,
+    CSS/SASS/Compass, Bootstrap, Foundation, jQuery, jQuery UI and Ajax
 
 - title: Front-end and Django developer
   company: <a href="http://studitemps.de/">STUDITEMPS GmbH</a>
